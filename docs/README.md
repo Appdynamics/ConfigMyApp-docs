@@ -37,9 +37,9 @@ The following requirments must be met:
 
 # Installation
 
-1. Download and unzip the UCSMonitoringExtension.zip to the <MachineAgent_Dir>/monitors directory
+1) Download and unzip the UCSMonitoringExtension.zip to the <MachineAgent_Dir>/monitors directory
 
-2. Edit only the Value property in the config.json file located at <MachineAgent_Dir>/monitors/UCSMonitoringExtension
+2) Edit only the Value property in the config.json file located at <MachineAgent_Dir>/monitors/UCSMonitoringExtension
 
 The table below contains a description of some of the configuration properties.
 
@@ -55,7 +55,7 @@ The table below contains a description of some of the configuration properties.
 | tierID  | This is required to monitor the health of the UCS monitoring extension i.e connectivity to AppDynamics, UCS and SNOW.Follow the instructions in this [doc](https://community.appdynamics.com/t5/Knowledge-Base/How-do-I-troubleshoot-missing-custom-metrics-or-extensions/ta-p/28695#Configuring%20an%20Extension) to acquire the component (or tier) ID. |
 
 
-3. Launch PowerShell as an Administrator and run the ./Setup.ps1 script. The Setup.ps1 script performs a one-time   configuration of the following items:
+3) Launch PowerShell as an Administrator and run the ./Setup.ps1 script. The Setup.ps1 script performs a one-time   configuration of the following items:
 
    - Acquires a UCS session and exports the session details into an
    encrypted file in the SecureFolder.
@@ -73,7 +73,7 @@ The table below contains a description of some of the configuration properties.
   |:--:| 
  | *Fig. 1.0 Setup.ps1 Process* |
                               
-4. Login to AppDynamics Controller and navigate to Analytics – Searches – Add  - &#39;Drag and Drop Search&#39;. Click on the Schema drop-down and ensure all 3 UCS schemas are present.
+4) Login to AppDynamics Controller and navigate to Analytics – Searches – Add  - &#39;Drag and Drop Search&#39;. Click on the Schema drop-down and ensure all 3 UCS schemas are present.
 
  | ![schemas](https://user-images.githubusercontent.com/2548160/68076034-b3d5a680-fda7-11e9-96a4-0767ef45dad0.jpg) |
  |:--:| 
@@ -81,9 +81,9 @@ The table below contains a description of some of the configuration properties.
  
 
 
-5. Run FaultFinder.ps1 script manually and ensure there are no errors
-6. Restart Machine Agent
-7. Repeat step 4 after 4 minutes, but this time select the PSU schema. You&#39;re expected to see some data.
+5) Run FaultFinder.ps1 script manually and ensure there are no errors
+6) Restart Machine Agent
+7) Repeat step 4 after 4 minutes, but this time select the PSU schema. You&#39;re expected to see some data.
 
  | ![verify_PSU_data](https://user-images.githubusercontent.com/2548160/68076055-f303f780-fda7-11e9-8cd5-ec9bf2243a95.png) | 
  |:--:| 
