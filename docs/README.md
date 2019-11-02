@@ -89,11 +89,14 @@ The table below contains a description of some of the configuration properties.
  |:--:| 
 | *Fig. 1.3 Verify PSU Telemetry* |
                                  
-<p align="middle">
- -------- End of UCS Monitoring Extension Setup --------
+<p align="middle"> 
+<strong>
+ -------- End of UCS Monitoring Extension Setup -------- 
+ </strong>
+ 
 </p>
 
-***...but if you are interested in setting up a dashboard similar to the one below, click this link to continue *** </br>
+<b><i>...but if you are interested in setting up a dashboard similar to the one below, click this link to continue </i></b></br>
 (*Pro-tip: Right click the image and select open in new tab*)
 
 <img width="1584" alt="Screenshot 2019-11-01 at 20 36 37" src="https://user-images.githubusercontent.com/2548160/68076387-c520b200-fdab-11e9-90bd-d40fd331f8eb.png">
