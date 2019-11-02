@@ -33,9 +33,9 @@ The following requirments must be met:
 
 1. BiQ/Analytics License
 2. Windows PowerShell 5.0 or later, or PowerShell Core running on Windows, Linux or macOS.
-  - How to install PowerShell on [Linux
+ 
+ - How to install PowerShell on [Linux
    Documentation](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-6)
-
  - How to install PowerShell on [macOS
    Documentation](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-6)
 
