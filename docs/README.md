@@ -9,7 +9,7 @@ This AppDynamics Cisco UCS monitoring extension covers UCS health monitoring fro
 
 1. **Proactive Monitoring** – This solution periodically collects Chassis blade server temperature and power supply statistics from UCS into the AppDynamics BiQ platform. The BiQ platform applies ML/AI on the aggregated data to learn the normal PSU and temperature stats to alert when a server is getting too hot and/or if there&#39;s an outlier in the Power supply stats. This will enable AppDynamics customers to proactively monitor UCS PSU and temperature health - before UCS flags it as a fault, and perform remediation actions before it impacts customers.
 
-1. **UCS faults Monitoring** - This solution periodically polls the UCS fault engine and aggregates UCS faults in AppDynamics by critical UCS functional areas – such as Disk Health, Fan Module health, Fabric Interconnect health, Blade servers Health, Rack Units Health, Chassis PSU Health vNICS health etc. All faults in UCS manager are monitored by the extension irrespective of the affected UCS component. Only faults that have not been acknowledged in UCS are pulled into AppDynamics. Also, the solution report on only Critical, Major, Minor and Warning faults. In other words, Info, Condition and Cleared Severities are all ignored and not reported in AppDynamics.
+1. **UCS Faults Monitor** - This solution periodically polls the UCS fault engine and aggregates UCS faults in AppDynamics by critical UCS functional areas – such as Disk Health, Fan Module health, Fabric Interconnect health, Blade servers Health, Rack Units Health, Chassis PSU Health vNICS health etc. All faults in UCS manager are monitored by the extension irrespective of the affected UCS component. Only faults that have not been acknowledged in UCS are pulled into AppDynamics. Also, the solution report on only Critical, Major, Minor and Warning faults. In other words, Info, Condition and Cleared Severities are all ignored and not reported in AppDynamics.
 
 1. **ServiceNow Integration** – This UCS monitoring extension has an optional ServiceNow integration built-in, if enabled, the extension creates a ServiceNow incident with a detailed description of UCS faults. The incident is auto-assigned to a pre-defined group. By default, it creates P3 incident for Critical faults.
 
@@ -41,7 +41,7 @@ The following requirments must be met:
 
 2. Edit only the Value property in the config.json file located at <MachineAgent_Dir>/monitors/UCSMonitoringExtension
 
- The table below contains a description of some of the configuration properties.
+The table below contains a description of some of the configuration properties.
 
 | **Config Property Name** | **Description** |
 | --- | --- |
@@ -66,8 +66,20 @@ The following requirments must be met:
    
    - Installs ServiceNow and UCS PowerShell module from Microsoft PSGallary. If your server is behind a firewall and it is blocked from accessing https://www.powershellgallery.com, you&#39;d need to manually download and install the PowerShell modules – refer to the Setup.ps1 script for the module names.
     - Creates a file named _appd.setup.complete.indicator.txt_ - to indicate that the setup has been successfully created, if and only if the setup was successful.
+    
+    ![Setup](https://user-images.githubusercontent.com/2548160/68075952-b4217200-fda6-11e9-98dd-a4562ccb3128.jpg)
+                                ***Fig. 1.0:*** *Setup.ps1 screenshot*
+    
 4. Login to AppDynamics Controller and navigate to Analytics – Searches – Add  - &#39;Drag and Drop Search&#39;. Click on the Schema drop-down and ensure all 3 UCS schemas are present.
+
+![schemas](https://user-images.githubusercontent.com/2548160/68076034-b3d5a680-fda7-11e9-96a4-0767ef45dad0.jpg)
+                                 ***Fig.1.1:*** *Analytics Schema*
+
 5. Run FaultFinder.ps1 script manually and ensure there are no errors
 6. Restart Machine Agent
 7. Repeat step 4 after 4 minutes, but this time select the PSU schema. You&#39;re expected to see some data.
+
+ ![verify_PSU_data](https://user-images.githubusercontent.com/2548160/68076055-f303f780-fda7-11e9-8cd5-ec9bf2243a95.png)
+                                 ***Fig.1.3:*** *Verify PSU Telemetry*
+                                 
 
