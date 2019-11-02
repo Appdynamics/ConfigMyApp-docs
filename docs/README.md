@@ -31,15 +31,14 @@ Better still, save the ADQL as a metric so it can be executed every minute to pl
 # Prerequisite
 The following requirments must be met: 
 
-1. BiQ/Analytics License
-2. Windows PowerShell 5.0 or later, or PowerShell Core running on Windows, Linux or macOS.
- 
+#1. BiQ/Analytics License
+#2. Windows PowerShell 5.0 or later, or PowerShell Core running on Windows, Linux or macOS.
  - How to install PowerShell on [Linux
    Documentation](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-6)
  - How to install PowerShell on [macOS
    Documentation](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-6)
 
-3. Before the extension is installed, the prerequisites mentioned [here](https://community.appdynamics.com/t5/Knowledge-Base/Extensions-Prerequisites-Guide/ta-p/35213) need to be met. 
+#3. Before the extension is installed, the prerequisites mentioned [here](https://community.appdynamics.com/t5/Knowledge-Base/Extensions-Prerequisites-Guide/ta-p/35213) need to be met. 
 
 Please do not proceed with the extension installation if any specified prerequisites are not met.
 
