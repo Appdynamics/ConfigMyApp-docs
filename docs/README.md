@@ -69,19 +69,19 @@ The table below contains a description of some of the configuration properties.
    - Installs ServiceNow and UCS PowerShell module from Microsoft PSGallary. If your server is behind a firewall and it is blocked from accessing https://www.powershellgallery.com, you&#39;d need to manually download and install the PowerShell modules – refer to the Setup.ps1 script for the module names.
     - Creates a file named _appd.setup.complete.indicator.txt_ - to indicate that the setup has been successfully created, if and only if the setup was successful.
     
-    ![Setup](https://user-images.githubusercontent.com/2548160/68075952-b4217200-fda6-11e9-98dd-a4562ccb3128.jpg)
-                                ***Fig. 1.0:*** *Setup.ps1 screenshot*
+    ![Setup](https://user-images.githubusercontent.com/2548160/68075952-b4217200-fda6-11e9-98dd-a4562ccb3128.jpg)  ***Fig. 1.0:*** *Setup.ps1 screenshot*
+                              
     
 4. Login to AppDynamics Controller and navigate to Analytics – Searches – Add  - &#39;Drag and Drop Search&#39;. Click on the Schema drop-down and ensure all 3 UCS schemas are present.
 
-![schemas](https://user-images.githubusercontent.com/2548160/68076034-b3d5a680-fda7-11e9-96a4-0767ef45dad0.jpg)
-   ***Fig.1.1:*** *Analytics Schema*
+   ![schemas](https://user-images.githubusercontent.com/2548160/68076034-b3d5a680-fda7-11e9-96a4-0767ef45dad0.jpg)   ***Fig.1.1:*** *Analytics Schema*
+
 
 5. Run FaultFinder.ps1 script manually and ensure there are no errors
 6. Restart Machine Agent
 7. Repeat step 4 after 4 minutes, but this time select the PSU schema. You&#39;re expected to see some data.
 
- ![verify_PSU_data](https://user-images.githubusercontent.com/2548160/68076055-f303f780-fda7-11e9-8cd5-ec9bf2243a95.png)
-   ***Fig.1.3:*** *Verify PSU Telemetry*
+   ![verify_PSU_data](https://user-images.githubusercontent.com/2548160/68076055-f303f780-fda7-11e9-8cd5-ec9bf2243a95.png)   ***Fig.1.3:*** *Verify PSU Telemetry*
+
                                  
 
