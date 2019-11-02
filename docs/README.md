@@ -1,5 +1,6 @@
-# Cisco UCS Monitoring Extension
-**With built-in ServiceNow Integration**
+
+<p><img align="left" width="100" height="100" src="https://github.com/Appdynamics/ucs-monitoring-extension-docs/blob/master/docs/DocArtifacts/1280px-Cisco_logo.svg.png"> <strong>Cisco UCS Monitoring Extension</strong></p>
+
 
 # Introduction
 Cisco Unified Computing System (UCS) is a system of servers, network, storage and storage network in a single platform.  Cisco UCS is used for creating a more cost-effective, efficient and centrally managed data center architecture by integrating computing, networking, virtualization and data storage components and resources.
