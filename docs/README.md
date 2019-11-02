@@ -89,7 +89,7 @@ The table below contains a description of some of the configuration properties.
  |:--:| 
 | *Fig. 1.3 Verify PSU Telemetry* |
                                  
-<p align="middle" style="color:#4E3EB1;> 
+<p align="middle" style="color:#4E3EB1;"> 
 <strong>
  -------- End of UCS Monitoring Extension Setup -------- 
  </strong>
