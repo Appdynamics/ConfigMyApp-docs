@@ -1,6 +1,6 @@
 
 
-<p><img align="right" width="100" height="60" src="https://user-images.githubusercontent.com/2548160/68075680-e0d38a80-fda2-11e9-8ac6-0449fa2a8031.png"> </p><strong> Cisco UCS Monitoring Extension</strong>
+<p><img align="right" width="100" height="60" src="https://user-images.githubusercontent.com/2548160/68075860-ba631e80-fda5-11e9-8457-07859944ae08.png"> </p><strong> Cisco UCS Monitoring Extension</strong>
 
 # Introduction
 Cisco Unified Computing System (UCS) is a system of servers, network, storage and storage network in a single platform.  Cisco UCS is used for creating a more cost-effective, efficient and centrally managed data center architecture by integrating computing, networking, virtualization and data storage components and resources.
