@@ -85,7 +85,7 @@ The table below contains a description of some of the configuration properties.
 6) Restart Machine Agent
 7) Repeat step 4 after 4 minutes, but this time select the PSU schema. You&#39;re expected to see some data.
 
- | ![verify_PSU_data](https://user-images.githubusercontent.com/2548160/68076055-f303f780-fda7-11e9-8cd5-ec9bf2243a95.png) | 
+ | ![verify_PSU_data](https://user-images.githubusercontent.com/2548160/68076433-36f8fb80-fdac-11e9-9652-fb62d9baf1c5.png)) | 
  |:--:| 
 | *Fig. 1.3 Verify PSU Telemetry* |
                                  
