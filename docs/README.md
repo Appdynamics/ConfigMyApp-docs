@@ -43,6 +43,7 @@ The following requirments must be met:
 
 The table below contains a description of some of the configuration properties.
 
+
 | **Config Property Name** | **Description** |
 | --- | --- |
 | UCSPasswordEncyptionKey  | Any string of your choice. This key is used to encrypt and decrypt UCS connection details. |
@@ -52,6 +53,7 @@ The table below contains a description of some of the configuration properties.
 | X-Events-API-Key  | Create the analytics API Key by following the instruction in this[doc](https://docs.appdynamics.com/display/latest/Managing+API+Keys).  Grant Manage, Query and Publish permissions to Custom Analytics Events. |
 | EnableServiceNow  | Set to &#39;yes&#39; or &#39;no&#39;. Other ServiceNOW properties are required if set to yes, else, ignore them. |
 | tierID  | This is required to monitor the health of the UCS monitoring extension i.e connectivity to AppDynamics, UCS and SNOW.Follow the instructions in this [doc](https://community.appdynamics.com/t5/Knowledge-Base/How-do-I-troubleshoot-missing-custom-metrics-or-extensions/ta-p/28695#Configuring%20an%20Extension) to acquire the component (or tier) ID. |
+
 
 3. Launch PowerShell as an Administrator and run the ./Setup.ps1 script. The Setup.ps1 script performs a one-time   configuration of the following items:
 
@@ -73,13 +75,13 @@ The table below contains a description of some of the configuration properties.
 4. Login to AppDynamics Controller and navigate to Analytics – Searches – Add  - &#39;Drag and Drop Search&#39;. Click on the Schema drop-down and ensure all 3 UCS schemas are present.
 
 ![schemas](https://user-images.githubusercontent.com/2548160/68076034-b3d5a680-fda7-11e9-96a4-0767ef45dad0.jpg)
-                                 ***Fig.1.1:*** *Analytics Schema*
+   ***Fig.1.1:*** *Analytics Schema*
 
 5. Run FaultFinder.ps1 script manually and ensure there are no errors
 6. Restart Machine Agent
 7. Repeat step 4 after 4 minutes, but this time select the PSU schema. You&#39;re expected to see some data.
 
  ![verify_PSU_data](https://user-images.githubusercontent.com/2548160/68076055-f303f780-fda7-11e9-8cd5-ec9bf2243a95.png)
-                                 ***Fig.1.3:*** *Verify PSU Telemetry*
+   ***Fig.1.3:*** *Verify PSU Telemetry*
                                  
 
