@@ -1,14 +1,14 @@
 # Cisco UCS Monitoring Extension
-**With in-built ServiceNow Integration**
+**With built-in ServiceNow Integration**
 
 # Introduction
 Cisco Unified Computing System (UCS) is a system of servers, network, storage and storage network in a single platform.  Cisco UCS is used for creating a more cost-effective, efficient and centrally managed data center architecture by integrating computing, networking, virtualization and data storage components and resources.
 
 This AppDynamics Cisco UCS monitoring extension covers UCS health monitoring from both proactive and reactive perspectives:
 
-1. **Proactive** – This solution periodically collects Chassis blade server temperature and power supply statistics from UCS into the AppDynamics BiQ platform. The BiQ platform applies ML/AI on the aggregated data to learn the normal PSU and temperature stats to alert when a server is getting too hot and/or if there&#39;s an outlier in the Power supply stats. This will enable AppDynamics customers to proactively monitor UCS PSU and temperature health - before UCS flags it as a fault, and perform remediation actions before it impacts customers.
+1. **Proactive Monitoring** – This solution periodically collects Chassis blade server temperature and power supply statistics from UCS into the AppDynamics BiQ platform. The BiQ platform applies ML/AI on the aggregated data to learn the normal PSU and temperature stats to alert when a server is getting too hot and/or if there&#39;s an outlier in the Power supply stats. This will enable AppDynamics customers to proactively monitor UCS PSU and temperature health - before UCS flags it as a fault, and perform remediation actions before it impacts customers.
 
-1. **UCS faults** - This solution periodically polls the UCS fault engine and aggregates UCS faults in AppDynamics by critical UCS functional areas – such as Disk Health, Fan Module health, Fabric Interconnect health, Blade servers Health, Rack Units Health, Chassis PSU Health vNICS health etc. All faults in UCS manager are monitored by the extension irrespective of the affected UCS component. Only faults that have not been acknowledged in UCS are pulled into AppDynamics. Also, the solution report on only Critical, Major, Minor and Warning faults. In other words, Info, Condition and Cleared Severities are all ignored and not reported in AppDynamics.
+1. **UCS faults Monitoring** - This solution periodically polls the UCS fault engine and aggregates UCS faults in AppDynamics by critical UCS functional areas – such as Disk Health, Fan Module health, Fabric Interconnect health, Blade servers Health, Rack Units Health, Chassis PSU Health vNICS health etc. All faults in UCS manager are monitored by the extension irrespective of the affected UCS component. Only faults that have not been acknowledged in UCS are pulled into AppDynamics. Also, the solution report on only Critical, Major, Minor and Warning faults. In other words, Info, Condition and Cleared Severities are all ignored and not reported in AppDynamics.
 
 1. **ServiceNow Integration** – This UCS monitoring extension has an optional ServiceNow integration built-in, if enabled, the extension creates a ServiceNow incident with a detailed description of UCS faults. The incident is auto-assigned to a pre-defined group. By default, it creates P3 incident for Critical faults.
 
@@ -16,11 +16,14 @@ In summary, as this monitoring extension leverages the power of the BiQ platform
 
 For example, this query returns all UCS _critical_ faults in the _last 7_ days that was caused by a _power-supply_ failure and affected server and network components.
 
-_SELECT \* FROM ucs\_faults WHERE cause = &quot;power-supply&quot; AND Severity = &quot;critical&quot; AND Type in (&quot;network&quot;, &quot;server&quot;) SINCE 7 days_
+> SELECT \* FROM ucs\_faults WHERE cause = &quot;power-supply&quot; AND
+> Severity = &quot;critical&quot; AND Type in (&quot;network&quot;,
+> &quot;server&quot;) SINCE 7 days
 
 In the same vein, the ADQL below uses a regular expression to return the average Rear Temperature (FmTempSenIo) for the Chassis-1/blad-1 server in the last 10 minutes.
 
-_SELECT avg(toFloat(FmTempSenIo)) FROM ucs\_server\_temperature WHERE Dn REGEXP &quot;sys/chassis-1/blade-1.\*&quot; SINCE 10 minutes_
+> SELECT avg(toFloat(FmTempSenIo)) FROM ucs\_server\_temperature WHERE
+> Dn REGEXP &quot;sys/chassis-1/blade-1.\*&quot; SINCE 10 minutes
 
 Better still, save the ADQL as a metric so it can be executed every minute to plot a time-series graph.
 
