@@ -37,7 +37,7 @@ The following requirements must be met:
  - How to install PowerShell Core on [macOS
    Documentation](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-6)  
   - How to upgrade Windows PowerShell to 5.1 [Documentation](https://docs.microsoft.com/en-us/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1)
- - How to install PowerShell Core on Windows (if you decide to use Powershell Core on Windows instead of upgrading to Windows Powershell 5.1) [Documentation](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-windows?view=powershell-6)
+ - How to install PowerShell Core on Windows (if you decide to use Powershell Core on Windows instead of upgrading to Windows PowerShell 5.1) [Documentation](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-windows?view=powershell-6)
 
 3) Before the extension is installed, the generic AppDynamics extension prerequisites mentioned [here](https://community.appdynamics.com/t5/Knowledge-Base/Extensions-Prerequisites-Guide/ta-p/35213) need to be met. 
 
@@ -48,7 +48,7 @@ Please do not proceed with the extension installation if any of the aforemention
 
 1) Download and unzip the UCSMonitoringExtension.zip to the <MachineAgent_Dir>/monitors directory
 
-2) Edit only the Value property in the config.json file located at <MachineAgent_Dir>/monitors/UCSMonitoringExtension
+2) Edit only the Value property in the `config.json` file located at <MachineAgent_Dir>/monitors/UCSMonitoringExtension
 
 The table below contains a description of some of the configuration properties.
 
