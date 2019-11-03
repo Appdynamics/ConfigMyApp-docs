@@ -27,7 +27,7 @@ In the same vein, the ADQL below uses regular expression to calculate and return
 Better still, you can save the ADQL as a metric so it can be automatically executed every minute to plot a time-series graph.
 
 # Prerequisites
-The following requirments must be met: 
+The following requirements must be met: 
 
 1) BiQ/Analytics License
 
@@ -39,9 +39,9 @@ The following requirments must be met:
   - How to upgrade Windows PowerShell to 5.1 [Documentation](https://docs.microsoft.com/en-us/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1)
  - How to install PowerShell Core on Windows (if you decide to use Powershell Core on Windows instead of upgrading to Windows Powershell 5.1) [Documentation](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-windows?view=powershell-6)
 
-3) Before the extension is installed, the generic AppDynamics extenions prerequisites mentioned [here](https://community.appdynamics.com/t5/Knowledge-Base/Extensions-Prerequisites-Guide/ta-p/35213) need to be met. 
+3) Before the extension is installed, the generic AppDynamics extension prerequisites mentioned [here](https://community.appdynamics.com/t5/Knowledge-Base/Extensions-Prerequisites-Guide/ta-p/35213) need to be met. 
 
-Please do not proceed with the extension installation if any specified prerequisites are not met.
+Please do not proceed with the extension installation if any of the aforementioned prerequisites are not met.
 
 
 # Installation
