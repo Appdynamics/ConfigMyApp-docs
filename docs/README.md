@@ -89,8 +89,11 @@ The table below contains a description of some of the configuration properties.
 | *Fig. 1.1 Analaytics Schema* |
  
 5) Run the `FaultFinder.ps1` script manually and ensure there are no errors 
+
 6) Restart Machine Agent 
+
 7) Repeat step 4 after 4 minutes, but this time select the PSU schema. You&#39;re expected to see some data.  
+
 
  | ![verify_PSU_data](https://user-images.githubusercontent.com/2548160/68076433-36f8fb80-fdac-11e9-9652-fb62d9baf1c5.png)) | 
  |:--:| 
