@@ -13,18 +13,18 @@ This AppDynamics Cisco UCS monitoring extension covers UCS health monitoring fro
 
 1. **ServiceNow Integration** – The UCS monitoring extension has an optional ServiceNow integration built-in; if enabled, the extension creates a ServiceNow incident with a detailed description of faults. The ServiceNow incident is auto-assigned to a pre-defined group. By default, it creates a P3 incident for Critical faults.
 
-In summary, as this monitoring extension leverages the power of the AppDynamics BiQ platform, Cisco UCS customers can slice and dice UCS faults in numerous dimensions for reporting and trend analysis purposes. For example, this query returns all UCS _critical_ faults that were caused by _power-supply_ failure, and had a direct (or a knock-on effect) on _server_ and _network components_ in the _last 7_ days.
+In summary, as this monitoring extension leverages the power of the AppDynamics BiQ platform, Cisco UCS customers can now slice and dice UCS faults in numerous dimensions for reporting and trend analysis purposes. For example, this query returns all UCS _critical_  faults that were caused by _power-supply_ failure, and had a direct (or a knock-on) effect on a _server_ a or a _network components_ in the _last 7_ days.
 
 > SELECT \* FROM ucs\_faults WHERE cause = &quot;power-supply&quot; AND
 > Severity = &quot;critical&quot; AND Type in (&quot;network&quot;,
 > &quot;server&quot;) SINCE 7 days
 
-In the same vein, the ADQL below uses a regular expression to return the average Rear Temperature (FmTempSenIo) for the Chassis-1/blad-1 server.
+In the same vein, the ADQL below uses regular expression to return the average Rear Temperature for for the first blade server in the first chassis. 
 
 > SELECT avg(toFloat(FmTempSenIo)) FROM ucs\_server\_temperature WHERE
 > Dn REGEXP &quot;sys/chassis-1/blade-1.\*&quot;
 
-Better still, save the ADQL as a metric so it can be executed every minute to plot a time-series graph.
+Better still, you can save the ADQL as a metric so it can be automatically executed every minute to plot a time-series graph.
 
 # Prerequisite
 The following requirments must be met: 
