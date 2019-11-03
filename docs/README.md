@@ -64,7 +64,7 @@ The table below contains a description of some of the configuration properties.
 | tierID  | This is required to monitor the health of the UCS monitoring extension i.e connectivity to AppDynamics, UCS and SNOW.Follow the instructions in this [doc](https://community.appdynamics.com/t5/Knowledge-Base/How-do-I-troubleshoot-missing-custom-metrics-or-extensions/ta-p/28695#Configuring%20an%20Extension) to acquire the component (or tier) ID. |
 
 
-3) Launch PowerShell as an Administrator and run the ./Setup.ps1 script. The Setup.ps1 script performs a one-time   configuration of the following items:
+3) Launch PowerShell as an Administrator, change directory to the extensions folder and run the `.\Setup.ps1` script. The `Setup.ps1` script performs a one-time configuration of the following items:
 
    - Acquires a UCS session and exports the session details into an
    encrypted file in the SecureFolder.
@@ -75,8 +75,8 @@ The table below contains a description of some of the configuration properties.
    - Creates AppDynamics Analytics Schemas – for UCS faults, Power Supply 
    Stats and Chassis temperature.
    
-   - Installs ServiceNow and UCS PowerShell module from Microsoft PSGallary. If your server is behind a firewall and it is blocked from accessing https://www.powershellgallery.com, you&#39;d need to manually download and install the PowerShell modules – refer to the Setup.ps1 script for the module names.
-    - Creates a file named _appd.setup.complete.indicator.txt_ - to indicate that the setup has been successfully created, if and only if the setup was successful.
+   - Installs ServiceNow and UCS PowerShell module from Microsoft PSGallary. If your server is behind a firewall and it is blocked from accessing https://www.powershellgallery.com, you&#39;d need to manually download and install the PowerShell modules – refer to the `Setup.ps1` script for the module names.
+    - Creates a file named `appd.setup.complete.indicator.txt` - to indicate that the setup has been successfully created, if and only if the setup was successful.
     
   | ![Setup](https://user-images.githubusercontent.com/2548160/68075952-b4217200-fda6-11e9-98dd-a4562ccb3128.jpg) |       
   |:--:| 
@@ -90,9 +90,9 @@ The table below contains a description of some of the configuration properties.
  
 
 
-5) Run FaultFinder.ps1 script manually and ensure there are no errors
+5) Run `FaultFinder.ps1` script manually and ensure there are no errors
 6) Restart Machine Agent
-7) Repeat step 4 after 4 minutes, but this time select the PSU schema. You&#39;re expected to see some data.
+7) Repeat step 4 after 4 minutes, but this time select the PSU schema. You&#39;re expected to see some data. 
 
  | ![verify_PSU_data](https://user-images.githubusercontent.com/2548160/68076433-36f8fb80-fdac-11e9-9652-fb62d9baf1c5.png)) | 
  |:--:| 
