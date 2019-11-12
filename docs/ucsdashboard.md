@@ -44,7 +44,6 @@ Navigate to the application that contains the tier ID you provided in the config
  *Health Rule Name*
  - UCS Machine Availability Health
  ![Screenshot 2019-11-12 at 21 42 03](https://user-images.githubusercontent.com/2548160/68713370-95d12880-0595-11ea-9f38-658b8feb935e.png)
-
 *Condition* 
   - No warning condition 
   - A metric value of 1 indicates failure 
