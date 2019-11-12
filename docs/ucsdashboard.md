@@ -39,6 +39,19 @@ Navigate to the application that contains the tier ID you provided in the config
   
   ![UCS1](https://user-images.githubusercontent.com/2548160/68712882-8d2c2280-0594-11ea-9e9d-b9c11e4d9e86.png)
 
+**UCS Machine Availability Health**
+
+ *Health Rule Name*
+ 
+ - UCS Machine Availability Health
+ ![Screenshot 2019-11-12 at 21 42 03](https://user-images.githubusercontent.com/2548160/68713370-95d12880-0595-11ea-9f38-658b8feb935e.png)
+
+*Condition* 
+  - No warning condition 
+  - A metric value of 1 indicates failure 
+  
+  ![Screenshot 2019-11-12 at 21 42 21](https://user-images.githubusercontent.com/2548160/68713472-da5cc400-0595-11ea-9b62-d61d6ed87c94.png)
+
 [DRAFT MODE]
 
 1. Create Analytics Queries 
