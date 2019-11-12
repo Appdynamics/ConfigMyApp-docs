@@ -7,6 +7,14 @@ Config Exporter - Ask your AppDynamics representative to give you the Config Exp
 
 We will use config exporter in this section to import application configurations and health rules into controller. 
 
+# Create Analaytics Queries 
+
+Copy the queries from this gist below and create analytics metrics from them. The metric name should exactly be the same as the value in the gist - 
+https://gist.github.com/iogbole/961a3ab20503a1c90b9ac9896822e6a7.js
+
+Refer to <a href="https://docs.appdynamics.com/display/latest/Create+Analytics+Metrics+From+Scheduled+Queries"> Create Analytics Metrics From Scheduled Queries</a> documentation for details on how to do this. 
+
+
 # Monitor the monitor 
 
 UCS Monitoring extension performs a health check on itself, ServiceNow connectivity (if in use) and connectivity to UCS Manager. 
@@ -49,10 +57,13 @@ Navigate to the application that contains the tier ID you provided in the config
 ![112](https://user-images.githubusercontent.com/2548160/68713582-198b1500-0596-11ea-88ef-78717f7d908c.jpg)
 
 
+
+
+
 [DRAFT MODE]
 
 1. Create Analytics Queries 
-2. Import Analytics Health Rules 
+2. Import 
 3. Import ucs-monitor application 
 4. Import Dashboard JSON 
 5. Configure RBAC
