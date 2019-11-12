@@ -45,7 +45,7 @@ Navigate to the application that contains the tier ID you provided in the config
  
 *Condition* 
   - No warning condition 
-  - A metric value of 1 indicates failure 
+  - A metric value of 1 indicates success 
 ![112](https://user-images.githubusercontent.com/2548160/68713582-198b1500-0596-11ea-88ef-78717f7d908c.jpg)
 
 
