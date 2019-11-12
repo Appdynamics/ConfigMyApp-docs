@@ -9,7 +9,7 @@ We will use config exporter in this section to import application configurations
 
 # Create Analytics Metrics 
 
-Copy the queries from this <a href="https://gist.github.com/iogbole/961a3ab20503a1c90b9ac9896822e6a7#file-queries-txt" target="_blank"> GitHub gist file </a> and create analytics metrics from them. The metric name should exactly be the same as the value in the gist - 
+Copy the queries from this <a href="https://gist.github.com/iogbole/961a3ab20503a1c90b9ac9896822e6a7#file-queries-txt" target="_blank"> GitHub gist file </a> and create analytics metrics from them. The metric name should exactly be the same as the value in the gist
 
 
 Refer to the <a href="https://docs.appdynamics.com/display/latest/Create+Analytics+Metrics+From+Scheduled+Queries"> Create Analytics Metrics From Scheduled Queries</a> documentation for details on how to do this. 
