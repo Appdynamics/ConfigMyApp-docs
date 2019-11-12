@@ -15,9 +15,8 @@ Navigate to the application that contains the tier ID you provided in the config
 
 **SNOW Connectivity Health**
 
- *Health Rule Name*
- - SNOW Connectivity Health
- 
+ *Health Rule Name:  SNOW Connectivity Health*
+
  ![SNOW](https://user-images.githubusercontent.com/2548160/68711065-c793c080-0590-11ea-8b9a-30914ac72380.png)
 
   *Condition* 
@@ -28,9 +27,8 @@ Navigate to the application that contains the tier ID you provided in the config
 
 **UCS Connectivity Health**
 
- *Health Rule Name*
-  - UCS Connectivity Health
-  
+ *Health Rule Name: UCS Connectivity Health*
+ 
   ![UCS](https://user-images.githubusercontent.com/2548160/68712728-3c1c2e80-0594-11ea-9226-33ac014273d9.png)
  
  *Condition* 
@@ -41,8 +39,8 @@ Navigate to the application that contains the tier ID you provided in the config
 
 **UCS Machine Availability Health**
 
- *Health Rule Name*
- - UCS Machine Availability Health
+ *Health Rule Name: UCS Machine Availability Health*
+ 
  ![Screenshot 2019-11-12 at 21 42 03](https://user-images.githubusercontent.com/2548160/68713370-95d12880-0595-11ea-9f38-658b8feb935e.png)
  
 *Condition* 
