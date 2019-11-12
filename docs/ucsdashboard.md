@@ -7,12 +7,12 @@ Config Exporter - Ask your AppDynamics representative to give you the Config Exp
 
 We will use config exporter in this section to import application configurations and health rules into controller. 
 
-# Create Analaytics Queries 
+# Create Analytics Metrics 
 
 Copy the queries from this gist below and create analytics metrics from them. The metric name should exactly be the same as the value in the gist - 
 https://gist.github.com/iogbole/961a3ab20503a1c90b9ac9896822e6a7#file-queries-txt
 
-Refer to <a href="https://docs.appdynamics.com/display/latest/Create+Analytics+Metrics+From+Scheduled+Queries"> Create Analytics Metrics From Scheduled Queries</a> documentation for details on how to do this. 
+Refer to the <a href="https://docs.appdynamics.com/display/latest/Create+Analytics+Metrics+From+Scheduled+Queries"> Create Analytics Metrics From Scheduled Queries</a> documentation for details on how to do this. 
 
 
 # Monitor the monitor 
