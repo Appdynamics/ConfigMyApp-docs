@@ -27,6 +27,7 @@ Navigate to the application that contains the tier ID you provided in the config
  ![condition](https://user-images.githubusercontent.com/2548160/68712168-0cb8f200-0593-11ea-9494-1cda611080b7.jpg)
 
 **UCS Connectivity Health**
+
  *Health Rule Name*
   - UCS Connectivity Health
   
