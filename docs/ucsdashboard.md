@@ -23,16 +23,19 @@ Navigate to the application that contains the tier ID you provided in the config
   *Condition* 
   - No warning condition 
   - A metric value of 1 indicates failure 
+  
  ![condition](https://user-images.githubusercontent.com/2548160/68712168-0cb8f200-0593-11ea-9494-1cda611080b7.jpg)
 
 **UCS Connectivity Health**
  *Health Rule Name*
   - UCS Connectivity Health
+  
   ![UCS](https://user-images.githubusercontent.com/2548160/68712728-3c1c2e80-0594-11ea-9226-33ac014273d9.png)
  
  *Condition* 
   - No warning condition 
   - A metric value of 1 indicates failure 
+  
   ![UCS1](https://user-images.githubusercontent.com/2548160/68712882-8d2c2280-0594-11ea-9e9d-b9c11e4d9e86.png)
 
 [DRAFT MODE]
