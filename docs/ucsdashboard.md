@@ -50,7 +50,8 @@ Navigate to the application that contains the tier ID you provided in the config
   - No warning condition 
   - A metric value of 1 indicates failure 
   
-  ![Screenshot 2019-11-12 at 21 42 21](https://user-images.githubusercontent.com/2548160/68713472-da5cc400-0595-11ea-9b62-d61d6ed87c94.png)
+![112](https://user-images.githubusercontent.com/2548160/68713582-198b1500-0596-11ea-88ef-78717f7d908c.jpg)
+
 
 [DRAFT MODE]
 
