@@ -14,11 +14,14 @@ UCS Monitoring extension performs a health check on itself, ServiceNow connectiv
 Navigate to the application that contains the tier ID you provided in the config.json file and the create the following health rules using exact name: 
 
 **SNOW Connectivity Health**
-Health Rule Name: SNOW Connectivity Health
-![SNOW](https://user-images.githubusercontent.com/2548160/68711065-c793c080-0590-11ea-8b9a-30914ac72380.png)
+ Health Rule Name: SNOW Connectivity Health
+ ![SNOW](https://user-images.githubusercontent.com/2548160/68711065-c793c080-0590-11ea-8b9a-30914ac72380.png)
 
-Conditition 
-![condition](https://user-images.githubusercontent.com/2548160/68711957-a207b680-0592-11ea-8b6a-a1392dceadfe.png)
+ Conditition 
+ ![condition](https://user-images.githubusercontent.com/2548160/68712168-0cb8f200-0593-11ea-9494-1cda611080b7.jpg)
+
+
+
 
 
 
