@@ -95,16 +95,22 @@ Navigate to the application that contains the tier ID you provided in the config
 # Role Based Access Control 
 If you'd like to restrict access to the UCS dashboard, you'd need to create a UCS Dashboard viewer role. Note that this role need to be able to query the faults, psu and temperature schemas respectively. Follow the screenshots: 
 
+Navigate to the Administrator's page and Add a role: 
+
+Under Applications, select Analytics and the application that contains the tierID you provided in the config.json file 
+
 ![1](https://user-images.githubusercontent.com/2548160/68866002-a8f60c80-06eb-11ea-8c57-c521310fae57.jpg)
+
+Under Analytics, Events, Select Custom Analytics Events 
 
 ![2](https://user-images.githubusercontent.com/2548160/68866008-abf0fd00-06eb-11ea-8ad6-6aa34f9e594b.jpg)
 
+Then add all 3 ucs schemas 
+
 ![3](https://user-images.githubusercontent.com/2548160/68866014-aeebed80-06eb-11ea-9b6e-d963fc317d46.jpg)
 
-Assign the role to a user or group - depending on your need. 
-
+Finally, assign the role to a user or group - depending on your need. 
 ![4](https://user-images.githubusercontent.com/2548160/68866017-b0b5b100-06eb-11ea-9103-d2004eb9f3bb.jpg)
  
-
 
 *Config Exporter - Ask your AppDynamics representative to give you the Config Exporter tool if you don't already have it. Config exporter be used to migrate configuration between controllers or applications. The configuration can be imported directly into another controller/application or it can be download as a file. 
