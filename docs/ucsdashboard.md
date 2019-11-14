@@ -1,12 +1,6 @@
 
 <p><img align="right" width="100" height="60" src="https://user-images.githubusercontent.com/2548160/68075860-ba631e80-fda5-11e9-8457-07859944ae08.png"> </p><strong> Cisco UCS Monitoring Extension</strong>
 
-# Required Tool
-
-Config Exporter - Ask your AppDynamics representative to give you the Config Exporter tool if you don't already have it. Config exporter be used to migrate configuration between controllers or applications. The configuration can be imported directly into another controller/application or it can be download as a file. 
-
-We will use config exporter in this section to import application configurations and health rules into controller. 
-
 # Create Analytics Metrics 
 
 Copy the queries from  <a href="https://gist.github.com/iogbole/961a3ab20503a1c90b9ac9896822e6a7#file-queries-txt" target="_blank" > this Gist </a> and create analytics metrics from them. The metric name should exactly be the same as the value in the gist
@@ -38,11 +32,11 @@ Using *UCS_StorageDisk_Health* as an example:
 
 ![Screenshot 2019-11-14 at 12 44 57](https://user-images.githubusercontent.com/2548160/68859861-2582ee00-06e0-11ea-9993-d6e9574bdfc0.png)
 
+Condition
 
 ![Screenshot 2019-11-14 at 12 45 07](https://user-images.githubusercontent.com/2548160/68859874-2a47a200-06e0-11ea-8201-a48c6f4459b3.png)
 
-
-# Monitor the monitor 
+# Monitoring the monitor 
 
 UCS Monitoring extension performs a health check on itself, ServiceNow connectivity (if in use) and connectivity to UCS Manager. 
 
@@ -84,6 +78,22 @@ Navigate to the application that contains the tier ID you provided in the config
 ![112](https://user-images.githubusercontent.com/2548160/68713582-198b1500-0596-11ea-88ef-78717f7d908c.jpg)
 
 
+# Upload the dashboard 
+1. Download the dashboard JSON file from this Gist. 
+2. Get your analytics applicationName from the controller. Navigate to  Analytics - Alert & Response - Health Rules. Select any health rule and note down the value under "Policy Executed On" coulmn as indicated in the screenshot below
+ 
+![Health Rules - AppDynamics 2019-11-14 13-53-40](https://user-images.githubusercontent.com/2548160/68862911-38002600-06e6-11ea-8b2d-24eb8ac98b25.jpg)
+
+3. Open the UCS_Dashoard.JSON file in your favourite text editor and find and replace all instances of "AppDynamics Analytics-249" with the value from step 2. 
+
+4. Upload the dashboard 
+
+5. Update any missing health status manually  - including the UCS extension health check status 
+
+6. Make it your own 
+
+
+# Role Based Access Control 
 
 
 
@@ -94,3 +104,5 @@ Navigate to the application that contains the tier ID you provided in the config
 3. Import ucs-monitor application 
 4. Import Dashboard JSON 
 5. Configure RBAC
+
+*Config Exporter - Ask your AppDynamics representative to give you the Config Exporter tool if you don't already have it. Config exporter be used to migrate configuration between controllers or applications. The configuration can be imported directly into another controller/application or it can be download as a file. 
