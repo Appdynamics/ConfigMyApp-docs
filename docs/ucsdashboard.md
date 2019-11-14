@@ -3,16 +3,15 @@
 
 # Create Analytics Metrics 
 
-Copy the queries from  <a href="https://gist.github.com/iogbole/961a3ab20503a1c90b9ac9896822e6a7#file-queries-txt" target="_blank" > this Gist </a> and create analytics metrics from them. The metric name should exactly be the same as the value in the gist
-
+Copy the queries from  <a href="https://gist.github.com/iogbole/961a3ab20503a1c90b9ac9896822e6a7#file-queries-txt" target="_blank" > this Gist </a> and create analytics metrics from them. Your metric names should match the values in the gist. 
 
 Refer to the <a href="https://docs.appdynamics.com/display/latest/Create+Analytics+Metrics+From+Scheduled+Queries"> Create Analytics Metrics From Scheduled Queries</a> documentation for details on how to do this. 
 
 # Create Analytics Health Rules 
 
-Create health rules from the scheduled queries in the previous section. You may use the AppDynamcis Config Exporter* tool to import the health rules from <a href="https://gist.github.com/iogbole/961a3ab20503a1c90b9ac9896822e6a7#file-analytics-health-rules-json" target= "_blank">this Gist</a> into your controller. Config Exporter has limited functionalities Controller version 4.5.12, and may be completely depreciated in version 4.5.16 - so your mileage may differ depending on your controller version. 
+Create health rules from the scheduled queries in the previous section. You may use the AppDynamcis Config Exporter* tool to import the health rules from <a href="https://gist.github.com/iogbole/961a3ab20503a1c90b9ac9896822e6a7#file-analytics-health-rules-json" target= "_blank">this Gist</a> into your controller. Config Exporter has limited functionalities in Controller version 4.5.12, and may be completely depreciated in version 4.5.16 - so your mileage may differ depending on your controller version. 
 
-The other alternative is to manaully create the health rules. Using these exact names. The names should be exactly thesame otherwise, you will be required to update the dashboard JSON file. 
+The other alternative is to manaully create the health rules. Again,the names should be exactly thesame otherwise, you will be required to update the dashboard JSON file. 
 
                   "name" : "UCS_StorageDisk_Health",
                   "name" : "UCS_Blade_Server_Health",
@@ -76,7 +75,6 @@ Navigate to the application that contains the tier ID you provided in the config
   - No warning condition 
   - A metric value of 1 indicates success 
 ![112](https://user-images.githubusercontent.com/2548160/68713582-198b1500-0596-11ea-88ef-78717f7d908c.jpg)
-
 
 # Upload the dashboard 
 1. Download the dashboard JSON file from <a href="https://gist.github.com/iogbole/961a3ab20503a1c90b9ac9896822e6a7#file-ucs_dashboard-json" taget="_blank">this Gist</a>. 
