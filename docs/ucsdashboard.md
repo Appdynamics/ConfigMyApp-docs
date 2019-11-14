@@ -9,30 +9,38 @@ We will use config exporter in this section to import application configurations
 
 # Create Analytics Metrics 
 
-Copy the queries from  <a href="https://gist.github.com/iogbole/961a3ab20503a1c90b9ac9896822e6a7#file-queries-txt" target="_blank"> this Gist </a> and create analytics metrics from them. The metric name should exactly be the same as the value in the gist
+Copy the queries from  <a href="https://gist.github.com/iogbole/961a3ab20503a1c90b9ac9896822e6a7#file-queries-txt" target="_blank" > this Gist </a> and create analytics metrics from them. The metric name should exactly be the same as the value in the gist
 
 
 Refer to the <a href="https://docs.appdynamics.com/display/latest/Create+Analytics+Metrics+From+Scheduled+Queries"> Create Analytics Metrics From Scheduled Queries</a> documentation for details on how to do this. 
 
 # Create Analytics Health Rules 
 
-Create health rules from the scheduled queries in the previous section. You may use the AppDynamcis Config Exporter* tool to import the health rules from <a href="https://gist.github.com/iogbole/961a3ab20503a1c90b9ac9896822e6a7#file-analytics-health-rules-json" target"_blank">this Gist</a> into your controller. Config Exporter has limited functionalities Controller version 4.5.12, and may be completely depreciated in version 4.5.16 - so your mileage may differ depending on your controller version. 
+Create health rules from the scheduled queries in the previous section. You may use the AppDynamcis Config Exporter* tool to import the health rules from <a href="https://gist.github.com/iogbole/961a3ab20503a1c90b9ac9896822e6a7#file-analytics-health-rules-json" target= "_blank">this Gist</a> into your controller. Config Exporter has limited functionalities Controller version 4.5.12, and may be completely depreciated in version 4.5.16 - so your mileage may differ depending on your controller version. 
 
-The other alternative is to manaully create the health rules. Using these exact names: 
+The other alternative is to manaully create the health rules. Using these exact names. The names should be exactly thesame otherwise, you will be required to update the dashboard JSON file. 
 
-     "name" : "UCS_StorageDisk_Health",
-     "name" : "UCS_Blade_Server_Health",
-     "name" : "UCS_RackUnit_CPU_Health",
-     "name" : "UCS_NumberOfFaults",
-     "name" : "UCS_RackUnit_PSU_Health",
-     "name" : "UCS_Chassis_PSU_Health",
-     "name" : "UCS_FanModule_Health",
-     "name" : "UCS_Adaptor_vNICs_Health",
-     "name" : "UCS_Chassis_IOM_Health",
-     "name" : "UCS_Fabric_Interconnect_Health",
-     "name" : "UCS_RackUnit_PSU_Health",
+                  "name" : "UCS_StorageDisk_Health",
+                  "name" : "UCS_Blade_Server_Health",
+                  "name" : "UCS_RackUnit_CPU_Health",
+                  "name" : "UCS_NumberOfFaults",
+                  "name" : "UCS_RackUnit_PSU_Health",
+                  "name" : "UCS_Chassis_PSU_Health",
+                  "name" : "UCS_FanModule_Health",
+                  "name" : "UCS_Adaptor_vNICs_Health",
+                  "name" : "UCS_Chassis_IOM_Health",
+                  "name" : "UCS_Fabric_Interconnect_Health",
+                  "name" : "UCS_RackUnit_PSU_Health"
 
-A full list of the health rule names, including UCS servers' power supply and temperature telemetry baselining can be found in <a href="https://gist.github.com/iogbole/961a3ab20503a1c90b9ac9896822e6a7#file-health-rule-names-json">this Gist</a>. 
+A full list of the health rule names, including UCS servers' power supply and temperature telemetry baselining can be found in <a href="https://gist.github.com/iogbole/961a3ab20503a1c90b9ac9896822e6a7#file-health-rule-names-json" target="_blank">this Gist</a>. 
+
+Using *UCS_StorageDisk_Health* as an example:  
+
+![Screenshot 2019-11-14 at 12 44 57](https://user-images.githubusercontent.com/2548160/68859861-2582ee00-06e0-11ea-9993-d6e9574bdfc0.png)
+
+
+![Screenshot 2019-11-14 at 12 45 07](https://user-images.githubusercontent.com/2548160/68859874-2a47a200-06e0-11ea-8201-a48c6f4459b3.png)
+
 
 # Monitor the monitor 
 
