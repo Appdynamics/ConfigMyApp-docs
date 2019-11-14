@@ -14,6 +14,8 @@ Copy the queries from this <a href="https://gist.github.com/iogbole/961a3ab20503
 
 Refer to the <a href="https://docs.appdynamics.com/display/latest/Create+Analytics+Metrics+From+Scheduled+Queries"> Create Analytics Metrics From Scheduled Queries</a> documentation for details on how to do this. 
 
+# Create Analytics Health Rules 
+Create health rules from the scheduled queries in the previous section. You may use the AppDynamcis Config Exporter tool to import the health rueles from this file into your controller. Config Exporter no longer works from Controller version 4.5.12 and latest so your mileage may differ depending on your controller version. The other alternative is to manaully create the health rules. Using these names: 
 
 # Monitor the monitor 
 
