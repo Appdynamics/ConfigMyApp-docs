@@ -79,7 +79,7 @@ Navigate to the application that contains the tier ID you provided in the config
 
 
 # Upload the dashboard 
-1. Download the dashboard JSON file from this Gist. 
+1. Download the dashboard JSON file from <a href="https://gist.github.com/iogbole/961a3ab20503a1c90b9ac9896822e6a7#file-ucs_dashboard-json" taget="_blank">this Gist</a>. 
 2. Get your analytics applicationName from the controller. Navigate to  Analytics - Alert & Response - Health Rules. Select any health rule and note down the value under "Policy Executed On" coulmn as indicated in the screenshot below
  
 ![Health Rules - AppDynamics 2019-11-14 13-53-40](https://user-images.githubusercontent.com/2548160/68862911-38002600-06e6-11ea-8b2d-24eb8ac98b25.jpg)
@@ -92,17 +92,19 @@ Navigate to the application that contains the tier ID you provided in the config
 
 6. Make it your own 
 
-
 # Role Based Access Control 
+If you'd like to restrict access to the UCS dashboard, you'd need to create a UCS Dashboard viewer role. Note that this role need to be able to query the faults, psu and temperature schemas respectively. Follow the screenshots: 
 
+![1](https://user-images.githubusercontent.com/2548160/68866002-a8f60c80-06eb-11ea-8c57-c521310fae57.jpg)
 
+![2](https://user-images.githubusercontent.com/2548160/68866008-abf0fd00-06eb-11ea-8ad6-6aa34f9e594b.jpg)
 
-[DRAFT MODE]
+![3](https://user-images.githubusercontent.com/2548160/68866014-aeebed80-06eb-11ea-9b6e-d963fc317d46.jpg)
 
-1. Create Analytics Queries 
-2. Import 
-3. Import ucs-monitor application 
-4. Import Dashboard JSON 
-5. Configure RBAC
+Assign the role to a user or group - depending on your need. 
+
+![4](https://user-images.githubusercontent.com/2548160/68866017-b0b5b100-06eb-11ea-9103-d2004eb9f3bb.jpg)
+ 
+
 
 *Config Exporter - Ask your AppDynamics representative to give you the Config Exporter tool if you don't already have it. Config exporter be used to migrate configuration between controllers or applications. The configuration can be imported directly into another controller/application or it can be download as a file. 
