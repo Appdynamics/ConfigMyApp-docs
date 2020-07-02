@@ -1,5 +1,5 @@
 title: ConfigMyApp
-description: AppDynamics configuration-as-code self service tool  
+description: A self-service configuration-as-code tool
 show_downloads: true
 google_analytics:
 theme: jekyll-theme-architect
