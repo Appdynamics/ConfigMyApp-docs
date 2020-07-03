@@ -7,6 +7,10 @@
 Monitoring as a service (MaaS) is one of many cloud delivery models under anything as a service (XaaS). It is a framework that facilitates the deployment of monitoring functionalities for various other services and applications within the cloud, usually via a CI/CD pipeline. 
 
 ConfigMyApp was built to enable AppDynamics customers actualise thier MaaS objectives. ConfigMyApp is designed based on the DevOps configuration-as-code paradigm. It is primarily built to enhance large scale application configuration and dashboarding with a specific objective in mind - the ability to plug it into customers' Continous Integration and Deployment pipelines - such as Jenkins, Harness, TeamCity, GitLab, Bamboo, etc. 
+
+How it works 
+
+![How it works](https://user-images.githubusercontent.com/2548160/79471051-03c4c480-7ffa-11ea-9405-133f9e9ee4eb.png)
  
 ConfigMyApp currently supports the following configurations (as-code): 
  
