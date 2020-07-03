@@ -4,11 +4,11 @@
 
 # Introduction
 
-Monitoring as a service (MaaS) is one of many cloud delivery models under anything as a service (XaaS). It is a framework that facilitates the deployment of monitoring functionalities for various other services and applications within the cloud, usually via a CI/CD pipeline. 
+Monitoring as a service (MaaS) is one of many cloud delivery models under anything as a service (XaaS). It is a framework that facilitates the deployment of monitoring functionalities for various other services and applications within the cloud, usually via a CI/CD pipeline. ConfigMyApp was built to enable AppDynamics customers actualise thier MaaS objectives.
 
-ConfigMyApp was built to enable AppDynamics customers actualise thier MaaS objectives. ConfigMyApp is designed based on the DevOps configuration-as-code paradigm. It is primarily built to enhance large scale application configuration and dashboarding with a specific objective in mind - the ability to plug it into customers' Continous Integration and Deployment pipelines - such as Jenkins, Harness, TeamCity, GitLab, Bamboo, etc. 
+ConfigMyApp design is based on the DevOps configuration-as-code paradigm. It is primarily built to enhance medium and large scale application configuration and dashboarding with a specific objective in mind - the ability to plug it into customers' Continous Integration and Deployment pipelines - such as Jenkins, Harness, TeamCity, GitLab, Bamboo, etc. 
 
-How it works 
+# How it works 
 
 ![How it works](https://user-images.githubusercontent.com/2548160/79471051-03c4c480-7ffa-11ea-9405-133f9e9ee4eb.png)
  
@@ -41,14 +41,3 @@ Please do not proceed with the extension installation if any of the aforemention
 **Harness** 
 **Jenkins**
 **Docker**
-
-| **Config Property Name** | **Description** |
-| --- | --- |
-| UCSPasswordEncyptionKey  | Any string of your choice. This key is used to encrypt and decrypt UCS connection details. |
-| UCSURL  | Specify the IP Address or domain name of UCS manager. Please do not include the http/s bit |
-| analyticsEndpoint  | This is the analytics endpoint of your controller. This differs depending on the location of your controller. Please refer to this [doc](https://docs.appdynamics.com/display/PAA/SaaS+Domains+and+IP+Ranges). |
-| X-Events-API-AccountName  | You can get the global account name to use from the [License page](https://docs.appdynamics.com/display/latest/License+Management)  |
-| X-Events-API-Key  | Create the analytics API Key by following the instruction in this[doc](https://docs.appdynamics.com/display/latest/Managing+API+Keys).  Grant Manage, Query and Publish permissions to Custom Analytics Events. |
-| EnableServiceNow  | Set to &#39;yes&#39; or &#39;no&#39;. Other ServiceNOW properties are required if set to yes, else, ignore them. |
-| tierID  | This is required to monitor the health of the UCS monitoring extension i.e connectivity to AppDynamics, UCS and SNOW.Follow the instructions in this [doc](https://community.appdynamics.com/t5/Knowledge-Base/How-do-I-troubleshoot-missing-custom-metrics-or-extensions/ta-p/28695#Configuring%20an%20Extension) to acquire the component (or tier) ID. |
-
