@@ -127,9 +127,64 @@ Configuration file used by ConfigMyApp can be found in the root of the project: 
 | Application | `-` | configure business transactions only  |  :heavy_multiplication_x: |
 
 
+# Running a script
+
+This section contains examples of running a ConfigMyApp script, it should be adjusted to fit your use-case and here are some of the common ones:
+
+> Server visibility
+
+```
+./start.sh --application-name <app-name> --include-sim
+```
+
+> Database visibility
+
+```
+./start.sh --application-name <app-name> --include-database  ---database=’DB collector name’
+```
+
+> Health rules
+
+```
+./start.sh --application-name <app-name>  --no-overwrite-health-rules
+```
+
+> Business transactions
+
+```
+./start.sh --application-name <app-name>  --configure-bt
+```
+```
+./start.sh --application-name <app-name>  ---bt-only
+```
+
+> Full configuration parameters
+
+```
+./start.sh --application-name <app-name>  \ 
+                     -c "http://customer1.saas.appdynamics.com" \ 
+                     -P “8090” \ 
+                      --account customer1 \
+                     -p "<password>" \ 
+                     -u "username" \ 
+                    --no-configure-bt \
+                    --include-database \
+                    --database-name ’DB Collector Name’ \
+                    --include-sim  \ 
+                    --use-https  \ 
+                    --proxy-url localhost  \
+                    --proxy-port 3303  \ 
+                    --overwrite-health-rules \ 
+                    --use-encoded-credentials
+
+```
+
+
 # Integrations 
 
 ## Harness
+
+<TODO>
 
 ## Jenkins
 
