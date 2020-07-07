@@ -69,7 +69,7 @@ It is going to print out all the flags available to use. Current list of paramet
 | Application | `--overwrite-health-rules` | overwrite health rules (true by default) |  :heavy_multiplication_x: |
 | Application | `--bt-only, --no-bt-only` | configure business transactions only  |  :heavy_multiplication_x: |
 
-Please note that you can run the script in debug mode by using `--debug` flag, in which case the connection and other parameters used are going to be printed out in the console in order to help setting us the environment. We do not recommend using this flag in production, and it is set to `false` by default.
+Please note that you can run the script in debug mode by using `--debug` flag, in which case the connection and other parameters used are going to be printed out in the console in order to help setting up the environment. We do not recommend using this flag in production, and it is set to `false` by default.
 
 ## Environment variables
 
