@@ -176,7 +176,6 @@ This section contains examples of running a ConfigMyApp script, it should be adj
                     --proxy-port 3303  \ 
                     --overwrite-health-rules \ 
                     --use-encoded-credentials
-
 ```
 
 
@@ -184,7 +183,7 @@ This section contains examples of running a ConfigMyApp script, it should be adj
 
 ## Harness
 
-<TODO>
+> TODO 
 
 ## Jenkins
 
