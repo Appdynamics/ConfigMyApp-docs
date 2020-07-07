@@ -27,11 +27,30 @@ Please do not proceed with the extension installation if any of the aforemention
 
 # Installation
 
-## ConfigMyApp Configuration Setting
+# Configuring input parameters
 
-## Environment variables setting
+ConfigMyApp accepts arguments from 3 sources, where parameters configured in runtime takes precedence over environment variables, and environment variables over configuration json file. Therefore, priority order is the following:
 
-# Run-time parameters  
+1. Runtime parameters 
+2. Environment variables 
+3. Configuration file config.json 
+
+## Runtime parameters  
+
+To get all of the parameters available to pass in runtime, you can use the help command of the `start.sh` script:
+```
+./start.sh --help
+```
+
+It is going to print out all the flags available to use. 
+
+Please note that you can run the script in debug mode by using `--debug` flag, in which case the connection and other parameters used are going to be printed out in the console in order to help setting us the environment. We do not recommend using this flag in production, and it is set to `false` by default.
+
+## Environment variables
+
+## Configuration file
+
+
 
 # Integrations 
 
