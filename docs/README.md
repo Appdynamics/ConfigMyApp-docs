@@ -35,7 +35,7 @@ ConfigMyApp accepts arguments from 3 sources, where parameters configured in run
 2. Environment variables 
 3. Configuration file config.json 
 
-Note that mandatory parameters need to be provided in any (and not all) of the available ways configuration listed above in order for ConfigMyApp to be able to start.
+Note that mandatory parameters need to be provided in any (and not all) of the available ways of configuration listed above in order for ConfigMyApp to be able to start.
 
 ## Runtime parameters  
 
@@ -75,7 +75,7 @@ Please note that you can run the script in debug mode by using `--debug` flag, i
 
 Environment variabels used by ConfigMyApp start with `CMA_` and if not empty, will be used to fill-in parameters values not explicitly set in runtime. List of the environment variables currently used is the following:
 
-| Section       | Parameter  | Description  | Mandatory parameter |
+| Section       | Environment Variable  | Description  | Mandatory parameter |
 | ------ |:------- | :--------- |  :----: |
 | Connection | `CMA_CONTROLLER_HOST` | controller host | :heavy_check_mark: |
 | Connection | `CMA_CONTROLLER_PORT` | controller port | :heavy_multiplication_x: |
@@ -101,6 +101,30 @@ Environment variabels used by ConfigMyApp start with `CMA_` and if not empty, wi
 
 ## Configuration file
 
+Configuration file used by ConfigMyApp can be found in the root of the project: `config.json`, and contains configuration that is going to be used in case when runtime parameter is not specified and environment variable for the parameter does not exist. The following table contains details of the JSON configuration:
+
+| Section       | JSON path  | Description  | Mandatory parameter |
+| ------ |:------- | :--------- |  :----: |
+| Connection | `.controller_details[].host` | controller host | :heavy_check_mark: |
+| Connection | `.controller_details[].port` | controller port | :heavy_multiplication_x: |
+| Connection | `.controller_details[].use_https` | if true, specifies that the agent should use SSL | :heavy_multiplication_x: |
+| Account | `.controller_details[].account` | account name | :heavy_check_mark: |
+| Account | `.controller_details[].username` | appd user username | :heavy_check_mark: |
+| Account | `.controller_details[].password` | appd user password (no default) | :heavy_check_mark: |
+| Account | `.are_passwords_encoded` | use base64 encoded credentials  | :heavy_multiplication_x: |
+| Proxy | `.controller_details[].use_proxy` | use proxy optional argument | :heavy_multiplication_x: |
+| Proxy | `.controller_details[].proxy_url` | proxy url | :heavy_multiplication_x: |
+| Proxy | `.controller_details[].proxy_port` | proxy port | :heavy_multiplication_x: |
+| Branding | `.branding[].enabled` | enable branding | :heavy_multiplication_x: |
+| Branding | `.branding[].logo_file_name` | logo image file name | :heavy_multiplication_x: |
+| Branding | `.branding[].background_file_name` | background image file name | :heavy_multiplication_x: |
+| Application | `.configuration[].application_name` | application name | :heavy_check_mark: |
+| Application | `.configuration[].include_database` | include database | :heavy_multiplication_x: |
+| Application | `.configuration[].database_name` | database name, mandatory if include-database set to true |  :heavy_multiplication_x: |
+| Application | `.configuration[].include_sim` | include server visibility |  :heavy_multiplication_x: |
+| Application | `.configuration[].configure_bt` | configure busness transactions (false by default) |  :heavy_multiplication_x: |
+| Application | `.overwrite_health_rules` | overwrite health rules (true by default) |  :heavy_multiplication_x: |
+| Application | `-` | configure business transactions only  |  :heavy_multiplication_x: |
 
 
 # Integrations 
