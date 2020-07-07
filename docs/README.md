@@ -42,9 +42,33 @@ To get all of the parameters available to pass in runtime, you can use the help 
 ./start.sh --help
 ```
 
-It is going to print out all the flags available to use. 
+It is going to print out all the flags available to use. Current list of parameters is the following:
+
+| Section       | Parameter  | Description  | Mandatory |
+| ------ |:------- | :--------- |  :----: |
+| Connection | `-c, --controller-host` | controller host (no default) | :heavy_check_mark: |
+| Connection | `-P, --controller-port` | controller port (8090 by default) | :heavy_multiplication_x: |
+| Connection | `--use-https, --no-use-https` | if on, specifies that the agent should use SSL (false by default) | :heavy_multiplication_x: |
+| Account | `--account` | account name (customer1 by default) | :heavy_check_mark: |
+| Account | `-u, --username` | appd user username (no default) | :heavy_check_mark: |
+| Account | `-p, --password` | appd user password (no default) | :heavy_check_mark: |
+| Account | `--use-encoded-credentials, --no-use-encoded-credentials` | use base64 encoded credentials (false by default) | :heavy_multiplication_x: |
+| Proxy | `--use-proxy, --no-use-proxy` | use proxy optional argument (false by default) | :heavy_multiplication_x: |
+| Proxy | `--proxy-url` | proxy url (no default) | :heavy_multiplication_x: |
+| Proxy | `--proxy-port` | proxy port (no default) | :heavy_multiplication_x: |
+| Branding | `--use-branding, --no-use-branding` | enable branding (true by default) | :heavy_multiplication_x: |
+| Branding | `--logo-name` | logo image file name (no default) | :heavy_multiplication_x: |
+| Branding | `--background-name` | background image file name (no default) | :heavy_multiplication_x: |
+| Application | `-a, --application-name` | application name (no default) | :heavy_check_mark: |
+| Application | `--include-database, --no-include-database` | include database (false by default) | :heavy_multiplication_x: |
+| Application | `-d, --database-name` | database name, mandatory if include-database set to true (no default) |  :heavy_multiplication_x: |
+| Application | `-s, --include-sim` | include server visibility (false by default) |  :heavy_multiplication_x: |
+| Application | `-b, --configure-bt` | configure busness transactions (false by default) |  :heavy_multiplication_x: |
+| Application | `--overwrite-health-rules` | overwrite health rules (true by default) |  :heavy_multiplication_x: |
+| Application | `--bt-only, --no-bt-only` | configure business transactions only  |  :heavy_multiplication_x: |
 
 Please note that you can run the script in debug mode by using `--debug` flag, in which case the connection and other parameters used are going to be printed out in the console in order to help setting us the environment. We do not recommend using this flag in production, and it is set to `false` by default.
+
 
 ## Environment variables
 
