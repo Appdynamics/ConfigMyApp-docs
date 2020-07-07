@@ -35,6 +35,8 @@ ConfigMyApp accepts arguments from 3 sources, where parameters configured in run
 2. Environment variables 
 3. Configuration file config.json 
 
+Note that mandatory parameters need to be provided in any (and not all) of the available ways configuration listed above in order for ConfigMyApp to be able to start.
+
 ## Runtime parameters  
 
 To get all of the parameters available to pass in runtime, you can use the help command of the `start.sh` script:
@@ -44,11 +46,11 @@ To get all of the parameters available to pass in runtime, you can use the help 
 
 It is going to print out all the flags available to use. Current list of parameters is the following:
 
-| Section       | Parameter  | Description  | Mandatory |
+| Section       | Parameter  | Description  | Mandatory parameter |
 | ------ |:------- | :--------- |  :----: |
 | Connection | `-c, --controller-host` | controller host (no default) | :heavy_check_mark: |
 | Connection | `-P, --controller-port` | controller port (8090 by default) | :heavy_multiplication_x: |
-| Connection | `--use-https, --no-use-https` | if on, specifies that the agent should use SSL (false by default) | :heavy_multiplication_x: |
+| Connection | `--use-https, --no-use-https` | if true, specifies that the agent should use SSL (false by default) | :heavy_multiplication_x: |
 | Account | `--account` | account name (customer1 by default) | :heavy_check_mark: |
 | Account | `-u, --username` | appd user username (no default) | :heavy_check_mark: |
 | Account | `-p, --password` | appd user password (no default) | :heavy_check_mark: |
@@ -69,8 +71,33 @@ It is going to print out all the flags available to use. Current list of paramet
 
 Please note that you can run the script in debug mode by using `--debug` flag, in which case the connection and other parameters used are going to be printed out in the console in order to help setting us the environment. We do not recommend using this flag in production, and it is set to `false` by default.
 
-
 ## Environment variables
+
+Environment variabels used by ConfigMyApp start with `CMA_` and if not empty, will be used to fill-in parameters values not explicitly set in runtime. List of the environment variables currently used is the following:
+
+| Section       | Parameter  | Description  | Mandatory parameter |
+| ------ |:------- | :--------- |  :----: |
+| Connection | `CMA_CONTROLLER_HOST` | controller host | :heavy_check_mark: |
+| Connection | `CMA_CONTROLLER_PORT` | controller port | :heavy_multiplication_x: |
+| Connection | `CMA_USE_HTTPS` | if true, specifies that the agent should use SSL | :heavy_multiplication_x: |
+| Account | `CMA_ACCOUNT` | account name | :heavy_check_mark: |
+| Account | `CMA_USERNAME` | appd user username | :heavy_check_mark: |
+| Account | `CMA_PASSWORD` | appd user password (no default) | :heavy_check_mark: |
+| Account | `CMA_USE_ENCODED_CREDENTIALS` | use base64 encoded credentials  | :heavy_multiplication_x: |
+| Proxy | `CMA_USE_PROXY` | use proxy optional argument | :heavy_multiplication_x: |
+| Proxy | `CMA_PROXY_URL` | proxy url | :heavy_multiplication_x: |
+| Proxy | `CMA_PROXY_PORT` | proxy port | :heavy_multiplication_x: |
+| Branding | `CMA_USE_BRANDING` | enable branding | :heavy_multiplication_x: |
+| Branding | `CMA_LOGO_NAME` | logo image file name | :heavy_multiplication_x: |
+| Branding | `CMA_BACKGROUND_NAME` | background image file name | :heavy_multiplication_x: |
+| Application | `CMA_APPLICATION_NAME` | application name | :heavy_check_mark: |
+| Application | `CMA_INCLUDE_DATABASE` | include database | :heavy_multiplication_x: |
+| Application | `CMA_DATABASE_NAME` | database name, mandatory if include-database set to true |  :heavy_multiplication_x: |
+| Application | `CMA_INCLUDE_SIM` | include server visibility |  :heavy_multiplication_x: |
+| Application | `CMA_CONFIGURE_BT` | configure busness transactions (false by default) |  :heavy_multiplication_x: |
+| Application | `CMA_OVERWRITE_HEALTH_RULES` | overwrite health rules (true by default) |  :heavy_multiplication_x: |
+| Application | `-` | configure business transactions only  |  :heavy_multiplication_x: |
+ 
 
 ## Configuration file
 
