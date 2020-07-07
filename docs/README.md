@@ -54,14 +54,14 @@ In order to show running containers, use the follwoing command:
 ```
 docker ps
 ```
-Jenkins is running on localhost:8080 and you can access it in the browser.
+Jenkins is running on `localhost:8080` and you can access it in the browser.
 
 Since volumes are mounted, note that all of your data configurations, plugins, pipelines, passwords, etc. will be persisted on the machine where conatainers are stared from.
 
-More information about running Jenkins in Docker container can be found in the official documentation:
+For more information about running Jenkins in Docker container refer to the official documentation:
 https://www.jenkins.io/doc/book/installing/#downloading-and-running-jenkins-in-docker
 
-### Unlock jenkins
+### Unlock Jenkins
 If you are starting the Jenkins container for the first time, in order to check for your password, access the container logs in the following way:
 ```
 docker logs CONTAINER_ID
