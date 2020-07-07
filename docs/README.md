@@ -84,7 +84,7 @@ Environment variabels used by ConfigMyApp start with `CMA_` and if not empty, wi
 | Account | `CMA_USERNAME` | appd user username | :heavy_check_mark: |
 | Account | `CMA_PASSWORD` | appd user password (no default) | :heavy_check_mark: |
 | Account | `CMA_USE_ENCODED_CREDENTIALS` | use base64 encoded credentials  | :heavy_multiplication_x: |
-| Proxy | `CMA_USE_PROXY` | use proxy optional argument | :heavy_multiplication_x: |
+| Proxy | `CMA_USE_PROXY` | use proxy | :heavy_multiplication_x: |
 | Proxy | `CMA_PROXY_URL` | proxy url | :heavy_multiplication_x: |
 | Proxy | `CMA_PROXY_PORT` | proxy port | :heavy_multiplication_x: |
 | Branding | `CMA_USE_BRANDING` | enable branding | :heavy_multiplication_x: |
@@ -94,9 +94,9 @@ Environment variabels used by ConfigMyApp start with `CMA_` and if not empty, wi
 | Application | `CMA_INCLUDE_DATABASE` | include database | :heavy_multiplication_x: |
 | Application | `CMA_DATABASE_NAME` | database name, mandatory if include-database set to true |  :heavy_multiplication_x: |
 | Application | `CMA_INCLUDE_SIM` | include server visibility |  :heavy_multiplication_x: |
-| Application | `CMA_CONFIGURE_BT` | configure busness transactions (false by default) |  :heavy_multiplication_x: |
-| Application | `CMA_OVERWRITE_HEALTH_RULES` | overwrite health rules (true by default) |  :heavy_multiplication_x: |
-| Application | `-` | configure business transactions only  |  :heavy_multiplication_x: |
+| Application | `CMA_CONFIGURE_BT` | configure busness transactions |  :heavy_multiplication_x: |
+| Application | `CMA_OVERWRITE_HEALTH_RULES` | overwrite health rules |  :heavy_multiplication_x: |
+| Application | `-` | configure business transactions only | :heavy_multiplication_x: |
  
 
 ## Configuration file
@@ -112,7 +112,7 @@ Configuration file used by ConfigMyApp can be found in the root of the project: 
 | Account | `.controller_details[].username` | appd user username | :heavy_check_mark: |
 | Account | `.controller_details[].password` | appd user password (no default) | :heavy_check_mark: |
 | Account | `.are_passwords_encoded` | use base64 encoded credentials  | :heavy_multiplication_x: |
-| Proxy | `.controller_details[].use_proxy` | use proxy optional argument | :heavy_multiplication_x: |
+| Proxy | `.controller_details[].use_proxy` | use proxy | :heavy_multiplication_x: |
 | Proxy | `.controller_details[].proxy_url` | proxy url | :heavy_multiplication_x: |
 | Proxy | `.controller_details[].proxy_port` | proxy port | :heavy_multiplication_x: |
 | Branding | `.branding[].enabled` | enable branding | :heavy_multiplication_x: |
@@ -122,8 +122,8 @@ Configuration file used by ConfigMyApp can be found in the root of the project: 
 | Application | `.configuration[].include_database` | include database | :heavy_multiplication_x: |
 | Application | `.configuration[].database_name` | database name, mandatory if include-database set to true |  :heavy_multiplication_x: |
 | Application | `.configuration[].include_sim` | include server visibility |  :heavy_multiplication_x: |
-| Application | `.configuration[].configure_bt` | configure busness transactions (false by default) |  :heavy_multiplication_x: |
-| Application | `.overwrite_health_rules` | overwrite health rules (true by default) |  :heavy_multiplication_x: |
+| Application | `.configuration[].configure_bt` | configure busness transactions |  :heavy_multiplication_x: |
+| Application | `.overwrite_health_rules` | overwrite health rules |  :heavy_multiplication_x: |
 | Application | `-` | configure business transactions only  |  :heavy_multiplication_x: |
 
 
