@@ -198,13 +198,13 @@ To start a local Jenkins server navigate to Jenkins folder and start the contain
 cd /integrations/Jenkins
 docker-compose up -d
 ```
-In order to show running containers, use the follwoing command:
+In order to show running containers, use the following command:
 ```
 docker ps
 ```
 Jenkins is running on `localhost:8080` and you can access it in the browser.
 
-Since volumes are mounted, note that all of your data configurations, plugins, pipelines, passwords, etc. will be persisted on the machine where conatainers are stared from.
+Since volumes are mounted, note that all of your data configurations, plugins, pipelines, passwords, etc. will be persisted on the machine where containers are stared from.
 
 For more information about running Jenkins in Docker container refer to the official documentation:
 https://www.jenkins.io/doc/book/installing/#downloading-and-running-jenkins-in-docker
