@@ -25,8 +25,6 @@ ConfigMyApp currently supports the following configurations (as-code):
 
 Please do not proceed with the extension installation if any of the aforementioned prerequisites are not met.
 
-# Installation
-
 # Configuring input parameters
 
 ConfigMyApp accepts arguments from 3 sources, where parameters configured in runtime takes precedence over environment variables, and environment variables over configuration json file. Therefore, priority order is the following:
@@ -219,5 +217,3 @@ And copy and paste the password from container to a Jenkins web form input field
 More details about Unlocking Jenkins can be found here:
 https://www.jenkins.io/doc/book/installing/#unlocking-jenkins
 
-
-## Docker
