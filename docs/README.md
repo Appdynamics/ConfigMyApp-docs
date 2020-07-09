@@ -181,9 +181,17 @@ This section contains examples of running a ConfigMyApp script, it should be adj
 
 ## Harness
 
-> TODO 
+Harness is a Continuous Delivery as a Service enterprise platform for automation of application and micro-service deployments.
+
+The Harness Delegate is a service you run in your local network or VPC to connect your artifact servers, and your infrastructure, collaboration, and verification providers, with the Harness Manager.
+
+Where delagate and Manager are in the overall Harness Arcitecture, can be seen in the diagram below:
+
+![harness_delegate](https://user-images.githubusercontent.com/23483887/87036607-00993900-c1e3-11ea-83b1-7b0b0d5b987d.png)
 
 ## Jenkins
+
+Jenkins is a free and open source automation server. It helps automate the parts of software development related to building, testing, and deploying, facilitating continuous integration and continuous delivery.
 
 ### Prerequisite 
 Verify that you are having Docker Compose installed:
