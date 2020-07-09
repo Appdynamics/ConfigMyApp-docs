@@ -207,6 +207,7 @@ In the Harness.io UI delegate appears as active, and you can access it at Setup/
 
 ![harness_delegate_ui](https://user-images.githubusercontent.com/23483887/87037486-34c12980-c1e4-11ea-8814-68b98e68aee3.png)
 
+Now when a delegate is available, you can run a defined application pipeline or workflow in order to deploy your configuration to controller.
 
 ## Jenkins
 
