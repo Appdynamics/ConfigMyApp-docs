@@ -189,7 +189,7 @@ The Harness Delegate is a service you run in your local network or VPC to connec
 
 Where delagate and Manager are in the overall Harness Arcitecture, can be seen in the diagram below:
 
-![harness_delegate](https://user-images.githubusercontent.com/23483887/87036607-00993900-c1e3-11ea-83b1-7b0b0d5b987d.png)
+![harness_delegate](https://user-images.githubusercontent.com/23483887/87052304-8a073600-c1f8-11ea-9eb0-bc92f93fd245.png)
 
 ### Run Harness.io Delegate as Docker Constainer
 
