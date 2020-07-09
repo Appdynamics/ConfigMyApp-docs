@@ -189,6 +189,25 @@ Where delagate and Manager are in the overall Harness Arcitecture, can be seen i
 
 ![harness_delegate](https://user-images.githubusercontent.com/23483887/87036607-00993900-c1e3-11ea-83b1-7b0b0d5b987d.png)
 
+### Run Harness.io Delegate as Docker Constainer
+
+Navigate to Harness.io integration folder and run a start script:
+
+```
+cd integrations/Harnessio/harness-delegate-docker/
+./launch-harness-delegate.sh
+```
+
+This command is starting a Docker container that contains your delegate and that you can see by using following command:
+```
+docker ps
+```
+
+In the Harness.io UI delegate appears as active, and you can access it at Setup/Delegates section:
+
+![harness_delegate_ui](https://user-images.githubusercontent.com/23483887/87037486-34c12980-c1e4-11ea-8814-68b98e68aee3.png)
+
+
 ## Jenkins
 
 Jenkins is a free and open source automation server. It helps automate the parts of software development related to building, testing, and deploying, facilitating continuous integration and continuous delivery.
