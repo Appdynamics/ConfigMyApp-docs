@@ -179,7 +179,9 @@ This section contains examples of running a ConfigMyApp script, it should be adj
 
 # Integrations 
 
-## Harness
+<p><img align="right" width="200" height="60" src="https://user-images.githubusercontent.com/23483887/87051577-a9ea2a00-c1f7-11ea-9ab8-4781d043e9bc.png"></p>
+
+## Harness.io
 
 Harness is a Continuous Delivery as a Service enterprise platform for automation of application and micro-service deployments.
 
@@ -208,6 +210,8 @@ In the Harness.io UI delegate appears as active, and you can access it at Setup/
 ![harness_delegate_ui](https://user-images.githubusercontent.com/23483887/87037486-34c12980-c1e4-11ea-8814-68b98e68aee3.png)
 
 Now when a delegate is available, you can run a defined application pipeline or workflow in order to deploy your configuration to controller.
+
+<p><img align="right" width="200" height="60" src="https://user-images.githubusercontent.com/23483887/87051994-33016100-c1f8-11ea-847f-38da20685581.png"></p>
 
 ## Jenkins
 
