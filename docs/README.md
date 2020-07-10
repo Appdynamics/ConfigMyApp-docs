@@ -57,7 +57,7 @@ Use the `--help` command to get a list of the avaialable runtime parameters as s
 ./start.sh --help
 ```
 
-The table below describes the supported runtime arguments: <br> 
+The table below describes the supported runtime arguments: 
 
 | Section       | Parameter<img>  | Description  | Mandatory  |
 | ------ |:------- | :--------- |  :----: |
