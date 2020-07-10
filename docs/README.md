@@ -121,7 +121,7 @@ ConfigMyApp uses a `config.json`configuration file which can be found in the roo
 
 The table below describe the JSON configuration:
 
-| Section       | JSON path <img>  | Description  | Mandatory |
+| Section       | JSON path  | Description  | Mandatory |
 | ------ |:------- | :--------- |  :----: |
 | Connection | `.controller_details[].host` | controller host | <img src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" width="20" height="20"> |
 | Connection | `.controller_details[].port` | controller port | <img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20"> |
