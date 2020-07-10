@@ -4,7 +4,7 @@
 
 ConfigMyApp is a <b>monitoring-as-a-service</b> solution that automates the configuration of AppDynamics business applications, Server Viz, dashboarding, etc  without the need to manaully login to the controller. Automated configuration saves time, hassle and cost; it decreases human error and maintains consistency of thresholds and naming conventations accross a customer's estate. 
 
-ConfigMyApp design is based on the DevOps configuration-as-code paradigm. It enhances medium and large scale application configuration and dashboarding with a specific objective in mind - the ability to plug it into customers' Continous Integration and Deployment (CI/CD) pipelines - such as Jenkins, Harness, TeamCity, GitLab, Bamboo, etc.  
+The design of ConfigMyApp is based on the DevOps configuration-as-code paradigm. It enhances medium and large scale application configuration and dashboarding with a specific objective in mind - the ability to plug it into customers' Continous Integration and Deployment (CI/CD) pipelines - such as Jenkins, Harness, TeamCity, GitLab, Bamboo, etc.  
 
 Being able to remotely create and update configurations in AppDynamics will significantly enhance user adoption and time to value. In addition, configuraion-as-code is a concept that will appeal to the DevOps team. 
 
@@ -12,8 +12,8 @@ Being able to remotely create and update configurations in AppDynamics will sign
 
 ConfigMyApp supports the configuration of the following AppDynamics components: 
 
- - Business transactions detection rules
-    Include and Exclude Rules for the following transactions: 
+ - Business transactions detection rules <br> 
+   Include and Exclude Rules for the following transactions: 
     - POCOs 
     - POJOs 
     - Servlets 
@@ -60,7 +60,7 @@ It is going to print out all the flags available to use. Current list of paramet
 
 | Section       | Parameter  | Description  | Mandatory parameter |
 | ------ |:------- | :--------- |  :----: |
-| Connection | `-c, --controller-host` | controller host (no default) | <img src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" width="5" height="5"> |
+| Connection | `-c, --controller-host` | controller host (no default) | <img src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" width="15" height="10"> |
 | Connection | `-P, --controller-port` | controller port (8090 by default) | ![yes](https://github.githubassets.com/images/icons/emoji/unicode/2714.png) |
 | Connection | `--use-https, --no-use-https` | if true, specifies that the agent should use SSL (false by default) | :heavy_multiplication_x: |
 | Account | `--account` | account name (customer1 by default) | :heavy_check_mark: |
