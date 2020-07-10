@@ -57,8 +57,9 @@ To get all of the parameters available to pass in runtime, you can use the help 
 ```
 
 It is going to print out all the flags available to use. Current list of parameters is the following:
+<div class="datatable-begin"></div>
 
-| Section       | Parameter  | Description  | <div style="width:100px">Mandatory parameter</div>  |
+| Section       | Parameter  | Description  | Mandatory<br>parameter  |
 | ------ |:------- | :--------- |  :----: |
 | Connection | `-c, --controller-host` | controller host (no default) | <img src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" width="20" height="20"> |
 | Connection | `-P, --controller-port` | controller port (8090 by default) | <img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20"> |
@@ -81,6 +82,7 @@ It is going to print out all the flags available to use. Current list of paramet
 | Application | `--overwrite-health-rules` | overwrite health rules (true by default) |  <img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20"> |
 | Application | `--bt-only, --no-bt-only` | configure business transactions only  |  <img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20"> |
 
+<div class="datatable-end"></div>
 Please note that you can run the script in debug mode by using `--debug` flag, in which case the connection and other parameters used are going to be printed out in the console in order to help setting up the environment. We do not recommend using this flag in production, and it is set to `false` by default.
 
 ## Environment variables
