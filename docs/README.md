@@ -62,24 +62,24 @@ It is going to print out all the flags available to use. Current list of paramet
 | ------ |:------- | :--------- |  :----: |
 | Connection | `-c, --controller-host` | controller host (no default) | <img src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" width="20" height="20"> |
 | Connection | `-P, --controller-port` | controller port (8090 by default) | <img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20"> |
-| Connection | `--use-https, --no-use-https` | if true, specifies that the agent should use SSL (false by default) | :heavy_multiplication_x: |
-| Account | `--account` | account name (customer1 by default) | :heavy_check_mark: |
-| Account | `-u, --username` | appd user username (no default) | :heavy_check_mark: |
-| Account | `-p, --password` | appd user password (no default) | :heavy_check_mark: |
-| Account | `--use-encoded-credentials, --no-use-encoded-credentials` | use base64 encoded credentials (false by default) | :heavy_multiplication_x: |
-| Proxy | `--use-proxy, --no-use-proxy` | use proxy optional argument (false by default) | :heavy_multiplication_x: |
-| Proxy | `--proxy-url` | proxy url (no default) | :heavy_multiplication_x: |
-| Proxy | `--proxy-port` | proxy port (no default) | :heavy_multiplication_x: |
-| Branding | `--use-branding, --no-use-branding` | enable branding (true by default) | :heavy_multiplication_x: |
-| Branding | `--logo-name` | logo image file name (no default) | :heavy_multiplication_x: |
-| Branding | `--background-name` | background image file name (no default) | :heavy_multiplication_x: |
-| Application | `-a, --application-name` | application name (no default) | :heavy_check_mark: |
-| Application | `--include-database, --no-include-database` | include database (false by default) | :heavy_multiplication_x: |
-| Application | `-d, --database-name` | database name, mandatory if include-database set to true (no default) |  :heavy_multiplication_x: |
-| Application | `-s, --include-sim` | include server visibility (false by default) |  :heavy_multiplication_x: |
-| Application | `-b, --configure-bt` | configure busness transactions (false by default) |  :heavy_multiplication_x: |
-| Application | `--overwrite-health-rules` | overwrite health rules (true by default) |  :heavy_multiplication_x: |
-| Application | `--bt-only, --no-bt-only` | configure business transactions only  |  :heavy_multiplication_x: |
+| Connection | `--use-https, --no-use-https` | if true, specifies that the agent should use SSL (false by default) | <img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20"> |
+| Account | `--account` | account name (customer1 by default) | <img src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" width="20" height="20"> |
+| Account | `-u, --username` | appd user username (no default) | <img src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" width="20" height="20"> |
+| Account | `-p, --password` | appd user password (no default) | <img src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" width="20" height="20"> |
+| Account | `--use-encoded-credentials, --no-use-encoded-credentials` | use base64 encoded credentials (false by default) | <img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20"> |
+| Proxy | `--use-proxy, --no-use-proxy` | use proxy optional argument (false by default) | <img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20"> |
+| Proxy | `--proxy-url` | proxy url (no default) | <img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20"> |
+| Proxy | `--proxy-port` | proxy port (no default) | <img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20"> |
+| Branding | `--use-branding, --no-use-branding` | enable branding (true by default) | <img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20"> |
+| Branding | `--logo-name` | logo image file name (no default) | <img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20"> |
+| Branding | `--background-name` | background image file name (no default) | <img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20"> |
+| Application | `-a, --application-name` | application name (no default) | <img src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" width="20" height="20"> |
+| Application | `--include-database, --no-include-database` | include database (false by default) | <img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20"> |
+| Application | `-d, --database-name` | database name, mandatory if include-database set to true (no default) |  <img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20"> |
+| Application | `-s, --include-sim` | include server visibility (false by default) |  <img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20"> |
+| Application | `-b, --configure-bt` | configure busness transactions (false by default) |  <img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20"> |
+| Application | `--overwrite-health-rules` | overwrite health rules (true by default) |  <img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20"> |
+| Application | `--bt-only, --no-bt-only` | configure business transactions only  |  <img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20"> |
 
 Please note that you can run the script in debug mode by using `--debug` flag, in which case the connection and other parameters used are going to be printed out in the console in order to help setting up the environment. We do not recommend using this flag in production, and it is set to `false` by default.
 
@@ -89,26 +89,26 @@ Environment variabels used by ConfigMyApp start with `CMA_` and if not empty, wi
 
 | Section       | Environment Variable  | Description  | Mandatory parameter |
 | ------ |:------- | :--------- |  :----: |
-| Connection | `CMA_CONTROLLER_HOST` | controller host | :heavy_check_mark: |
-| Connection | `CMA_CONTROLLER_PORT` | controller port | :heavy_multiplication_x: |
-| Connection | `CMA_USE_HTTPS` | if true, specifies that the agent should use SSL | :heavy_multiplication_x: |
-| Account | `CMA_ACCOUNT` | account name | :heavy_check_mark: |
-| Account | `CMA_USERNAME` | appd user username | :heavy_check_mark: |
-| Account | `CMA_PASSWORD` | appd user password (no default) | :heavy_check_mark: |
-| Account | `CMA_USE_ENCODED_CREDENTIALS` | use base64 encoded credentials  | :heavy_multiplication_x: |
-| Proxy | `CMA_USE_PROXY` | use proxy | :heavy_multiplication_x: |
-| Proxy | `CMA_PROXY_URL` | proxy url | :heavy_multiplication_x: |
-| Proxy | `CMA_PROXY_PORT` | proxy port | :heavy_multiplication_x: |
-| Branding | `CMA_USE_BRANDING` | enable branding | :heavy_multiplication_x: |
-| Branding | `CMA_LOGO_NAME` | logo image file name | :heavy_multiplication_x: |
-| Branding | `CMA_BACKGROUND_NAME` | background image file name | :heavy_multiplication_x: |
-| Application | `CMA_APPLICATION_NAME` | application name | :heavy_check_mark: |
-| Application | `CMA_INCLUDE_DATABASE` | include database | :heavy_multiplication_x: |
-| Application | `CMA_DATABASE_NAME` | database name, mandatory if include-database set to true |  :heavy_multiplication_x: |
-| Application | `CMA_INCLUDE_SIM` | include server visibility |  :heavy_multiplication_x: |
-| Application | `CMA_CONFIGURE_BT` | configure busness transactions |  :heavy_multiplication_x: |
-| Application | `CMA_OVERWRITE_HEALTH_RULES` | overwrite health rules |  :heavy_multiplication_x: |
-| Application | `-` | configure business transactions only | :heavy_multiplication_x: |
+| Connection | `CMA_CONTROLLER_HOST` | controller host | <img src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" width="20" height="20"> |
+| Connection | `CMA_CONTROLLER_PORT` | controller port | <img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20">: |
+| Connection | `CMA_USE_HTTPS` | if true, specifies that the agent should use SSL | <img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20"> |
+| Account | `CMA_ACCOUNT` | account name | <img src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" width="20" height="20"> |
+| Account | `CMA_USERNAME` | appd user username | <img src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" width="20" height="20"> |
+| Account | `CMA_PASSWORD` | appd user password (no default) | <img src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" width="20" height="20"> |
+| Account | `CMA_USE_ENCODED_CREDENTIALS` | use base64 encoded credentials  | <img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20"> |
+| Proxy | `CMA_USE_PROXY` | use proxy | <img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20"> |
+| Proxy | `CMA_PROXY_URL` | proxy url | <img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20"> |
+| Proxy | `CMA_PROXY_PORT` | proxy port | <img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20"> |
+| Branding | `CMA_USE_BRANDING` | enable branding | <img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20"> |
+| Branding | `CMA_LOGO_NAME` | logo image file name |<img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20"> |
+| Branding | `CMA_BACKGROUND_NAME` | background image file name | <img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20"> |
+| Application | `CMA_APPLICATION_NAME` | application name | <img src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" width="20" height="20"> |
+| Application | `CMA_INCLUDE_DATABASE` | include database | <img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20"> |
+| Application | `CMA_DATABASE_NAME` | database name, mandatory if include-database set to true |  <img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20"> |
+| Application | `CMA_INCLUDE_SIM` | include server visibility |  <img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20"> |
+| Application | `CMA_CONFIGURE_BT` | configure busness transactions |  <img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20"> |
+| Application | `CMA_OVERWRITE_HEALTH_RULES` | overwrite health rules |  <img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20"> |
+| Application | `-` | configure business transactions only | <img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20"> |
  
 
 ## Configuration file
@@ -117,26 +117,26 @@ Configuration file used by ConfigMyApp can be found in the root of the project: 
 
 | Section       | JSON path  | Description  | Mandatory parameter |
 | ------ |:------- | :--------- |  :----: |
-| Connection | `.controller_details[].host` | controller host | :heavy_check_mark: |
-| Connection | `.controller_details[].port` | controller port | :heavy_multiplication_x: |
-| Connection | `.controller_details[].use_https` | if true, specifies that the agent should use SSL | :heavy_multiplication_x: |
-| Account | `.controller_details[].account` | account name | :heavy_check_mark: |
-| Account | `.controller_details[].username` | appd user username | :heavy_check_mark: |
-| Account | `.controller_details[].password` | appd user password (no default) | :heavy_check_mark: |
-| Account | `.are_passwords_encoded` | use base64 encoded credentials  | :heavy_multiplication_x: |
-| Proxy | `.controller_details[].use_proxy` | use proxy | :heavy_multiplication_x: |
-| Proxy | `.controller_details[].proxy_url` | proxy url | :heavy_multiplication_x: |
-| Proxy | `.controller_details[].proxy_port` | proxy port | :heavy_multiplication_x: |
-| Branding | `.branding[].enabled` | enable branding | :heavy_multiplication_x: |
-| Branding | `.branding[].logo_file_name` | logo image file name | :heavy_multiplication_x: |
-| Branding | `.branding[].background_file_name` | background image file name | :heavy_multiplication_x: |
-| Application | `.configuration[].application_name` | application name | :heavy_check_mark: |
-| Application | `.configuration[].include_database` | include database | :heavy_multiplication_x: |
-| Application | `.configuration[].database_name` | database name, mandatory if include-database set to true |  :heavy_multiplication_x: |
-| Application | `.configuration[].include_sim` | include server visibility |  :heavy_multiplication_x: |
-| Application | `.configuration[].configure_bt` | configure busness transactions |  :heavy_multiplication_x: |
-| Application | `.overwrite_health_rules` | overwrite health rules |  :heavy_multiplication_x: |
-| Application | `-` | configure business transactions only  |  :heavy_multiplication_x: |
+| Connection | `.controller_details[].host` | controller host | <img src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" width="20" height="20"> |
+| Connection | `.controller_details[].port` | controller port | <img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20"> |
+| Connection | `.controller_details[].use_https` | if true, specifies that the agent should use SSL | <img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20"> |
+| Account | `.controller_details[].account` | account name | <img src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" width="20" height="20"> |
+| Account | `.controller_details[].username` | appd user username | <img src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" width="20" height="20"> |
+| Account | `.controller_details[].password` | appd user password (no default) | <img src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" width="20" height="20"> |
+| Account | `.are_passwords_encoded` | use base64 encoded credentials  | <img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20"> |
+| Proxy | `.controller_details[].use_proxy` | use proxy | <img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20"> |
+| Proxy | `.controller_details[].proxy_url` | proxy url | <img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20"> |
+| Proxy | `.controller_details[].proxy_port` | proxy port | <img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20"> |
+| Branding | `.branding[].enabled` | enable branding | <img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20"> |
+| Branding | `.branding[].logo_file_name` | logo image file name | <img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20"> |
+| Branding | `.branding[].background_file_name` | background image file name | <img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20"> |
+| Application | `.configuration[].application_name` | application name | <img src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" width="20" height="20"> |
+| Application | `.configuration[].include_database` | include database | <img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20"> |
+| Application | `.configuration[].database_name` | database name, mandatory if include-database set to true |  <img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20"> |
+| Application | `.configuration[].include_sim` | include server visibility |  <img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20"> |
+| Application | `.configuration[].configure_bt` | configure busness transactions |  <img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20"> |
+| Application | `.overwrite_health_rules` | overwrite health rules |  <img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20">|
+| Application | `-` | configure business transactions only  |  <img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20"> |
 
 
 # Running a script
