@@ -2,23 +2,35 @@
 
 # Introduction
 
-Monitoring as a service (MaaS) is one of many cloud delivery models under anything as a service (XaaS). It is a framework that facilitates the deployment of monitoring functionalities for various other services and applications within the cloud, usually via a CI/CD pipeline. ConfigMyApp was built to enable AppDynamics customers actualise thier MaaS objectives.
+ConfigMyApp is a <b>monitoring-as-a-service<b> solution that automates the configuration of your business applications without the need to manaully login to the controller - thereby saving time, cost, human errror etc. 
 
-ConfigMyApp design is based on the DevOps configuration-as-code paradigm. It is primarily built to enhance medium and large scale application configuration and dashboarding with a specific objective in mind - the ability to plug it into customers' Continous Integration and Deployment pipelines - such as Jenkins, Harness, TeamCity, GitLab, Bamboo, etc. 
+ConfigMyApp design is based on the DevOps configuration-as-code paradigm. It enhances medium and large scale application configuration and dashboarding with a specific objective in mind - the ability to plug it into customers' Continous Integration and Deployment pipelines - such as Jenkins, Harness, TeamCity, GitLab, Bamboo, etc.  
+
+Being able to remotely create and update configurations in AppDynamics will significantly ehance adoption and time to value.   
 
 # How it works 
 
 ![How it works](https://user-images.githubusercontent.com/2548160/79471051-03c4c480-7ffa-11ea-9405-133f9e9ee4eb.png)
  
-ConfigMyApp currently supports the following configurations (as-code): 
+ConfigMyApp currently supports the following configurations: 
  
-1) Business transactions detection rules - for  POCOs, POJOs, Servlets and ASPs transactions 
-2) Server Viz Health Rules   
-3) Application Health Rules  
+1) Business transactions detection rules - for  POCOs, POJOs, Servlets and ASPs transactions. 
+2) Server Visibility Health Rules   
+3) Business Application Health Rules  
 4) DB Monitoring 
-6) Custom dashboard branding 
-5) and finally, ConfigMyApp dynamically pulls all the configurations into a dynamic dashboard. 
+6) Custom dashboard with support for custom logo and background images.  
 
+ - Business transactions detection rules
+    Include and Exclude Rules for the following transactions for : 
+    - POCOs 
+    - POJOs 
+    - Servlets 
+    - ASPs
+ - Server Visibility Health Rules
+ - Business Application Health Rules
+ - DB Monitoring
+ - Custom dashboard with support for custom logo and background images.
+ 
 # Prerequisites
 
 3) Before the extension is installed, the generic AppDynamics extension prerequisites mentioned [here](https://community.appdynamics.com/t5/Knowledge-Base/Extensions-Prerequisites-Guide/ta-p/35213) need to be met. 
