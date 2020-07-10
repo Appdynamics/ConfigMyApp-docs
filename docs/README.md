@@ -2,15 +2,15 @@
 
 # Introduction
 
-ConfigMyApp is a <b>monitoring-as-a-service</b> solution that automates the configuration of your business applications without the need to manaully login to the controller - thereby saving time, cost, human errror etc. 
+ConfigMyApp is a <b>monitoring-as-a-service</b> solution that automates the configuration of AppDynamics business applications, Server Viz, dashboarding, etc  without the need to manaully login to the controller. Automated configuration saves time, hussle and cost, it decreases human error, and maintains consistency of naming conventations accross a customer estate. 
 
 ConfigMyApp design is based on the DevOps configuration-as-code paradigm. It enhances medium and large scale application configuration and dashboarding with a specific objective in mind - the ability to plug it into customers' Continous Integration and Deployment pipelines - such as Jenkins, Harness, TeamCity, GitLab, Bamboo, etc.  
 
-Being able to remotely create and update configurations in AppDynamics will significantly ehance adoption and time to value.   
+Being able to remotely create and update configurations in AppDynamics will significantly ehance useradoption, time to value and configuraion-as-code appeals to the DevOps team. 
 
 # Supported Components 
 
-ConfigMyApp supports the configuration of the following components: 
+ConfigMyApp supports the configuration of the following AppDynamics components: 
 
  - Business transactions detection rules
     Include and Exclude Rules for the following transactions for : 
@@ -35,7 +35,8 @@ Please do not proceed with the extension installation if any of the aforemention
 
  # How it works 
  
-At high level, 
+This is is higlevel flow digram on how ConfigMyApp works. 
+
 ![How it works](https://user-images.githubusercontent.com/2548160/79471051-03c4c480-7ffa-11ea-9405-133f9e9ee4eb.png)
  
 # Configuring input parameters
