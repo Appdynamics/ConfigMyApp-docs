@@ -58,10 +58,10 @@ To get all of the parameters available to pass in runtime, you can use the help 
 
 It is going to print out all the flags available to use. Current list of parameters is the following:
 
-| Section       | Parameter  | Description  | Mandatory parameter |
+| Section       | Parameter  | Description  | <div style="width:100px">Mandatory parameter</div>  |
 | ------ |:------- | :--------- |  :----: |
-| Connection | `-c, --controller-host` | controller host (no default) | <img src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" width="15" height="10"> |
-| Connection | `-P, --controller-port` | controller port (8090 by default) | ![yes](https://github.githubassets.com/images/icons/emoji/unicode/2714.png) |
+| Connection | `-c, --controller-host` | controller host (no default) | <img src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" width="20" height="20"> |
+| Connection | `-P, --controller-port` | controller port (8090 by default) | <img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20"> |
 | Connection | `--use-https, --no-use-https` | if true, specifies that the agent should use SSL (false by default) | :heavy_multiplication_x: |
 | Account | `--account` | account name (customer1 by default) | :heavy_check_mark: |
 | Account | `-u, --username` | appd user username (no default) | :heavy_check_mark: |
