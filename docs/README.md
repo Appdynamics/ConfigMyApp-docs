@@ -90,7 +90,7 @@ Environment variabels used by ConfigMyApp start with `CMA_` and if not empty, wi
 | Section       | Environment Variable  | Description  | Mandatory parameter |
 | ------ |:------- | :--------- |  :----: |
 | Connection | `CMA_CONTROLLER_HOST` | controller host | <img src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" width="20" height="20"> |
-| Connection | `CMA_CONTROLLER_PORT` | controller port | <img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20">: |
+| Connection | `CMA_CONTROLLER_PORT` | controller port | <img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20"> |
 | Connection | `CMA_USE_HTTPS` | if true, specifies that the agent should use SSL | <img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20"> |
 | Account | `CMA_ACCOUNT` | account name | <img src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" width="20" height="20"> |
 | Account | `CMA_USERNAME` | appd user username | <img src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" width="20" height="20"> |
