@@ -61,6 +61,7 @@ The table below describes the supported runtime arguments:
 
 <div class="datatable-begin"></div>
 
+
 | Section       | Parameter<img>  | Description  | Mandatory  |
 | ------ |:------- | :--------- |  :----: |
 | Connection | `-c, --controller-host` | controller host (no default) | <img src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" width="20" height="20"> |
@@ -83,6 +84,7 @@ The table below describes the supported runtime arguments:
 | Application | `-b, --configure-bt` | configure busness transactions (false by default) |  <img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20"> |
 | Application | `--overwrite-health-rules` | overwrite health rules (true by default) |  <img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20"> |
 | Application | `--bt-only, --no-bt-only` | configure business transactions only  |  <img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20"> |
+
 <div class="datatable-end"></div>
 
 In addtion, note that you can run the script in debug mode by using `--debug` flag, in which case the connection and other parameters used will be printed out in the console. We do not recommend using this flag in production, and it is set to `false` by default.
