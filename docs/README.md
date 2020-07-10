@@ -60,8 +60,8 @@ It is going to print out all the flags available to use. Current list of paramet
 
 | Section       | Parameter  | Description  | Mandatory parameter |
 | ------ |:------- | :--------- |  :----: |
-| Connection | `-c, --controller-host` | controller host (no default) | man(https://github.githubassets.com/images/icons/emoji/unicode/2714.png) |
-| Connection | `-P, --controller-port` | controller port (8090 by default) | - [x] |
+| Connection | `-c, --controller-host` | controller host (no default) | ![yes](https://github.githubassets.com/images/icons/emoji/unicode/2714.png) |
+| Connection | `-P, --controller-port` | controller port (8090 by default) | ![yes](https://github.githubassets.com/images/icons/emoji/unicode/2714.png) |
 | Connection | `--use-https, --no-use-https` | if true, specifies that the agent should use SSL (false by default) | :heavy_multiplication_x: |
 | Account | `--account` | account name (customer1 by default) | :heavy_check_mark: |
 | Account | `-u, --username` | appd user username (no default) | :heavy_check_mark: |
