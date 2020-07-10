@@ -1,4 +1,5 @@
 title: ConfigMyApp
+datatable: true
 description: A self-service configuration-as-code tool
 show_downloads: true
 theme: jekyll-theme-cayman
