@@ -94,6 +94,7 @@ In addtion, note that you can run the script in debug mode by using `--debug` fl
 Environment variabels used by ConfigMyApp start with `CMA_` and if not empty, will be used to fill-in parameters values not explicitly set at runtime. <br>
 
 The table below describes the supported environment variables: 
+<div class="datatable-begin"></div>
 
 <table id="envTable" class="display">
   <thead>
@@ -228,6 +229,7 @@ The table below describes the supported environment variables:
   </tbody>
 </table>
 
+<div class="datatable-end"></div>
 
 ## Configuration file
 
