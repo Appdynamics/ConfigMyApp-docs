@@ -4,9 +4,7 @@
 
 ConfigMyApp is a <b>monitoring-as-a-service</b> solution that automates the configuration of AppDynamics business applications, Server Viz, dashboarding, etc  without the need to manaully login to the controller. Automated configuration saves time, hassle and cost; it decreases human error and maintains consistency of thresholds and naming conventations accross a customer's estate. 
 
-The design of ConfigMyApp is based on the DevOps configuration-as-code paradigm. It enhances medium and large scale application configuration and dashboarding with a specific objective in mind - the ability to plug it into customers' Continous Integration and Deployment (CI/CD) pipelines - such as Jenkins, Harness, TeamCity, GitLab, Bamboo, etc.  
-
-Being able to remotely create and update configurations in AppDynamics will significantly enhance user adoption and time to value. In addition, configuraion-as-code is a concept that will appeal to the DevOps team. 
+ConfigMyApp enhances rapid medium and large scale rollout of AppDynamics. We built ConfigMyApp based on the DevOps configuration-as-code paradigm with a simple  objective - the ability to configure appdynamics with from customers' existing Continous Integration and Deployment (CI/CD) pipelines - such as Jenkins, Harness, TeamCity, GitLab, Bamboo, etc.  Being able to remotely create and update configurations in AppDynamics will significantly enhance user adoption and time to value. In addition, configuraion-as-code is a concept that will appeal to the DevOps team. 
 
 # Supported Components 
 
@@ -41,7 +39,9 @@ This is is higlevel flow digram on how ConfigMyApp works.
  
 ## Configuring input parameters
 
-ConfigMyApp accepts arguments from 3 sources,  where parameters configured ar runtime takes precedence over environment variables, and environment variables over configuration json file.  The order of parameter definition priority is as follows: 
+ConfigMyApp accepts arguments from 3 (combined) sources - runtime, environment variables and the config.json file, where runtime parameters have precedence over environment variables, and environment variables have precendence configuration json file.  
+
+In summary, the order of parameter precedence is as follows: 
 
 1. Runtime parameters 
 2. Environment variables 
@@ -51,15 +51,15 @@ Note that mandatory parameters need to be provided in any (and not all) of the a
 
 ## Runtime parameters  
 
-To get all of the parameters available to pass in runtime, you can use the help command of the `start.sh` script:
+Use the `--help` command to get a list of the avaialable runtime parameters as shown below: 
+
 ```
 ./start.sh --help
 ```
 
-It is going to print out all the flags available to use. Current list of parameters is the following:
+The table below describes the supported runtime arguments: <br> 
 
-
-| Section       | Parameter<img>  | Description  | Mandatory<br>parameter  |
+| Section       | Parameter<img>  | Description  | Mandatory  |
 | ------ |:------- | :--------- |  :----: |
 | Connection | `-c, --controller-host` | controller host (no default) | <img src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" width="20" height="20"> |
 | Connection | `-P, --controller-port` | controller port (8090 by default) | <img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20"> |
@@ -83,13 +83,15 @@ It is going to print out all the flags available to use. Current list of paramet
 | Application | `--bt-only, --no-bt-only` | configure business transactions only  |  <img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20"> |
 
 <br>
-Please note that you can run the script in debug mode by using `--debug` flag, in which case the connection and other parameters used are going to be printed out in the console in order to help setting up the environment. We do not recommend using this flag in production, and it is set to `false` by default.
+In addtion, note that you can run the script in debug mode by using `--debug` flag, in which case the connection and other parameters used will be printed out in the console. We do not recommend using this flag in production, and it is set to `false` by default.
 
 ## Environment variables
 
-Environment variabels used by ConfigMyApp start with `CMA_` and if not empty, will be used to fill-in parameters values not explicitly set in runtime. List of the environment variables currently used is the following:
+Environment variabels used by ConfigMyApp start with `CMA_` and if not empty, will be used to fill-in parameters values not explicitly set at runtime. <br>
 
-| Section       | Environment Variable  | Description  | Mandatory parameter |
+The table below describes the supported environment variables: 
+
+| Section       | Environment Variable  | Description  | Mandatory |
 | ------ |:------- | :--------- |  :----: |
 | Connection | `CMA_CONTROLLER_HOST` | controller host | <img src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" width="20" height="20"> |
 | Connection | `CMA_CONTROLLER_PORT` | controller port | <img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20"> |
@@ -115,9 +117,11 @@ Environment variabels used by ConfigMyApp start with `CMA_` and if not empty, wi
 
 ## Configuration file
 
-Configuration file used by ConfigMyApp can be found in the root of the project: `config.json`, and contains configuration that is going to be used in case when runtime parameter is not specified and environment variable for the parameter does not exist. The following table contains details of the JSON configuration:
+ConfigMyApp uses a `config.json`configuration file which can be found in the root of the project. The values in the configuration file is only used  when the runtime parameter is not defined and environment variable for the same parameter does not exist. <br>
 
-| Section       | JSON path  | Description  | Mandatory parameter |
+The table below describe the JSON configuration:
+
+| Section       | JSON path <img>  | Description  | Mandatory |
 | ------ |:------- | :--------- |  :----: |
 | Connection | `.controller_details[].host` | controller host | <img src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" width="20" height="20"> |
 | Connection | `.controller_details[].port` | controller port | <img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20"> |
