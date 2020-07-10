@@ -8,17 +8,9 @@ ConfigMyApp design is based on the DevOps configuration-as-code paradigm. It enh
 
 Being able to remotely create and update configurations in AppDynamics will significantly ehance adoption and time to value.   
 
-# How it works 
+# Supported Components 
 
-![How it works](https://user-images.githubusercontent.com/2548160/79471051-03c4c480-7ffa-11ea-9405-133f9e9ee4eb.png)
- 
-ConfigMyApp currently supports the following configurations: 
- 
-1) Business transactions detection rules - for  POCOs, POJOs, Servlets and ASPs transactions. 
-2) Server Visibility Health Rules   
-3) Business Application Health Rules  
-4) DB Monitoring 
-6) Custom dashboard with support for custom logo and background images.  
+ConfigMyApp supports the configuration of the following components: 
 
  - Business transactions detection rules
     Include and Exclude Rules for the following transactions for : 
@@ -31,12 +23,21 @@ ConfigMyApp currently supports the following configurations:
  - DB Monitoring
  - Custom dashboard with support for custom logo and background images.
  
-# Prerequisites
+ # Prequisites 
+ The following requirments must be met to run ConfigMyApp: 
 
-3) Before the extension is installed, the generic AppDynamics extension prerequisites mentioned [here](https://community.appdynamics.com/t5/Knowledge-Base/Extensions-Prerequisites-Guide/ta-p/35213) need to be met. 
-
+ 1. It's only supported on Linux/Unix and Mac 
+ 2. `jq` must be installed on your machine 
+ 3.  `awk` must be installed on the machine 
+ 4. `sed` must be installed on the machine 
+ 
 Please do not proceed with the extension installation if any of the aforementioned prerequisites are not met.
 
+ # How it works 
+ 
+At high level, 
+![How it works](https://user-images.githubusercontent.com/2548160/79471051-03c4c480-7ffa-11ea-9405-133f9e9ee4eb.png)
+ 
 # Configuring input parameters
 
 ConfigMyApp accepts arguments from 3 sources, where parameters configured in runtime takes precedence over environment variables, and environment variables over configuration json file. Therefore, priority order is the following:
