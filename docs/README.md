@@ -2,7 +2,7 @@
 
 # Introduction
 
-ConfigMyApp is a <b>monitoring-as-a-service<b> solution that automates the configuration of your business applications without the need to manaully login to the controller - thereby saving time, cost, human errror etc. 
+ConfigMyApp is a <b>monitoring-as-a-service</b> solution that automates the configuration of your business applications without the need to manaully login to the controller - thereby saving time, cost, human errror etc. 
 
 ConfigMyApp design is based on the DevOps configuration-as-code paradigm. It enhances medium and large scale application configuration and dashboarding with a specific objective in mind - the ability to plug it into customers' Continous Integration and Deployment pipelines - such as Jenkins, Harness, TeamCity, GitLab, Bamboo, etc.  
 
