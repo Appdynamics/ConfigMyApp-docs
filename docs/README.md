@@ -2,18 +2,18 @@
 
 # Introduction
 
-ConfigMyApp is a <b>monitoring-as-a-service</b> solution that automates the configuration of AppDynamics business applications, Server Viz, dashboarding, etc  without the need to manaully login to the controller. Automated configuration saves time, hassle and cost; it decreases human error and maintains consistency of thresholds and naming conventations accross a customer's estate. 
+ConfigMyApp is a <b>monitoring-as-a-service</b> solution that automates the configuration of AppDynamics business applications, Server Viz, dashboarding, etc  without the need to manually login to the controller. Automated configuration saves time, hassle and cost; it decreases human error and maintains consistency of thresholds and naming conventions across a customer's estate. 
 
-ConfigMyApp enhances rapid medium and large scale rollout of AppDynamics. We built ConfigMyApp based on the DevOps configuration-as-code paradigm with a simple  objective - the ability to configure appdynamics with from customers' existing Continous Integration and Deployment (CI/CD) pipelines - such as Jenkins, Harness, TeamCity, GitLab, Bamboo, etc.  Being able to remotely create and update configurations in AppDynamics will significantly enhance user adoption and time to value. In addition, configuraion-as-code is a concept that will appeal to the DevOps team. 
+ConfigMyApp enhances rapid medium and large scale rollout of AppDynamics. We built ConfigMyApp based on the DevOps configuration-as-code paradigm with a simple  objective - the ability to configure AppDynamics with from customers' existing Continuous Integration and Deployment (CI/CD) pipelines - such as Jenkins, Harness, TeamCity, GitLab, Bamboo, etc.  Being able to remotely create and update configurations in AppDynamics will significantly enhance user adoption and time to value. In addition, configuration-as-code is a concept that will appeal to the DevOps team. 
 
 # Supported Components 
 
 ConfigMyApp supports the configuration of the following AppDynamics components: 
 
  - Business transactions detection rules <br> 
-   Include and Exclude Rules for the following transactions: 
-    - POCOs 
-    - POJOs 
+   Support for INCLUDE and EXCLUDE rules for the following types of transactions: 
+    - .Net classes and methods (POCOs) 
+    - Java classes and methods (POJOs)
     - Servlets 
     - ASPs
  - Server Visibility 
@@ -21,46 +21,43 @@ ConfigMyApp supports the configuration of the following AppDynamics components:
  - DB Monitoring
  - Custom dashboard with support for custom logo and background images.
  
- # Prequisites 
- The following requirments must be met to run ConfigMyApp: 
+# Prerequisites
+ The following requirements must be met to run ConfigMyApp: 
 
- 1. It's only supported on Linux/Unix and MacOS. Tested on Ubuntu, CentOS and MacOS
+ 1. It's only supported on Linux/Unix and macOS. Tested on Ubuntu, CentOS and MacOS
  2. `jq` must be installed on your machine 
  3. `awk` must be installed on the machine 
  4. `sed` must be installed on the machine 
  
 Please do not proceed if any of the aforementioned prerequisites are not met.
 
- # How it works 
+# How it works 
  
-This is is higlevel flow digram on how ConfigMyApp works. 
+The diagram below depicts a high-level flow on how ConfigMyApp works. 
 
 ![How it works](https://user-images.githubusercontent.com/2548160/79471051-03c4c480-7ffa-11ea-9405-133f9e9ee4eb.png)
  
 ## Configuring input parameters
 
-ConfigMyApp accepts arguments from 3 (combined) sources - runtime, environment variables and the config.json file, where runtime parameters have precedence over environment variables, and environment variables have precendence configuration json file.  
+ConfigMyApp accepts arguments from 3 (combined) sources - runtime, environment variables and the config.json file, where runtime parameters have precedence over environment variables, and environment variables have precedence configuration `JSON` file.  
 
 In summary, the order of parameter precedence is as follows: 
 
 1. Runtime parameters 
 2. Environment variables 
-3. Configuration file config.json 
+3. Configuration file `config.json` 
 
-Note that mandatory parameters need to be provided in any (and not all) of the available ways of configuration listed above in order for ConfigMyApp to be able to start.
+Note that mandatory parameters need to be provided in any (and not all) of the three configuration methods listed above for ConfigMyApp to be able to start.
 
 ## Runtime parameters  
 
-Use the `--help` command to get a list of the avaialable runtime parameters as shown below: 
+Use the `--help` command to get a list of the available runtime parameters as shown below: 
 
 ```
 ./start.sh --help
 ```
 
 The table below describes the supported runtime arguments: 
-
-<div class="datatable-begin"></div>
-
 
 | Section       | Parameter<img>  | Description  | Mandatory  |
 | ------ |:------- | :--------- |  :----: |
@@ -85,13 +82,11 @@ The table below describes the supported runtime arguments:
 | Application | `--overwrite-health-rules` | overwrite health rules (true by default) |  <img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20"> |
 | Application | `--bt-only, --no-bt-only` | configure business transactions only  |  <img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20"> |
 
-<div class="datatable-end"></div>
-
-In addtion, note that you can run the script in debug mode by using `--debug` flag, in which case the connection and other parameters used will be printed out in the console. We do not recommend using this flag in production, and it is set to `false` by default.
+In addition, note that you can run the script in debug mode by using `--debug` flag, in which case the connection and other parameters used will be printed out in the console. We do not recommend using this flag in production, and it is set to `false` by default.
 
 ## Environment variables
 
-Environment variabels used by ConfigMyApp start with `CMA_` and if not empty, will be used to fill-in parameters values not explicitly set at runtime. <br>
+Environment variables used by ConfigMyApp start with `CMA_` and if not empty, will be used to fill-in parameters values not explicitly set at runtime. <br>
 
 The table below describes the supported environment variables: 
 <div class="datatable-begin"></div>
@@ -233,7 +228,7 @@ The table below describes the supported environment variables:
 
 ## Configuration file
 
-ConfigMyApp uses a `config.json`configuration file which can be found in the root of the project. The values in the configuration file is only used  when the runtime parameter is not defined and environment variable for the same parameter does not exist. <br>
+ConfigMyApp uses a `config.json` configuration file which can be found in the root of the project. The values in the configuration file are only used  when the runtime parameter is not defined and the environment for the same parameter does not exist. <br>
 
 The table below describe the JSON configuration:
 
@@ -322,13 +317,13 @@ This section contains examples of running an instance of ConfigMyApp, it should 
 
 Harness is a Continuous Delivery as a Service enterprise platform for automation of application and micro-service deployments.
 
-The Harness Delegate is a service you run in your local network or VPC to connect your artifact servers, and your infrastructure, collaboration, and verification providers, with the Harness Manager.
+The Harness Delegate is a service you run in your local network or VPC to connect your artefact servers, and your infrastructure, collaboration, and verification providers, with the Harness Manager.
 
-Where delagate and Manager are in the overall Harness Arcitecture, can be seen in the diagram below:
+Where delegate and Manager are in the overall Harness Architecture, can be seen in the diagram below:
 
 ![harness_delegate](https://user-images.githubusercontent.com/23483887/87052304-8a073600-c1f8-11ea-9eb0-bc92f93fd245.png)
 
-### Run Harness.io Delegate as Docker Constainer
+### Run Harness.io Delegate as Docker Container
 
 Navigate to Harness.io integration folder and run a start script:
 
@@ -337,7 +332,7 @@ cd integrations/Harnessio/harness-delegate-docker/
 ./launch-harness-delegate.sh
 ```
 
-This command is starting a Docker container that contains your delegate and that you can see by using following command:
+This command is starting a Docker container that contains your delegate and that you can see by using the following command:
 ```
 docker ps
 ```
@@ -346,7 +341,7 @@ In the Harness.io UI delegate appears as active, and you can access it at Setup/
 
 ![harness_delegate_ui](https://user-images.githubusercontent.com/23483887/87037486-34c12980-c1e4-11ea-8814-68b98e68aee3.png)
 
-Now when a delegate is available, you can run a defined application pipeline or workflow in order to deploy your configuration to controller.
+Now when a delegate is available, you can run a defined application pipeline or workflow to deploy your configuration to controller.
 
 <p><img align="right" width="200" height="60" src="https://user-images.githubusercontent.com/23483887/87051994-33016100-c1f8-11ea-847f-38da20685581.png"></p>
 
