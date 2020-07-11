@@ -1,5 +1,4 @@
 
-<img>
 # Introduction
 
 ConfigMyApp is a <b>monitoring-as-a-service</b> solution that automates the configuration of AppDynamics business applications, Server Viz, dashboarding, etc  without the need to manually login to the controller. 
