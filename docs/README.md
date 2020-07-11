@@ -319,6 +319,9 @@ This section contains examples of running an instance of ConfigMyApp, it should 
 
 ## Business Transaction Configuration 
 
+Match types: MATCHES_REGEX, CONTAINS, EQUALS, STARTS_WITH, ENDS_WITH, IS_IN_LIST, IS_NOT_EMPTY
+The format of the JSON must be maintained at all times.. all four sections must be available even if you're not using them, leave them blank.
+
 ## Branding 
 
 ## Proxy Settings 
