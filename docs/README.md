@@ -1,7 +1,4 @@
-
-
-
-
+<p align=center>. . . </p>
 
 # Introduction
 
