@@ -2,9 +2,9 @@
 
 # Introduction
 
-ConfigMyApp is a <b>monitoring-as-a-service</b> solution that automates the configuration of AppDynamics business applications, Server Viz, dashboarding, etc  without the need to manually login to the controller. Automated configuration saves time, hassle and cost; it decreases human error and maintains consistency of thresholds and naming conventions across a customer's estate. 
+ConfigMyApp is a <b>monitoring-as-a-service</b> solution that automates the configuration of AppDynamics business applications, Server Viz, dashboarding, etc  without the need to manually login to the controller. 
 
-ConfigMyApp enhances rapid medium and large scale rollout of AppDynamics. We built ConfigMyApp based on the DevOps configuration-as-code paradigm with a simple  objective - the ability to configure AppDynamics from customers' existing Continuous Integration and Deployment (CI/CD) pipelines - such as Jenkins, Harness, TeamCity, GitLab, Bamboo, etc.  Being able to remotely create and update configurations in AppDynamics will significantly enhance user adoption and time to value. In addition, configuration-as-code is a concept that will appeal to the DevOps team. 
+ConfigMyApp enhances rapid medium and large scale rollout of AppDynamics. We built it based on the DevOps configuration-as-code paradigm with a simple  objective - the ability to configure AppDynamics from your existing Continuous Integration and Deployment (CI/CD) platform - be it Jenkins, Harness, TeamCity, GitLab, Bamboo, etc. Using ConfigMyApp will save you time, hassle and cost,  it reduces human error and maintains consistency of thresholds and naming conventions across your estate.  Being able to remotely create and update configurations in AppDynamics will significantly enhance user adoption and time to value. In addition, configuration-as-code is a concept that will appeal to your DevOps team. 
 
 # Supported Components 
 
@@ -35,7 +35,8 @@ Please do not proceed if any of the aforementioned prerequisites are not met.
  
 The diagram below depicts a high-level flow on how ConfigMyApp works. 
 
-![How it works](https://user-images.githubusercontent.com/2548160/79471051-03c4c480-7ffa-11ea-9405-133f9e9ee4eb.png)
+![How it works](https://user-images.githubusercontent.com/2548160/87234693-719b4500-c3cb-11ea-9fab-fa82d3e30f21.png)
+
 
 ## Output 
 
