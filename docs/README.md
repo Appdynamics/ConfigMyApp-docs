@@ -36,6 +36,14 @@ Please do not proceed if any of the aforementioned prerequisites are not met.
 The diagram below depicts a high-level flow on how ConfigMyApp works. 
 
 ![How it works](https://user-images.githubusercontent.com/2548160/79471051-03c4c480-7ffa-11ea-9405-133f9e9ee4eb.png)
+
+## Output 
+
+In addition to the automated business transaction and health rule configuration features that ConfigMyApp provides, it also creates an automated dynamic dashboard as shown below. The server and databse monitoring health status are optional. Refer to the <b> Configuring input parameters <b> for details. 
+
+![dashboard](https://user-images.githubusercontent.com/2548160/87234207-bec8e800-c3c6-11ea-9858-c857fb0b7470.png)
+
+Note that the branding, which consists of logo and the background image can be easily changed by either copying both images into the `branding` folder in the root directory. 
  
 ## Configuring input parameters
 
