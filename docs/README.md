@@ -98,7 +98,6 @@ In addition, note that you can run the script in debug mode by using `--debug` f
 Environment variables used by ConfigMyApp start with `CMA_` and if not empty, will be used to fill-in parameters values not explicitly set at runtime. <br>
 
 The table below describes the supported environment variables: 
-<div class="datatable-begin"></div>
 
 <table id="envTable" class="display">
   <thead>
@@ -233,7 +232,6 @@ The table below describes the supported environment variables:
   </tbody>
 </table>
 
-<div class="datatable-end"></div>
 
 ## Configuration file
 
@@ -269,7 +267,7 @@ The table below describe the JSON configuration:
 
 This section contains examples of running an instance of ConfigMyApp, it should be adjusted to fit your use-case and here are some of the common ones
 
-## Common Scenerios  
+## Common scenarios  
 
 > Server visibility
 
