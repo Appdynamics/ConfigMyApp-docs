@@ -4,7 +4,7 @@
 
 ConfigMyApp is a <b>monitoring-as-a-service</b> solution that automates the configuration of AppDynamics business applications, Server Viz, dashboarding, etc  without the need to manually login to the controller. Automated configuration saves time, hassle and cost; it decreases human error and maintains consistency of thresholds and naming conventions across a customer's estate. 
 
-ConfigMyApp enhances rapid medium and large scale rollout of AppDynamics. We built ConfigMyApp based on the DevOps configuration-as-code paradigm with a simple  objective - the ability to configure AppDynamics with from customers' existing Continuous Integration and Deployment (CI/CD) pipelines - such as Jenkins, Harness, TeamCity, GitLab, Bamboo, etc.  Being able to remotely create and update configurations in AppDynamics will significantly enhance user adoption and time to value. In addition, configuration-as-code is a concept that will appeal to the DevOps team. 
+ConfigMyApp enhances rapid medium and large scale rollout of AppDynamics. We built ConfigMyApp based on the DevOps configuration-as-code paradigm with a simple  objective - the ability to configure AppDynamics from customers' existing Continuous Integration and Deployment (CI/CD) pipelines - such as Jenkins, Harness, TeamCity, GitLab, Bamboo, etc.  Being able to remotely create and update configurations in AppDynamics will significantly enhance user adoption and time to value. In addition, configuration-as-code is a concept that will appeal to the DevOps team. 
 
 # Supported Components 
 
