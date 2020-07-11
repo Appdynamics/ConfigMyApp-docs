@@ -12,18 +12,6 @@
       </script>
     {% endif %}
     
-    <script>
-$(document).ready(function(){
-
-    $('table.display').DataTable( {
-        paging: true,
-        stateSave: true,
-        searching: true
-    }
-        );
-});
-</script>
-    
     <meta charset="UTF-8">
 
 {% seo %}
@@ -48,7 +36,7 @@ $(document).ready(function(){
     </header>
 
     <main id="content" class="main-content" role="main">
-      {{ content }}
+      {% include toc.html html=content %}
 
       <footer class="site-footer">
         {% if site.github.is_project_page %}
