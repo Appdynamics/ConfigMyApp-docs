@@ -38,9 +38,9 @@ The diagram below depicts a high-level flow on how ConfigMyApp works.
 ![How it works](https://user-images.githubusercontent.com/2548160/87234693-719b4500-c3cb-11ea-9fab-fa82d3e30f21.png)
 
 
-## Output 
+## Sample Output 
 
-In addition to the automated business transaction and health rule configuration features that ConfigMyApp provides, it also creates an automated dynamic dashboard as shown below. The server and databse monitoring health status are optional. Refer to the <b> Configuring input parameters <b> for details. 
+In addition to the automated business transaction and health rule configuration features that ConfigMyApp provides, it also creates an automated dynamic dashboard as shown below. The server and databse monitoring health status are optional. Refer to the <a href="https://appdynamics.github.io/ConfigMyApp-docs/#configuring-input-parameters"> configuring input parameters</a> for details. 
 
 ![dashboard](https://user-images.githubusercontent.com/2548160/87234207-bec8e800-c3c6-11ea-9858-c857fb0b7470.png)
 
@@ -265,9 +265,11 @@ The table below describe the JSON configuration:
 | Application | `-` | configure business transactions only  |  <img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20"> |
 
 
-# Execute ConfigMyApp
+# Running ConfigMyApp
 
-This section contains examples of running an instance of ConfigMyApp, it should be adjusted to fit your use-case and here are some of the common ones:
+This section contains examples of running an instance of ConfigMyApp, it should be adjusted to fit your use-case and here are some of the common ones
+
+## Common Scenerios  
 
 > Server visibility
 
@@ -317,6 +319,11 @@ This section contains examples of running an instance of ConfigMyApp, it should 
                   
 ```
 
+## Business Transaction Configuration 
+
+## Branding 
+
+## Proxy Settings 
 
 # Integrations 
 
