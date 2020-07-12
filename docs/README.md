@@ -44,7 +44,7 @@ In addition to the automated business transaction and health rule configuration 
 
 ![dashboard](https://user-images.githubusercontent.com/2548160/87234207-bec8e800-c3c6-11ea-9858-c857fb0b7470.png)
 
-Note that the branding which consists of the logo and the background image can easily be changed by copying your custom images into the `branding` folder in the root directory. 
+Note that the branding which consists of the logo and the background image can be easily changed by copying your custom images into the `branding` folder in the root directory. Refer to the <a href="https://appdynamics.github.io/ConfigMyApp-docs/#branding"> branding section</a> for further details. 
  
 ## Configuring input parameters
 
