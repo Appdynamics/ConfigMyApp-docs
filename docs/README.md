@@ -40,11 +40,11 @@ The diagram below depicts a high-level flow on how ConfigMyApp works.
 
 ## Sample Output 
 
-In addition to the automated business transaction and health rule configuration features that ConfigMyApp provides, it also creates an automated dynamic dashboard as shown below. The server and databse monitoring health status are optional. Refer to the <a href="https://appdynamics.github.io/ConfigMyApp-docs/#configuring-input-parameters"> configuring input parameters</a> for details. 
+In addition to the automated business transaction and health rule configuration features that ConfigMyApp provides, it also creates a dynamic dashboard as shown below. The server and databse monitoring health status are optional. Refer to the <a href="https://appdynamics.github.io/ConfigMyApp-docs/#configuring-input-parameters"> configuring input parameters</a> for details. 
 
 ![dashboard](https://user-images.githubusercontent.com/2548160/87234207-bec8e800-c3c6-11ea-9858-c857fb0b7470.png)
 
-Note that the branding, which consists of logo and the background image can be easily changed by either copying both images into the `branding` folder in the root directory. 
+Note that the branding which consists of the logo and the background image can easily be changed by copying your custom images into the `branding` folder in the root directory. 
  
 ## Configuring input parameters
 
