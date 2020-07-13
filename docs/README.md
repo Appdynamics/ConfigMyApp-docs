@@ -33,12 +33,13 @@ Please do not proceed if any of the aforementioned prerequisites are not met.
 
 ## Service account 
 A lcoal service account should be created in you controller with the following privileges: 
-    
-     i)   Create Health rules in All applications 
-     ii)  Create dashboards 
-     iii) Create Database health rules  
-     iv)  View Database collector 
-      v)  Create SIM health rules  
+
+1. Create health rules in all business applications 
+2. Create dashboards 
+3. Create business transactions 
+4. Create Database health rules  
+5. View Database collector 
+6. Create SIM health rules  
       
 Single Sign-On user will not work. 
 
@@ -341,11 +342,20 @@ The format of the JSON must be maintained at all times.. all four sections must 
 
 ## Docker 
 
-### Use Official ConfigMyApp image 
+You can run ConfigMyApp by using either the official docker image or you can build you own custom image. 
+
+### ConfigMyApp image 
+
+ConfigMyApp images are available from Docker hub and can be downloaded using `docker pull`. For example: 
+
+`docker pull iogbole/configmyapp:latest`
 
 ### Build a custom image
 
-### Build a custom image
+Alternatively, you may build your own ConfigMyApp image using the following steps: 
+1. Clone the <a href="https://github.com/Appdynamics/ConfigMyApp" target="_blank">repository</a>
+2. change directory the docker folder
+3. Run  `./build.sh <tag_name> <image_name>`  
 
 ### docker run
 
