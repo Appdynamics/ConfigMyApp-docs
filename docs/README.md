@@ -31,6 +31,17 @@ ConfigMyApp supports the configuration of the following AppDynamics components:
  
 Please do not proceed if any of the aforementioned prerequisites are not met.
 
+## Service account 
+A lcoal service account should be created in you controller with the following privileges: 
+    
+     i)   Create Health rules in All applications 
+     ii)  Create dashboards 
+     iii) Create Database health rules  
+     iv)  View Database collector 
+      v)  Create SIM health rules  
+      
+Single Sign-On user will not work. 
+
 # How it works 
  
 The diagram below depicts a high-level flow on how ConfigMyApp works. 
