@@ -310,7 +310,7 @@ This section contains examples of running an instance of ConfigMyApp, it should 
            --include-database \
            --database-name 'DB Collector Name' \
            --include-sim  \ 
-           --use-proxy  \ 
+           --use-https false  \ 
            --proxy-url localhost  \
            --proxy-port 3303  \ 
            --overwrite-health-rules 
@@ -318,7 +318,7 @@ This section contains examples of running an instance of ConfigMyApp, it should 
 ```
 
 ## Business Transaction Configuration 
-
+EUMS
 Match types: MATCHES_REGEX, CONTAINS, EQUALS, STARTS_WITH, ENDS_WITH, IS_IN_LIST, IS_NOT_EMPTY
 The format of the JSON must be maintained at all times.. all four sections must be available even if you're not using them, leave them blank.
 
@@ -327,6 +327,52 @@ The format of the JSON must be maintained at all times.. all four sections must 
 ## Proxy Settings 
 
 # Integrations 
+
+## Docker 
+
+### Use Official ConfigMyApp image 
+
+### Build a custom image
+
+### Build a custom image
+
+### docker run
+
+#### mount branding volume
+
+#### mount business transaction volume 
+
+
+```
+docker $ docker run --env-file env.list <image-name>
+```
+Sample output 
+
+```
+Checking if API_Gateway business application exist in http://controller-2060nosshco-o3wdq4ip.appd-cx.com:8090/controller...
+
+Found API_Gateway business application
+
+Creating Server Visibility Health Rules...Please wait
+
+
+Creating API_Gateway Health Rules...
+
+done
+
+Processing Dashboard Template.
+
+Applying Database and SIM settings to the dashboard template...
+done
+
+Creating dashboard in the controller
+*********************************************************************
+
+[TRUNCATED]
+
+```
+
+## Kubernetes  
 
 <p><img align="right" width="200" height="60" src="https://user-images.githubusercontent.com/23483887/87051577-a9ea2a00-c1f7-11ea-9ab8-4781d043e9bc.png"></p>
 
