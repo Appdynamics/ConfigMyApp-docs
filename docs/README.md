@@ -389,7 +389,8 @@ CMA_LOGO_NAME=<logo_image_name>.<file-extension>
       --mount type=bind,source=$(pwd)/branding,destination=/opt/configmyapp/branding \
       --env-file docker/env.list  ${image_name}:${version}
  ```
- 
+Note: Do not use qoutes in the environment variable values, and it's best not to use spaces in the file name. 
+
 #### Mount business transaction volume 
 
 Use the folllowing steps to automate business transaction configuration using the docker image:
@@ -406,7 +407,7 @@ docker run -d \
   ${image_name}:${version}
 ```
 
-Once your contaienr is up and running, execute `docker ps` to check it's status, then tail the logs: 
+Once your contaienr is up and running, execute `docker ps` to check the container status, then tail the logs: 
 
 `docker logs ConfigMyApp -f`
 
