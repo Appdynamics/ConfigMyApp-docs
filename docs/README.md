@@ -373,7 +373,7 @@ Standard run:
 To use your company's logo and background images, use the following steps: 
 
 1. Create a folder called `branding`, add both images into the folder.
-2. In the `env.list` file, the following BRANDING environment variables:
+2. In the `env.list` file, add the following BRANDING environment variables:
 
 ```
 CMA_USE_BRANDING=true
@@ -381,8 +381,6 @@ CMA_BACKGROUND_NAME=<bg_image_name>.<file-extension>
 CMA_LOGO_NAME=<logo_image_name>.<file-extension>
 
 ```
-Note: Do not use qoutes in the environment variable values, and it's best not to use spaces in the file name. 
-
 3. Mount the `branding` volume in docker run. The docker run command should be executed from the `branding` folder on your host. 
 
  ``` 
@@ -408,7 +406,7 @@ docker run -d \
   ${image_name}:${version}
 ```
 
-Once your contaienr is up and running, execute `docker ps` to check it's status, then tails the logs: 
+Once your contaienr is up and running, execute `docker ps` to check it's status, then tail the logs: 
 
 `docker logs ConfigMyApp -f`
 
