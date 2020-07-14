@@ -52,11 +52,11 @@ The diagram below depicts a high-level flow on how ConfigMyApp works.
 
 ## Sample Output 
 
-In addition to the automated business transaction and health rule configuration features that ConfigMyApp provides, it also creates a dynamic dashboard as shown below. The server and databse monitoring health status are optional. Refer to the <a href="https://appdynamics.github.io/ConfigMyApp-docs/#configuring-input-parameters"> configuring input parameters</a> for details. 
+In addition to the automated business transaction and health rule configuration features that ConfigMyApp provides, it also creates a dynamic dashboard as shown below. The server and databse monitoring health status are optional. Refer to the <a href="https://appdynamics.github.io/ConfigMyApp/#configuring-input-parameters"> configuring input parameters</a> for details. 
 
 ![dashboard](https://user-images.githubusercontent.com/2548160/87234207-bec8e800-c3c6-11ea-9858-c857fb0b7470.png)
 
-Note that the branding which consists of the logo and the background image can be easily changed by copying your custom images into the `branding` folder in the root directory. Refer to the <a href="https://appdynamics.github.io/ConfigMyApp-docs/#branding"> branding section</a> for further details. 
+Note that the branding which consists of the logo and the background image can be easily changed by copying your custom images into the `branding` folder in the root directory. Refer to the <a href="https://appdynamics.github.io/ConfigMyApp/#branding"> branding section</a> for further details. 
  
 ## Configuring input parameters
 
@@ -366,7 +366,7 @@ First, you would need to define your environment variables using the `env.list` 
 
 Standard run: 
 
-`$ docker run --env-file env.list <image-name>` 
+`docker run --name ConfigMyApp --env-file env.list ${image_name}:${version}` 
 
 #### Mount branding volume
 
@@ -381,7 +381,7 @@ CMA_BACKGROUND_NAME=<bg_image_name>.<file-extension>
 CMA_LOGO_NAME=<logo_image_name>.<file-extension>
 
 ```
-3. Mount the `branding` volume in docker run. The docker run command should be executed from the `branding` folder on your host. 
+ 3.Mount the `branding` volume in docker run. The docker run command should be executed from the `branding` folder on your host. 
 
  ``` 
  docker run -d \
