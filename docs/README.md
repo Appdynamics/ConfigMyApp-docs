@@ -368,7 +368,63 @@ The format of the JSON must be maintained at all times, all four sections must b
 
 ## Branding 
 
+ConfigMyApp uses the `logo.png` and the `background.jpg` file in the `branding` folder by default. We recommend that you replace both files with your company's images. Alternatively, you may toss additional images into the `branding` folder and specify the image names as parameters. See examples below: 
+
+<b> Run time Paramaters</b>
+
+`./start.sh -c http://controller-2060nosshco-o3wdq4ip.appd-cx.com -a API_Gateway -u appd -p appd --use-branding --logo-name="logo-white.png" --background-name="appd-bg.jpg"`
+
+<b>Environment Varaibles</b>
+```
+CMA_USE_BRANDING=true
+CMA_BACKGROUND_NAME=<bg_image_name>.<file-extension>
+CMA_LOGO_NAME=<logo_image_name>.<file-extension>
+
+```
+<b>Configuration file (`config.json`)</b>
+
+    "branding": [
+    {
+      "enabled": true,
+      "logo_file_name": "logo.png",
+      "background_file_name": "background.jpg"
+    }
+    ]
+
 ## Proxy Settings 
+
+If your AppDynamics controller is behind proxy, ConfigMyApp lets you specify the Proxy Host and Port. Proxy authentication is not supported. 
+
+<b> Run time Paramaters</b>
+`./start.sh -c http://controller-2060nosshco-o3wdq4ip.appd-cx.com -a API_Gateway -u appd -p appd --use-proxy 	--proxy-url="10.3.5.9" --proxy-port 8080`
+
+<b>Environment Varaibles</b>
+
+```
+CMA_USE_PROXY=true
+CMA_PROXY_URL=10.5.9.1
+CMA_PROXY_PORT=4993
+```
+
+<b>Configuration file (`config.json`)</b>
+
+    "controller_details": [
+    {
+      "host": "http://controller-2060nosshco-o3wdq4ip.appd-cx.com",
+      "port": 8090,
+      "use_https": false,
+      "account": "customer1",
+      "username": "appd",
+      "password": "appd",
+      <b>
+      "use_proxy": true,
+      "proxy_url": "127.0.0.1",
+      "proxy_port": "8030" 
+      </b>
+    }
+    ]
+    
+## Encoded Password  
 
 # Integrations 
 
@@ -468,8 +524,9 @@ Creating dashboard in the controller
 [TRUNCATED]
 
 ```
-
 ## Kubernetes  
+[TODO]
+
 
 <p><img align="right" width="200" height="60" src="https://user-images.githubusercontent.com/23483887/87051577-a9ea2a00-c1f7-11ea-9ab8-4781d043e9bc.png"></p>
 
