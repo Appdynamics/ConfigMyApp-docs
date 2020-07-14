@@ -237,7 +237,7 @@ The table below describes the supported environment variables:
     </tr>
     <tr>
       <td>Application</td>
-      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">-</code></td>
+      <td style="text-align: left"><code class="language-plaintext highlighter-rouge">CMA_BT_ONLY</code></td>
       <td style="text-align: left">configure business transactions only</td>
       <td style="text-align: center"><img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20"></td>
     </tr>
@@ -272,7 +272,7 @@ The table below describe the JSON configuration:
 | Application | `.configuration[].include_sim` | include server visibility |  <img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20"> |
 | Application | `.configuration[].configure_bt` | configure busness transactions |  <img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20"> |
 | Application | `.overwrite_health_rules` | overwrite health rules |  <img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20">|
-| Application | `CMA_BT_ONLY` | configure business transactions only  |  <img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20"> |
+| Application | `-` | configure business transactions only  |  <img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20"> |
 
 
 # Running ConfigMyApp
