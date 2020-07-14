@@ -344,10 +344,25 @@ Business transaction detection rules can be configured by using the template fil
         "priority":"10"
        }
      ]
+     
+and this Java servelet example below shows an example of using REGEX matching condition: 
+
+    "java_servlet_rules": [
+      {
+       "rule_name": "LogonServlet_test",
+       "matching_condition":"MATCHES_REGEX",
+       "matching_strings": "^user.*(\/login)$",
+       "priority":"7"
+      }
+    ]   
+  
+The supported transaction types are: 
+
+`java_pojo_rules`, `dotnet_poco_rules`, `dotnet_asp_rules` and `java_servlet_rules`
 
 The supported match-type ENUMS are: 
 
- `MATCHES_REGEX, CONTAINS, EQUALS, STARTS_WITH, ENDS_WITH, IS_IN_LIST and IS_NOT_EMPTY`
+`MATCHES_REGEX`, `CONTAINS`, `EQUALS`, `STARTS_WITH`, `ENDS_WITH`, `IS_IN_LIST` and `IS_NOT_EMPTY`
      
 The format of the JSON must be maintained at all times, all four sections must be available even if you're not using them, leave it blank if you're not using it. 
 
