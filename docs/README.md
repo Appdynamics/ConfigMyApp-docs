@@ -358,7 +358,7 @@ Alternatively, you may build your own ConfigMyApp image using the following step
 2. change directory the docker folder
 3. Run  `./build.sh <tag_name> <image_name>`  
 
-### docker run
+### Docker run
 
 The `run.sh` script in the docker folder contains 3 examples (standard, BT, and branding) on how to run the configMyApp docker image. 
 
@@ -368,7 +368,7 @@ Standard run:
 
 `$ docker run --env-file env.list <image-name>` 
 
-#### mount branding volume
+#### Mount branding volume
 
 To use your company's logo and background images, use the following steps: 
 
@@ -376,21 +376,23 @@ To use your company's logo and background images, use the following steps:
 2. In the `env.list` file, add <br>
 
 ```
-    CMA_USE_BRANDING=true
-    CMA_BACKGROUND_NAME=<bg_image_name>.<file-extension>
-    CMA_LOGO_NAME=<logo_image_name>.<file-extension>
+CMA_USE_BRANDING=true
+CMA_BACKGROUND_NAME=<bg_image_name>.<file-extension>
+CMA_LOGO_NAME=<logo_image_name>.<file-extension>
 ```
   Note: Do not use qoutes in the environment variable values, and it's best to no use spaces in the file name. 
-  
- 3. Mount the `branding` volume in docker run. The docker run command should be executed from the `branding` folder on your host. 
-    ``` 
-    docker run -d \
-         --name ConfigMyApp
-         --mount type=bind,source=$(pwd)/branding,destination=/opt/configmyapp/branding \
-         --env-file docker/env.list  ${image_name}:${version}
-    ```
-#### mount business transaction volume 
-To automate business transaction configuration, use the following steps: 
+3. Mount the `branding` volume in docker run. The docker run command should be executed from the `branding` folder on your host. 
+
+ ``` 
+ docker run -d \
+      --name ConfigMyApp
+      --mount type=bind,source=$(pwd)/branding,destination=/opt/configmyapp/branding \
+      --env-file docker/env.list  ${image_name}:${version}
+ ```
+ 
+#### Mount business transaction volume 
+
+Use the folllowing steps to automate business transaction configuration using the docker image:
 
 1. create a folder called `bt_config` 
 2. Copy the `configBT.json` file from the project into the `bt_config` folder on your docker host 
