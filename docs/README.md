@@ -344,28 +344,72 @@ The format of the JSON must be maintained at all times.. all four sections must 
 
 You can run ConfigMyApp by using either the official docker image or you can build you own custom image. 
 
-### ConfigMyApp image 
+### ConfigMyApp docker image 
 
 ConfigMyApp images are available from Docker hub and can be downloaded using `docker pull`. For example: 
 
 `docker pull iogbole/configmyapp:latest`
 
-### Build a custom image
+### Build a custom docker image
 
 Alternatively, you may build your own ConfigMyApp image using the following steps: 
+
 1. Clone the <a href="https://github.com/Appdynamics/ConfigMyApp" target="_blank">repository</a>
 2. change directory the docker folder
 3. Run  `./build.sh <tag_name> <image_name>`  
 
 ### docker run
 
+The `run.sh` script in the docker folder contains 3 examples (standard, BT, and branding) on how to run the configMyApp docker image. 
+
+First, you would need to define your environment variables using the `env.list` file in the docker folder as an example. 
+
+Standard run: 
+
+`$ docker run --env-file env.list <image-name>` 
+
 #### mount branding volume
 
-#### mount business transaction volume 
+To use your company's logo and background images, use the following steps: 
 
+1. Create a folder called `branding`, add both images into the folder.
+2. In the `env.list` file, add <br>
 
 ```
-docker $ docker run --env-file env.list <image-name>
+    CMA_USE_BRANDING=true
+    CMA_BACKGROUND_NAME=<bg_image_name>.<file-extension>
+    CMA_LOGO_NAME=<logo_image_name>.<file-extension>
+```
+  Note: Do not use qoutes in the environment variable values, and it's best to no use spaces in the file name. 
+  
+ 3. Mount the `branding` volume in docker run. The docker run command should be executed from the `branding` folder on your host. 
+    ``` 
+    docker run -d \
+         --name ConfigMyApp
+         --mount type=bind,source=$(pwd)/branding,destination=/opt/configmyapp/branding \
+         --env-file docker/env.list  ${image_name}:${version}
+    ```
+#### mount business transaction volume 
+To automate business transaction configuration, use the following steps: 
+
+1. create a folder called `bt_config` 
+2. Copy the `configBT.json` file from the project into the `bt_config` folder on your docker host 
+3. Make neccessasary adjustments to the folder depending on your need. Please refer to the <a href="https://appdynamics.github.io/ConfigMyApp-docs/#business-transaction-configuration"> business transaction configuration</a> section for details
+4. Mount the `bt_config` volume in docker run. The docker run command should be executed from the `bt_config` folder on your host. 
+
+```
+docker run -d \
+  --name ConfigMyApp
+  --mount type=bind,source=$(pwd)/bt_config,destination=/opt/configmyapp/bt_config \
+  ${image_name}:${version}
+```
+
+Once your contaienr is up and running, execute `docker ps` to check it's status, then tails the logs: 
+
+`docker logs ConfigMyApp -f`
+
+The output should be similar to this: 
+
 ```
 Sample output 
 
