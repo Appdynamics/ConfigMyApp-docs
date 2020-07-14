@@ -330,9 +330,26 @@ This section contains examples of running an instance of ConfigMyApp, it should 
 ```
 
 ## Business Transaction Configuration 
-EUMS
-Match types: MATCHES_REGEX, CONTAINS, EQUALS, STARTS_WITH, ENDS_WITH, IS_IN_LIST, IS_NOT_EMPTY
-The format of the JSON must be maintained at all times.. all four sections must be available even if you're not using them, leave them blank.
+
+Business transaction detection rules can be configured by using the template file in <a href="https://github.com/Appdynamics/ConfigMyApp/tree/master/bt_config"> `bt_config/configBT.json` </a>. The JSON file contains four arrays which represents the four types of business tranaction rules that are currently supported by ConfigMyApp. For example, the Java POJO section look like: 
+
+    "java_pojo_rules": [
+       {
+        "include_or_exclude_rule": "exclude",
+        "rule_name": "getStatus_test",
+        "class_name": "com.appdynamics.health.Class",
+        "class_matching_condition":"STARTS_WITH",
+        "method_name": "getStatus",
+        "method_matching_condition":"EQUALS",
+        "priority":"10"
+       }
+     ]
+
+The supported match-type ENUMS are: 
+
+ `MATCHES_REGEX, CONTAINS, EQUALS, STARTS_WITH, ENDS_WITH, IS_IN_LIST and IS_NOT_EMPTY`
+     
+The format of the JSON must be maintained at all times, all four sections must be available even if you're not using them, leave it blank if you're not using it. 
 
 ## Branding 
 
