@@ -617,11 +617,11 @@ Workflow step type should be Shell Script, and in order to pull data from a gith
 
 ![Harness_step_1_github](https://user-images.githubusercontent.com/23483887/87539172-58c5b480-c695-11ea-9099-8cb5318b5262.png)
 
-In next step we are using the downloaded sourcecde to run the `start.sh` script . Not ethat we are can set environment variables as workflow variables and in start script only override runtime parameter default values and/or environment variable values if necessary:
+In next step we are using the downloaded source code to run the `start.sh` script . Note that we are can set environment variables as workflow variables and in start script only overrides runtime parameter default values and/or environment variable values if necessary:
 
 ![Harness_step_2_start](https://user-images.githubusercontent.com/23483887/87539231-6f6c0b80-c695-11ea-851e-a87cbeeea1f2.png)
 
-Note: In project source code you can find an example of a workflow, in the integrations folder under Harness.io:
+Note: In project source code you can find an example of a workflow, under the `integrations/Harnessio` directory:
 ```
 integrations/Harnessio/Workflow.yml
 ```
@@ -657,7 +657,7 @@ Jenkins is running on `localhost:8080` and you can access it in the browser.
 
 ### Setting up the Jenkins job - running for a first time
 
-If you are running Jenkis for the fist time, you need to setup a job with the steps below. If you areledy specified the job, skip to next chapter for running a Jenkis job.
+If you are running Jenkis for the first time, you need to setup a job with the steps below. If you already specified the job, jump to next chapter to run a Jenkis job.
 
 #### Plugins
 
@@ -693,7 +693,7 @@ You are going to be prompted with environment ariables defined that you can upda
 
 ![Jenkins_console_output](https://user-images.githubusercontent.com/23483887/87530466-45f8b300-c688-11ea-82e0-50b7355b004b.png)
 
-### Sharing on-prem job definitions
+### Sharing On-prem Job Definitions
 
 An example of Jenkins job definition can also be found in project source code: 
 ```
