@@ -564,20 +564,21 @@ Navigate to folder and update `harness-variables.env` variables, at the minimum:
 docker-compose up
 ```
 
+#### Check the running container
+
+Both startup options are starting a Docker container that contains your delegate and you can access by using the following command:
+```
+docker ps
+```
+
 #### Optional: Download your own delegate from Harness.io UI
 
 In Harness.io navigate to Setup and in section Account click on Harness Delegates:
 
 ![Harness_download_delegate](https://user-images.githubusercontent.com/23483887/87535779-f0280900-c68f-11ea-9feb-990da695fabc.png)
 
-This is going to initiate download of a delegate. For our use-case we are using the Docker delegate, athough depending on how you plan to host the delegate, you can pick alternative options. After downloading follow the readme procedure and start a delegate process.
+This is going to initiate download of a delegate. For our use-case we are using the Docker delegate, although depending on how you intend to host a delegate, you can pick alternative options. After downloading follow the readme procedure and start a delegate process.
 
-#### Check the running container
-
-All startup commands are starting a Docker container that contains your delegate and that you can see by using the following command:
-```
-docker ps
-```
 
 ### Check if the delegate is active in Harness.io UI
 
@@ -590,7 +591,7 @@ Now when a delegate is available, you can run a defined application pipeline or 
 
 ### Running for a first time - setup
 
-In case that on your account you already have an application and workflow with steps set, proceed to next chapter - Run Harness.io script.
+In case that on your account you already have an application and workflow with steps set, proceed to next chapter - Run Harness.io script, otherwise continue in this section.
 
 #### Create an application and workflow
 
