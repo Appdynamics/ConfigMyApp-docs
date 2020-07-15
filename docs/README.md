@@ -372,7 +372,7 @@ ConfigMyApp uses the `logo.png` and the `background.jpg` file in the `branding` 
 
 <b> Run time Paramaters</b>
 
-`./start.sh -c http://controller-2060nosshco-o3wdq4ip.appd-cx.com -a API_Gateway -u appd -p appd --use-branding --logo-name="logo-white.png" --background-name="appd-bg.jpg"`
+`./start.sh -c http://appd-cx.com -a API_Gateway -u appd -p appd --use-branding --logo-name="logo-white.png" --background-name="appd-bg.jpg"`
 
 <b>Environment Varaibles</b>
 ```
@@ -396,7 +396,7 @@ CMA_LOGO_NAME=<logo_image_name>.<file-extension>
 If your AppDynamics controller is behind proxy, ConfigMyApp lets you specify the Proxy Host and Port. Proxy authentication is not supported. 
 
 <b> Run time Paramaters</b>
-`./start.sh -c http://controller-2060nosshco-o3wdq4ip.appd-cx.com -a API_Gateway -u appd -p appd --use-proxy 	--proxy-url="10.3.5.9" --proxy-port 8080`
+`./start.sh -c http://appd-cx.com -a API_Gateway -u appd -p appd --use-proxy 	--proxy-url="10.3.5.9" --proxy-port 8080`
 
 <b>Environment Varaibles</b>
 
@@ -405,26 +405,48 @@ CMA_USE_PROXY=true
 CMA_PROXY_URL=10.5.9.1
 CMA_PROXY_PORT=4993
 ```
-
 <b>Configuration file (`config.json`)</b>
 
     "controller_details": [
     {
-      "host": "http://controller-2060nosshco-o3wdq4ip.appd-cx.com",
-      "port": 8090,
-      "use_https": false,
-      "account": "customer1",
-      "username": "appd",
-      "password": "appd",
-      <b>
+      [truncated]
       "use_proxy": true,
       "proxy_url": "127.0.0.1",
       "proxy_port": "8030" 
-      </b>
     }
     ]
     
 ## Encoded Password  
+
+For added security, ConfigMyApp supports base64 password encoding. 
+For example `echo "password" | base64` outputs  the `YXBwZAo=` which you can be used in ConfigMyApp instead of a plain text `password`
+
+<b> Run time Paramaters</b>
+
+`./start.sh -c http://appd.saas.com -a MyApp -u appd -p YXBwZAo=  --use-encoded-credentials`
+
+<b>Environment Varaibles</b>
+
+```
+CMA_PASSWORD=YXBwZAo=
+CMA_USE_ENCODED_CREDENTIALS=true
+```
+<b>Configuration file (`config.json`)</b>
+
+` "are_passwords_encoded": true`
+
+## Health Rules 
+
+We have used our experience from working with diverse customers to collate a pre-canned set of best-practice application and server visibility health rules in ConfigMyApp. These health rules are located in the `healthrules` folder.  You may adjust the thresholds of the health rules to match your specific needs. 
+
+Futhermore, you can add more health rules should you wish to do so; ConfigMyApp will automatically process all the JSON files that are in the `healthrules\Application` folder and `healthrules\ServerVisibility` folder respecitvely. To minimize the chances of an error, we recommend that you create the new health rule in the controller first, then export into a JSON file. Once that is done, toss the new JSON file into either the Application or ServerVisbility folder. 
+
+Please refer to the <a href="https://docs.appdynamics.com/display/PRO45/Health+Rule+API"> Health Rule API</a> documentation for further details. 
+
+ConfigMyApp will skip a health rule if it exist in the controller. You would need to explicitly set the overwrite flag to true if you wish to overwrite existing health rules. 
+
+<b> Run time Paramaters</b>
+
 
 # Integrations 
 
