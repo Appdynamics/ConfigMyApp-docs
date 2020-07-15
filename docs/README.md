@@ -534,59 +534,6 @@ Creating dashboard in the controller
 
 Harness is a Continuous Delivery as a Service enterprise platform for automation of application and micro-service deployments.
 
-The Harness Delegate is a service you run in your local network or VPC to connect your artefact servers, and your infrastructure, collaboration, and verification providers, with the Harness Manager.
-
-Where delegate and Manager are in the overall Harness Architecture, can be seen in the diagram below:
-
-![harness_delegate](https://user-images.githubusercontent.com/23483887/87052304-8a073600-c1f8-11ea-9eb0-bc92f93fd245.png)
-
-### Run Harness.io Delegate as Docker Container
-
-Navigate to Harness.io integration folder and run a start Harness.io delegate. You have two options here, to use docker run command or Docker Compose.
-
-#### Option 1: Docker run
-
-```
-cd integrations/Harnessio/harness-delegate-docker/
-```
-Navigate to folder and in `launch-harness-delegate.sh` update the following run parameters, at the minimum: YOUR_ACCOUNT_ID_HERE, YOUR_ACCOUNT_SECRET_HERE and YOUR_DELEGATE_PROFILE_HERE. Run the script in order to start a delegate:
-```
-./launch-harness-delegate.sh
-```
-
-#### Option 2: Docker Compose
-
-```
-cd integrations/Harnessio/harness-delegate-docker-compose/
-```
-Navigate to folder and update `harness-variables.env` variables, at the minimum: YOUR_ACCOUNT_ID_HERE, YOUR_ACCOUNT_SECRET_HERE and YOUR_DELEGATE_PROFILE_HERE. Start containers defined in `docker-compose.yml`:
-```
-docker-compose up
-```
-
-#### Check the running container
-
-Both startup options are starting a Docker container that contains your delegate and you can access by using the following command:
-```
-docker ps
-```
-
-#### Optional: Download your own delegate from Harness.io UI
-
-In Harness.io navigate to Setup and in section Account click on Harness Delegates:
-
-![Harness_download_delegate](https://user-images.githubusercontent.com/23483887/87535779-f0280900-c68f-11ea-9feb-990da695fabc.png)
-
-This is going to initiate download of a delegate. For our use-case we are using the Docker delegate, although depending on how you intend to host a delegate, you can pick alternative options. After downloading follow the readme procedure and start a delegate process.
-
-
-### Check if the delegate is active in Harness.io UI
-
-In the Harness.io UI delegate appears as active, and you can access it at Setup/Delegates section:
-
-![harness_delegate_ui](https://user-images.githubusercontent.com/23483887/87037486-34c12980-c1e4-11ea-8814-68b98e68aee3.png)
-
-Now when a delegate is available, you can run a defined application pipeline or workflow to deploy your configuration to controller.
 
 
 ### Running for a first time - setup
@@ -642,18 +589,6 @@ This will trigger your deployment and you can track progress in console output i
 
 Jenkins is a free and open source automation server. It helps automate the parts of software development related to building, testing, and deploying, facilitating continuous integration and continuous delivery.
 
-### Prerequisite 
-Verify that you are having Docker Compose installed:
-```
-docker-compose --version
-```
-### Run Jenkins as Docker Container
-To start a local Jenkins server navigate to Jenkins folder and start the containers defined in docker-compose.yaml file: 
-```
-cd /integrations/Jenkins
-docker-compose up -d
-```
-Jenkins is running on `localhost:8080` and you can access it in the browser.
 
 ### Setting up the Jenkins job - running for a first time
 
