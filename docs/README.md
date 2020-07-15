@@ -621,13 +621,19 @@ In next step we are using the downloaded sourcecde to run the `start.sh` script 
 
 ![Harness_step_2_start](https://user-images.githubusercontent.com/23483887/87539231-6f6c0b80-c695-11ea-851e-a87cbeeea1f2.png)
 
+Note: In project source code you can find an example of a workflow, in the integrations folder under Harness.io:
+```
+integrations/Harnessio/Workflow.yml
+```
+
 ### Run Harness.io script
 
 Navigate to Setup, choose your Application from a list and pick a Workflow that you wish to use. Click Deploy and update environment variables if necessary when prompted, similar to screenshot below:
 
 ![Harness_io_deploy](https://user-images.githubusercontent.com/23483887/87539640-29fc0e00-c696-11ea-9cfd-ce36ac7a9eb9.png)
 
-This will trigger your deployment and you can track progress in console output in the right-side of the UI.
+This will trigger your deployment and you can track progress in console output in the right-side of the Harness.io UI.
+
 
 ## Jenkins
 
