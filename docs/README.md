@@ -447,6 +447,14 @@ ConfigMyApp will skip a health rule if it exist in the controller. You would nee
 
 <b> Run time Paramaters</b>
 
+`./start.sh -c http://appd.saas.com -a MyApp --username=appd --password=appd --overwrite-health-rules`
+
+<b>Environment Varaibles</b>
+`CMA_OVERWRITE_HEALTH_RULES=true`
+
+<b>Configuration file (`config.json`)</b>
+
+` "overwrite_health_rules": true`
 
 # Integrations 
 
