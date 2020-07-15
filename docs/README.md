@@ -587,11 +587,10 @@ In the Harness.io UI delegate appears as active, and you can access it at Setup/
 
 Now when a delegate is available, you can run a defined application pipeline or workflow to deploy your configuration to controller.
 
-<p><img align="right" width="200" height="60" src="https://user-images.githubusercontent.com/23483887/87051994-33016100-c1f8-11ea-847f-38da20685581.png"></p>
 
-### Steps for running for a first time
+### Running for a first time - setup
 
-in case that on your account you already have an application and workflow with steps set, proceed to next chapter - Run Harness.io script.
+In case that on your account you already have an application and workflow with steps set, proceed to next chapter - Run Harness.io script.
 
 #### Create an application and workflow
 
@@ -634,6 +633,9 @@ Navigate to Setup, choose your Application from a list and pick a Workflow that 
 
 This will trigger your deployment and you can track progress in console output in the right-side of the Harness.io UI.
 
+
+
+<p><img align="right" width="200" height="60" src="https://user-images.githubusercontent.com/23483887/87051994-33016100-c1f8-11ea-847f-38da20685581.png"></p>
 
 ## Jenkins
 
