@@ -694,7 +694,11 @@ You are going to be prompted with environment ariables defined that you can upda
 
 ### Sharing on-prem job definitions
 
-An example of Jenkis job definition can also be found in project sourcecode: `integrations/Jenkins/JenkinsJobFile.xml`. Additionally, you can export your Jenkins job in order to share it by using script `integrations/Jenkins/jenkins-api-get-job.sh`, make sure you replace variables with your login details before running it.
+An example of Jenkins job definition can also be found in project source code: 
+```
+integrations/Jenkins/JenkinsJobFile.xml
+``` 
+Additionally, you can export your Jenkins job in order to share it by using script `integrations/Jenkins/jenkins-api-get-job.sh`, make sure you replace variables with your login details before running it.
 
 
 
