@@ -535,8 +535,7 @@ Creating dashboard in the controller
 Harness is a Continuous Delivery as a Service enterprise platform for automation of application and micro-service deployments.
 
 
-
-### Running for a first time - setup
+### Running for the first time - setup
 
 In case that on your account you already have an application and workflow with steps set, proceed to next chapter - Run Harness.io script, otherwise continue in this section.
 
@@ -590,7 +589,7 @@ This will trigger your deployment and you can track progress in console output i
 Jenkins is a free and open source automation server. It helps automate the parts of software development related to building, testing, and deploying, facilitating continuous integration and continuous delivery.
 
 
-### Setting up the Jenkins job - running for a first time
+### Running for the first time - setup
 
 If you are running Jenkis for the first time, you need to setup a job with the steps below. If you already specified the job, jump to next chapter to run a Jenkis job.
 
