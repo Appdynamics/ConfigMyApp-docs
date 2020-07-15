@@ -542,17 +542,44 @@ Where delegate and Manager are in the overall Harness Architecture, can be seen 
 
 ### Run Harness.io Delegate as Docker Container
 
-Navigate to Harness.io integration folder and run a start script:
+Navigate to Harness.io integration folder and run a start Harness.io delegate. You have two options here, to use docker run command or Docker Compose.
+
+#### Option 1: Docker run
 
 ```
 cd integrations/Harnessio/harness-delegate-docker/
+```
+Navigate to folder and in `launch-harness-delegate.sh` update the following run parameters, at the minimum: YOUR_ACCOUNT_ID_HERE, YOUR_ACCOUNT_SECRET_HERE and YOUR_DELEGATE_PROFILE_HERE. Run the script in order to start a delegate:
+```
 ./launch-harness-delegate.sh
 ```
 
-This command is starting a Docker container that contains your delegate and that you can see by using the following command:
+#### Option 2: Docker Compose
+
+```
+cd integrations/Harnessio/harness-delegate-docker-compose/
+```
+Navigate to folder and update `harness-variables.env` variables, at the minimum: YOUR_ACCOUNT_ID_HERE, YOUR_ACCOUNT_SECRET_HERE and YOUR_DELEGATE_PROFILE_HERE. Start containers defined in `docker-compose.yml`:
+```
+docker-compose up
+```
+
+#### Optional: Download your own delegate from Harness.io UI
+
+In Harness.io navigate to Setup and in section Account click on Harness Delegates:
+
+![Harness_download_delegate](https://user-images.githubusercontent.com/23483887/87535779-f0280900-c68f-11ea-9feb-990da695fabc.png)
+
+This is going to initiate download of a delegate. For our use-case we are using the Docker delegate, athough depending on how you plan to host the delegate, you can pick alternative options. After downloading follow the readme procedure and start a delegate process.
+
+#### Check the running container
+
+All startup commands are starting a Docker container that contains your delegate and that you can see by using the following command:
 ```
 docker ps
 ```
+
+### Check if the delegate is active in Harness.io UI
 
 In the Harness.io UI delegate appears as active, and you can access it at Setup/Delegates section:
 
@@ -561,6 +588,46 @@ In the Harness.io UI delegate appears as active, and you can access it at Setup/
 Now when a delegate is available, you can run a defined application pipeline or workflow to deploy your configuration to controller.
 
 <p><img align="right" width="200" height="60" src="https://user-images.githubusercontent.com/23483887/87051994-33016100-c1f8-11ea-847f-38da20685581.png"></p>
+
+### Steps for running for a first time
+
+in case that on your account you already have an application and workflow with steps set, proceed to next chapter - Run Harness.io script.
+
+#### Create an application and workflow
+
+To create an application, if it does not exist, go to Configure and add an application:
+
+![Harness_new_app](https://user-images.githubusercontent.com/23483887/87537282-48f8a100-c692-11ea-8638-79098fb97fd6.png)
+
+Create new Workflow of a type "Build Workflow":
+
+![Harness_workflow](https://user-images.githubusercontent.com/23483887/87538269-db4d7480-c693-11ea-98e4-40cb08adbc14.png)
+
+#### Add workflow variables and steps
+
+Add workflow variables, at the minimum GITHUB_USER, GITHUB_PASSWORD and GITHUB_BRANCH:
+
+![Harness_env_vars](https://user-images.githubusercontent.com/23483887/87538628-6af32300-c694-11ea-8695-c85f9e142b88.png)
+
+Add workflow steps for pulling the data from github and executing the `start.sh` script, for example:
+
+![Harness_workflow_steps](https://user-images.githubusercontent.com/23483887/87538756-b0175500-c694-11ea-9753-de250e3fc3a6.png)
+
+Workflow step type should be Shell Script, and in order to pull data from a github repo install the necessary packages and use already defined workflow variables:
+
+![Harness_step_1_github](https://user-images.githubusercontent.com/23483887/87539172-58c5b480-c695-11ea-9099-8cb5318b5262.png)
+
+In next step we are using the downloaded sourcecde to run the `start.sh` script . Not ethat we are can set environment variables as workflow variables and in start script only override runtime parameter default values and/or environment variable values if necessary:
+
+![Harness_step_2_start](https://user-images.githubusercontent.com/23483887/87539231-6f6c0b80-c695-11ea-851e-a87cbeeea1f2.png)
+
+### Run Harness.io script
+
+Navigate to Setup, choose your Application from a list and pick a Workflow that you wish to use. Click Deploy and update environment variables if necessary when prompted, similar to screenshot below:
+
+![Harness_io_deploy](https://user-images.githubusercontent.com/23483887/87539640-29fc0e00-c696-11ea-9cfd-ce36ac7a9eb9.png)
+
+This will trigger your deployment and you can track progress in console output in the right-side of the UI.
 
 ## Jenkins
 
@@ -579,7 +646,7 @@ docker-compose up -d
 ```
 Jenkins is running on `localhost:8080` and you can access it in the browser.
 
-### Setting up the Jenkins job
+### Setting up the Jenkins job - running for a first time
 
 If you are running Jenkis for the fist time, you need to setup a job with the steps below. If you areledy specified the job, skip to next chapter for running a Jenkis job.
 
@@ -609,11 +676,11 @@ In build tab, as a buld step add "Execute shell" and execute the start.sh script
 
 ### Run Jenkis Job
 
-In order to change any of the confiuration, from left-side menu inside of a project clik "Configure". To run A Jenkins job, pick "Build with Parameters". 
+In order to change any of the confiuration, from left-side menu inside of a project click "Configure". To run A Jenkins job, pick "Build with Parameters". 
 
 ![Jenkins_run_job](https://user-images.githubusercontent.com/23483887/87529787-67a56a80-c687-11ea-9976-65c5d4263a87.png)
 
-You are going to be prompted with environment ariables defined that you can update prior tu running a job. Click on build, and check the progress in build history and "Console output".
+You are going to be prompted with environment ariables defined that you can update prior to running a job. Click on build, and check the progress in build history and "Console output".
 
 ![Jenkins_console_output](https://user-images.githubusercontent.com/23483887/87530466-45f8b300-c688-11ea-82e0-50b7355b004b.png)
 
