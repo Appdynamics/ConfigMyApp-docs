@@ -571,30 +571,56 @@ Verify that you are having Docker Compose installed:
 ```
 docker-compose --version
 ```
-### Run Jenkins as Docker Constainer
+### Run Jenkins as Docker Container
 To start a local Jenkins server navigate to Jenkins folder and start the containers defined in docker-compose.yaml file: 
 ```
 cd /integrations/Jenkins
 docker-compose up -d
 ```
-In order to show running containers, use the following command:
-```
-docker ps
-```
 Jenkins is running on `localhost:8080` and you can access it in the browser.
 
-Since volumes are mounted, note that all of your data configurations, plugins, pipelines, passwords, etc. will be persisted on the machine where containers are stared from.
+### Setting up the Jenkins job
 
-For more information about running Jenkins in Docker container refer to the official documentation:
-https://www.jenkins.io/doc/book/installing/#downloading-and-running-jenkins-in-docker
+If you are running Jenkis for the fist time, you need to setup a job with the steps below. If you areledy specified the job, skip to next chapter for running a Jenkis job.
 
-### Unlock Jenkins
-If you are starting the Jenkins container for the first time, in order to check for your password, access the container logs in the following way:
-```
-docker logs CONTAINER_ID
-```
-And copy and paste the password from container to a Jenkins web form input field when prompted.
+#### Plugins
 
-More details about Unlocking Jenkins can be found here:
-https://www.jenkins.io/doc/book/installing/#unlocking-jenkins
+If you installed recommended packages yo umay already have GitHub plugin, if you do not then navigate to "Manage Jenkins" and choose "Manage Plugins", search for "git plugin", and click on "Install without restart". You should be seeing GitHub plugin installed:
+
+![Jenkins_github plugin](https://user-images.githubusercontent.com/23483887/87523050-4e4bf080-c67e-11ea-95af-946490110ffd.png)
+
+#### Create Jenkins Job
+
+Click "New Item" to create new Jenkis job, and pick a Freestyle projct from the list, pick an apropriate name adn add an description:
+
+![Jenkins_new_item](https://user-images.githubusercontent.com/23483887/87525582-9ae4fb00-c681-11ea-96e8-946032c70141.png)
+
+In job confihuration, check the "This project is parameterised" checkbox in General section in order to add environment variables as String variables:
+
+![Jenkins_env_vars](https://user-images.githubusercontent.com/23483887/87527981-d1704500-c684-11ea-83b0-d43985793c69.png)
+
+As a source code specify GitHub project:
+
+![Jenkins_source](https://user-images.githubusercontent.com/23483887/87527538-2a8ba900-c684-11ea-8ea7-631012d912a4.png)
+
+In build tab, as a buld step add "Execute shell" and execute the start.sh script in a similar fashion as you would from command line. Bare in mind that we defined environment variables in previous step and you need to specify only additional runtime parameters that you may require:
+
+![Jenkins_build](https://user-images.githubusercontent.com/23483887/87528976-37110100-c686-11ea-8ca4-9e8a299afe12.png)
+
+### Run Jenkis Job
+
+In order to change any of the confiuration, from left-side menu inside of a project clik "Configure". To run A Jenkins job, pick "Build with Parameters". 
+
+![Jenkins_run_job](https://user-images.githubusercontent.com/23483887/87529787-67a56a80-c687-11ea-9976-65c5d4263a87.png)
+
+You are going to be prompted with environment ariables defined that you can update prior tu running a job. Click on build, and check the progress in build history and "Console output".
+
+![Jenkins_console_output](https://user-images.githubusercontent.com/23483887/87530466-45f8b300-c688-11ea-82e0-50b7355b004b.png)
+
+### Sharing on-prem job definitions
+
+An example of Jenkis job definition can also be found in project sourcecode: `integrations/Jenkins/JenkinsJobFile.xml`. Additionally, you can export your Jenkins job in order to share it by using script `integrations/Jenkins/jenkins-api-get-job.sh`, make sure you replace variables with your login details before running it.
+
+
+
 
