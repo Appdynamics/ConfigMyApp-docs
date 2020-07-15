@@ -418,8 +418,11 @@ CMA_PROXY_PORT=4993
     
 ## Encoded Password  
 
-For added security, ConfigMyApp supports base64 password encoding. 
-For example `echo "password" | base64` outputs  the `YXBwZAo=` which you can be used in ConfigMyApp instead of a plain text `password`
+For added security, ConfigMyApp supports base64 password encoding. For example 
+
+`echo "password" | base64` outputs  `YXBwZAo=` 
+
+which can be used in ConfigMyApp instead of the plain text `password`
 
 <b> Run time Paramaters</b>
 
@@ -450,6 +453,7 @@ ConfigMyApp will skip a health rule if it exist in the controller. You would nee
 `./start.sh -c http://appd.saas.com -a MyApp --username=appd --password=appd --overwrite-health-rules`
 
 <b>Environment Varaibles</b>
+
 `CMA_OVERWRITE_HEALTH_RULES=true`
 
 <b>Configuration file (`config.json`)</b>
