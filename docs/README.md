@@ -32,7 +32,7 @@ ConfigMyApp supports the configuration of the following AppDynamics components:
 Please do not proceed if any of the aforementioned prerequisites are not met.
 
 ## Service account 
-A lcoal service account should be created in you controller with the following privileges: 
+A local service account should be created in your controller with the following privileges: 
 
 1. Create health rules in all business applications 
 2. Create dashboards 
@@ -52,7 +52,7 @@ The diagram below depicts a high-level flow on how ConfigMyApp works.
 
 ## Sample Output 
 
-In addition to the automated business transaction and health rule configuration features that ConfigMyApp provides, it also creates a dynamic dashboard as shown below. The server and databse monitoring health status are optional. Refer to the <a href="https://appdynamics.github.io/ConfigMyApp/#configuring-input-parameters"> configuring input parameters</a> for details. 
+In addition to the automated business transaction and health rule configuration features that ConfigMyApp provides, it also creates a dynamic dashboard as shown below. The server and database monitoring health configurations are optional items. Refer to the <a href="https://appdynamics.github.io/ConfigMyApp/#configuring-input-parameters"> configuring input parameters</a> for details. 
 
 ![dashboard](https://user-images.githubusercontent.com/2548160/87234207-bec8e800-c3c6-11ea-9858-c857fb0b7470.png)
 
@@ -331,7 +331,7 @@ This section contains examples of running an instance of ConfigMyApp, it should 
 
 ## Business Transaction Configuration 
 
-Business transaction detection rules can be configured by using the template file in <a href="https://github.com/Appdynamics/ConfigMyApp/tree/master/bt_config"> `bt_config/configBT.json` </a>. The JSON file contains four arrays which represents the four types of business tranaction rules that are currently supported by ConfigMyApp. For example, the Java POJO section look like: 
+Business transaction detection rules can be configured by using the template file in <a href="https://github.com/Appdynamics/ConfigMyApp/tree/master/bt_config"> `bt_config/configBT.json` </a>. The JSON file contains four arrays which represent the four types of business transaction rules that are currently supported by ConfigMyApp. For example, the Java POJO section looks like: 
 
     "java_pojo_rules": [
        {
@@ -393,7 +393,7 @@ CMA_LOGO_NAME=<logo_image_name>.<file-extension>
 
 ## Proxy Settings 
 
-If your AppDynamics controller is behind proxy, ConfigMyApp lets you specify the Proxy Host and Port. Proxy authentication is not supported. 
+If your AppDynamics controller is behind a proxy, ConfigMyApp lets you specify the Proxy Host and Port. Proxy authentication is not supported. 
 
 <b> Run time Paramaters</b>
 `./start.sh -c http://appd-cx.com -a API_Gateway -u appd -p appd --use-proxy 	--proxy-url="10.3.5.9" --proxy-port 8080`
@@ -442,11 +442,11 @@ CMA_USE_ENCODED_CREDENTIALS=true
 
 We have used our experience from working with diverse customers to collate a pre-canned set of best-practice application and server visibility health rules in ConfigMyApp. These health rules are located in the `healthrules` folder.  You may adjust the thresholds of the health rules to match your specific needs. 
 
-Futhermore, you can add more health rules should you wish to do so; ConfigMyApp will automatically process all the JSON files that are in the `healthrules\Application` folder and `healthrules\ServerVisibility` folder respecitvely. To minimize the chances of an error, we recommend that you create the new health rule in the controller first, then export into a JSON file. Once that is done, toss the new JSON file into either the Application or ServerVisbility folder. 
+Furthermore, you can add more health rules should you wish to do so; ConfigMyApp will automatically process all the JSON files that are in the `healthrules\Application` folder and `healthrules\ServerVisibility` folder respectively. To minimize the chances of an error, we recommend that you create the new health rule in the controller first, then export into a JSON file. Once that is done, toss the new JSON file into either the Application or ServerVisbility folder. 
 
 Please refer to the <a href="https://docs.appdynamics.com/display/PRO45/Health+Rule+API"> Health Rule API</a> documentation for further details. 
 
-ConfigMyApp will skip a health rule if it exist in the controller. You would need to explicitly set the overwrite flag to true if you wish to overwrite existing health rules. 
+ConfigMyApp will skip a health rule if it exists in the controller. You would need to explicitly set the overwrite flag to true if you wish to overwrite existing health rules. 
 
 <b> Run time Paramaters</b>
 
@@ -464,7 +464,7 @@ ConfigMyApp will skip a health rule if it exist in the controller. You would nee
 
 ## Docker 
 
-You can run ConfigMyApp by using either the official docker image or you can build you own custom image. 
+You can run ConfigMyApp by using either the official docker image or you can build a custom docker image from the source code. 
 
 ### ConfigMyApp docker image 
 
@@ -515,11 +515,11 @@ Note: Do not use qoutes in the environment variable values, and it's best not to
 
 #### Mount business transaction volume 
 
-Use the folllowing steps to automate business transaction configuration using the docker image:
+Use the following steps to automate business transaction configuration using the docker image:
 
 1. create a folder called `bt_config` 
 2. Copy the `configBT.json` file from the project into the `bt_config` folder on your docker host 
-3. Make neccessasary adjustments to the folder depending on your need. Please refer to the <a href="https://appdynamics.github.io/ConfigMyApp-docs/#business-transaction-configuration"> business transaction configuration</a> section for details
+3. Make necessary adjustments to the folder depending on your need. Please refer to the <a href="https://appdynamics.github.io/ConfigMyApp-docs/#business-transaction-configuration"> business transaction configuration</a> section for details
 4. Mount the `bt_config` volume in docker run. The docker run command should be executed from the `bt_config` folder on your host. 
 
 ```
