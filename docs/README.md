@@ -589,7 +589,7 @@ You can use some of the available Pod specifications, surrently available are:
 - `cma-pod-bt-volume.yml` - includes Business Transactions from `bt-config.yml` file,
 - `cma-pod-branding-volume.yml` - mounts a volume for Branding feature.
 
-Verify that the nginx container is running:
+Verify that the ConfigMyApp container is running:
 ```
 kubectl get pod <pod-name>
 ```
@@ -653,26 +653,26 @@ This will trigger your deployment and you can track progress in console output i
 
 ## Jenkins
 
-Jenkins is a free and open source automation server. It helps automate the parts of software development related to building, testing, and deploying, facilitating continuous integration and continuous delivery.
+Jenkins is a free and open-source automation server. It helps automate the parts of software development related to building, testing, and deploying, facilitating continuous integration and continuous delivery.
 
 
 ### Running for the first time - setup
 
-If you are running Jenkis for the first time, you need to setup a job with the steps below. If you already specified the job, jump to next chapter to run a Jenkis job.
+If you are running Jenkins for the first time, you need to set up a job with the steps below. If you already specified the job, jump to the next chapter to run a Jenkins job.
 
 #### Plugins
 
-If you installed recommended packages yo umay already have GitHub plugin, if you do not then navigate to "Manage Jenkins" and choose "Manage Plugins", search for "git plugin", and click on "Install without restart". You should be seeing GitHub plugin installed:
+If you installed recommended packages you may already have GitHub plugin, if you do not then navigate to "Manage Jenkins" and choose "Manage Plugins", search for "git plugin", and click on "Install without restart". You should be seeing GitHub plugin installed:
 
 ![Jenkins_github plugin](https://user-images.githubusercontent.com/23483887/87523050-4e4bf080-c67e-11ea-95af-946490110ffd.png)
 
 #### Create Jenkins Job
 
-Click "New Item" to create new Jenkis job, and pick a Freestyle projct from the list, pick an apropriate name adn add an description:
+Click "New Item" to create new Jenkins job, and pick a Freestyle project from the list, pick an appropriate name and add and description:
 
 ![Jenkins_new_item](https://user-images.githubusercontent.com/23483887/87525582-9ae4fb00-c681-11ea-96e8-946032c70141.png)
 
-In job confihuration, check the "This project is parameterised" checkbox in General section in order to add environment variables as String variables:
+In job configuration, check the "This project is parameterized" checkbox in the General section to add environment variables as String variables:
 
 ![Jenkins_env_vars](https://user-images.githubusercontent.com/23483887/87527981-d1704500-c684-11ea-83b0-d43985793c69.png)
 
@@ -680,17 +680,17 @@ As a source code specify GitHub project:
 
 ![Jenkins_source](https://user-images.githubusercontent.com/23483887/87527538-2a8ba900-c684-11ea-8ea7-631012d912a4.png)
 
-In build tab, as a buld step add "Execute shell" and execute the start.sh script in a similar fashion as you would from command line. Bare in mind that we defined environment variables in previous step and you need to specify only additional runtime parameters that you may require:
+In the build tab, as a build step add "Execute shell" and execute the `start.sh` script in a similar fashion as you would from the command line. Bear in mind that we defined environment variables in the previous step and you need to specify only additional runtime parameters that you may require:
 
 ![Jenkins_build](https://user-images.githubusercontent.com/23483887/87528976-37110100-c686-11ea-8ca4-9e8a299afe12.png)
 
-### Run Jenkis Job
+### Run Jenkins Job
 
-In order to change any of the confiuration, from left-side menu inside of a project click "Configure". To run A Jenkins job, pick "Build with Parameters". 
+In order to change any of the configurations, from the left-side menu inside of a project click "Configure". To run A Jenkins job, pick "Build with Parameters". 
 
 ![Jenkins_run_job](https://user-images.githubusercontent.com/23483887/87529787-67a56a80-c687-11ea-9976-65c5d4263a87.png)
 
-You are going to be prompted with environment ariables defined that you can update prior to running a job. Click on build, and check the progress in build history and "Console output".
+You are going to be prompted with environment variables defined that you can update prior to running a job. Click on the build, and check the progress in build history and "Console output".
 
 ![Jenkins_console_output](https://user-images.githubusercontent.com/23483887/87530466-45f8b300-c688-11ea-82e0-50b7355b004b.png)
 
