@@ -523,7 +523,7 @@ Use the following steps to automate business transaction configuration using the
 
 1. create a folder called `bt_config` 
 2. Copy the `configBT.json` file from the project into the `bt_config` folder on your docker host 
-3. Make necessary adjustments to the folder depending on your need. Please refer to the <a href="https://appdynamics.github.io/ConfigMyApp-docs/#business-transaction-configuration"> business transaction configuration</a> section for details
+3. Make necessary adjustments to the folder depending on your need. Please refer to the <a href="https://appdynamics.github.io/ConfigMyApp/#business-transaction-configuration"> business transaction configuration</a> section for details
 4. Mount the `bt_config` volume in docker run. The docker run command should be executed from the `bt_config` folder on your host. 
 
 ```
@@ -676,7 +676,7 @@ You are going to be prompted with environment ariables defined that you can upda
 
 ![Jenkins_console_output](https://user-images.githubusercontent.com/23483887/87530466-45f8b300-c688-11ea-82e0-50b7355b004b.png)
 
-### Sharing On-prem Job Definitions
+### Job Definitions
 
 An example of Jenkins job definition can also be found in project source code: 
 ```
