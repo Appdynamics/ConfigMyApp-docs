@@ -464,9 +464,7 @@ ConfigMyApp will skip a health rule if it exists in the controller. You would ne
 
 ` "overwrite_health_rules": true`
 
-# Integrations
-
-This section describes practical examples on how to run ConfigMyApp from  Docker, Kubernetes, Harness and Jenkins. 
+# Integrations 
 
 ## Docker 
 
@@ -476,7 +474,7 @@ You can run ConfigMyApp by using either the official docker image or you can bui
 
 ConfigMyApp images are available from Docker hub and can be downloaded using `docker pull`. For example: 
 
-`docker pull appdynamicscx/configmyapp:latest`
+`docker pull iogbole/configmyapp:latest`
 
 ### Build a custom docker image
 
@@ -494,7 +492,7 @@ First, you would need to define your environment variables using the `env.list` 
 
 Standard run: 
 
-`docker run --name ConfigMyApp --env-file env.list appdynamicscx/configmyapp:latest`
+`docker run --name ConfigMyApp --env-file env.list ${image_name}:${version}` 
 
 #### Mount branding volume
 
@@ -515,7 +513,7 @@ CMA_LOGO_NAME=<logo_image_name>.<file-extension>
  docker run -d \
       --name ConfigMyApp
       --mount type=bind,source=$(pwd)/branding,destination=/opt/configmyapp/branding \
-      --env-file docker/env.list  appdynamicscx/configmyapp:latest
+      --env-file docker/env.list  ${image_name}:${version}
  ```
 Note: Do not use qoutes in the environment variable values, and it's best not to use spaces in the file name. 
 
@@ -523,7 +521,7 @@ Note: Do not use qoutes in the environment variable values, and it's best not to
 
 Use the following steps to automate business transaction configuration using the docker image:
 
-1. create a folder called `bt_config` 
+1. Create a folder called `bt_config` 
 2. Copy the `configBT.json` file from the project into the `bt_config` folder on your docker host 
 3. Make necessary adjustments to the folder depending on your need. Please refer to the <a href="https://appdynamics.github.io/ConfigMyApp/#business-transaction-configuration"> business transaction configuration</a> section for details
 4. Mount the `bt_config` volume in docker run. The docker run command should be executed from the `bt_config` folder on your host. 
@@ -532,7 +530,7 @@ Use the following steps to automate business transaction configuration using the
 docker run -d \
   --name ConfigMyApp
   --mount type=bind,source=$(pwd)/bt_config,destination=/opt/configmyapp/bt_config \
-    appdynamicscx/configmyapp:latest
+  ${image_name}:${version}
 ```
 
 Once your contaienr is up and running, execute `docker ps` to check the container status, then tail the logs: 
@@ -542,7 +540,7 @@ Once your contaienr is up and running, execute `docker ps` to check the containe
 The output should be similar to this: 
 
 ```
-Checking if API_Gateway business application exist in http://controller.com:8090/controller...
+Checking if API_Gateway business application exist in http://controller-2060nosshco-o3wdq4ip.appd-cx.com:8090/controller...
 
 Found API_Gateway business application
 
@@ -569,14 +567,32 @@ Creating dashboard in the controller
 
 ## Kubernetes  
 
+All files relevant for Kubernetes deployment can be found in `/kubernetes` directory of a project.
+
 ## Updating secrets and environment variables
 
 1. Update the password in the `cma-pass-secret.yml` with your controller's user password base64 encoded.
 
 2. Update environment variables defined in a file `cma-configmap.yaml`.
 
-3. In a pod definition, for example `cma-pod-standard.yml`, set the `env:` section to reflect your controller and application settings. 
+3. In a pod definition, for example `cma-pod-standard.yml`, set the `env:` section to reflect your application and/or controller settings. 
 
+## Create a Pod
+
+Example command of how to create the Pod:
+```
+kubectl apply -f <pod-manifest.yaml>
+```
+
+You can use some of the available Pod specifications, surrently available are:
+- `cma-pod-standard.yml` - standard deployment, without Business Transactions and Branding,
+- `cma-pod-bt-volume.yml` - includes Business Transactions from `bt-config.yml` file,
+- `cma-pod-branding-volume.yml` - mounts a volume for Branding feature.
+
+Verify that the nginx container is running:
+```
+kubectl get pod <pod-name>
+```
 
 
 <p><img align="right" width="200" height="60" src="https://user-images.githubusercontent.com/23483887/87051577-a9ea2a00-c1f7-11ea-9ab8-4781d043e9bc.png"></p>
