@@ -678,7 +678,7 @@ In job configuration, check the "This project is parameterized" checkbox in the 
 
 ![Jenkins_env_vars](https://user-images.githubusercontent.com/23483887/87527981-d1704500-c684-11ea-83b0-d43985793c69.png)
 
-As a source code specify GitHub project:
+Under "Source Code Management" tab specify the GitHub project:
 
 ![Jenkins_source](https://user-images.githubusercontent.com/23483887/87527538-2a8ba900-c684-11ea-8ea7-631012d912a4.png)
 
