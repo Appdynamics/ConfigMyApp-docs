@@ -604,7 +604,7 @@ Harness.io is a Continuous Delivery as a Service enterprise platform for automat
 
 ### Running for the first time - setup
 
-In case that on your account you already have an application and workflow with steps set, proceed to the next chapter - Run Harness.io script, otherwise continue in this section.
+In case that on your account you already have an application and workflow with steps set, proceed to the next chapter to <a href="https://appdynamics.github.io/ConfigMyApp/#run-harnessio-script"> run the Harness.io deployment.
 
 #### Create an application and workflow
 
@@ -639,7 +639,7 @@ Note: In project source code you can find an example of a workflow, under the `i
 integrations/Harnessio/Workflow.yml
 ```
 
-### Run Harness.io script
+### Run Harness.io deployment
 
 Navigate to Setup, choose your Application from a list, and pick a Workflow that you wish to use. Click Deploy and update environment variables if necessary when prompted, similar to the screenshot below:
 
@@ -657,7 +657,7 @@ Jenkins is a free and open-source automation server. It helps automate the parts
 
 ### Running for the first time - setup
 
-If you are running Jenkins for the first time, you need to set up a job with the steps below. If you already specified the job, jump to the next chapter to run a Jenkins job.
+If you are running Jenkins for the first time, you need to set up a job with the steps below. If you already specified the job, jump to the next chapter to <a href="https://appdynamics.github.io/ConfigMyApp/#run-jenkins-job"> run the Jenkins job.
 
 #### Plugins
 
