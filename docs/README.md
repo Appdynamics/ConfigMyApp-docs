@@ -466,6 +466,11 @@ ConfigMyApp will skip a health rule if it exists in the controller. You would ne
 
 # Integrations 
 
+This section describes practical examples on how to run ConfigMyApp from  Docker, Kubernetes, Harness and Jenkins. 
+
+<p><img align="right" width="200" height="75" src="https://user-images.githubusercontent.com/2548160/87821525-e3f6a400-c867-11ea-8f27-edcfe83a6108.png"></p>
+
+
 ## Docker 
 
 You can run ConfigMyApp by using either the official docker image or you can build a custom docker image from the source code. 
@@ -563,7 +568,7 @@ Creating dashboard in the controller
 
 ```
 
-<p><img align="right" width="200" height="60" src="https://user-images.githubusercontent.com/23483887/87779752-39f62800-c825-11ea-9c8c-66be52d131c8.png"></p>
+<p><img align="right" width="200" height="57" src="https://user-images.githubusercontent.com/23483887/87779752-39f62800-c825-11ea-9c8c-66be52d131c8.png"></p>
 
 ## Kubernetes  
 
