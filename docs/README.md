@@ -2,13 +2,13 @@
 
 # Introduction
 
-ConfigMyApp is a <b>monitoring-as-a-service</b> solution that automates the configuration of AppDynamics business applications, Server Viz, dashboarding, etc  without the need to manually login to the controller. 
+ConfigMyApp is a <b>monitoring-as-a-service</b> solution that automates the configuration of AppDynamics business applications, Server Viz, dashboarding, etc without the need to manually login to the controller. 
 
-ConfigMyApp enhances rapid rollout of AppDynamics. We built it based on the DevOps configuration-as-code paradigm with a simple  objective - the ability to configure AppDynamics from your existing Continuous Integration and Deployment (CI/CD) platform - such as Jenkins, Harness, TeamCity, GitLab, Bamboo. In addition, ConfigMyApp can be executed from the offical Docker image and Kubernetes. 
+ConfigMyApp enhances rapid rollout of AppDynamics.  We built it based on the DevOps configuration-as-code paradigm with a simple objective - the ability to configure AppDynamics from your existing Continuous Integration and Deployment (CI/CD) platform - such as Jenkins, Harness, TeamCity, GitLab, Bamboo. In addition, ConfigMyApp can be executed from the official Docker image and Kubernetes. 
 
-Configuration as code allows the entire configurations to be stored as source code. It moves the managing of certain configurations from the UI to the developer's integrated development environment. This approach brings a lot of benefits - versioning of changes, traceability of changes, smooth promotion of config changes from test to production controller, etc. 
+Configuration as code allows the entire configurations to be stored as source code.  It moves the managing of certain configurations from the UI to the developer's integrated development environment. This approach brings a lot of benefits, i.e.- versioning of changes, traceability of changes, smooth promotion of config changes from test to production controller, etc. 
 
-ConfigMyApp saves time, hassle and cost, it reduces human error and time-to-value and it maintains consistency of thresholds and naming conventions across your estate.  
+ConfigMyApp saves time, hassle and cost, as it reduces human error and time-to-value while it maintains consistency of thresholds and naming conventions across your estate.  
 
 # Supported Components 
 
@@ -16,7 +16,7 @@ ConfigMyApp supports the configuration of the following AppDynamics components:
 
  - Business transactions detection rules <br> 
    Support for INCLUDE and EXCLUDE rules for the following types of transactions: 
-    - .Net classes and methods (POCOs) 
+    - .NET classes and methods (POCOs) 
     - Java classes and methods (POJOs)
     - Servlets 
     - ASPs
@@ -33,7 +33,7 @@ ConfigMyApp supports the configuration of the following AppDynamics components:
  3. `awk` must be installed on the machine 
  4. `sed` must be installed on the machine 
  
-Please do not proceed if any of the aforementioned prerequisites are not met.
+Please do not proceed if any of the above aforementioned prerequisites are not met.
 
 ## Service account 
 A local service account should be created in your controller with the following privileges: 
@@ -45,7 +45,7 @@ A local service account should be created in your controller with the following 
 5. View Database collector 
 6. Create SIM health rules  
       
-Single Sign-On user will not work. 
+*****Single Sign-On user will not work***** 
 
 # How it works 
  
@@ -56,21 +56,23 @@ The diagram below depicts a high-level flow on how ConfigMyApp works.
 
 ## Sample Output 
 
-In addition to the automated business transaction and health rule configuration features that ConfigMyApp provides, it also creates a dynamic dashboard as shown below. The server and database monitoring health configurations are optional items. Refer to the <a href="https://appdynamics.github.io/ConfigMyApp/#configuring-input-parameters"> configuring input parameters</a> for details. 
+Besides the automated business transaction and health rule configuration features, ConfigMyApp can provide the ability to create a dynamic dashboard as shown below. The server visibility and database monitoring health rule configurations are optional items. Refer to the <a href="https://appdynamics.github.io/ConfigMyApp/#configuring-input-parameters"> configuring input parameters</a> for more details.
 
 ![dashboard](https://user-images.githubusercontent.com/2548160/87234207-bec8e800-c3c6-11ea-9858-c857fb0b7470.png)
 
-Note that the branding which consists of the logo and the background image can be easily changed by copying your custom images into the `branding` folder in the root directory. Refer to the <a href="https://appdynamics.github.io/ConfigMyApp/#branding"> branding section</a> for further details. 
+Note that the branding; which consists of the logo and the background image, can be easily changed by copying your own chosen custom images into the `branding` folder in the root directory. Refer to the <a href="https://appdynamics.github.io/ConfigMyApp/#branding"> branding section</a> for further details.
  
 ## Configuring input parameters
 
-ConfigMyApp accepts arguments from 3 (combined) sources - runtime, environment variables and the config.json file, where runtime parameters have precedence over environment variables, and environment variables have precedence configuration `JSON` file.  
+ConfigMyApp accepts arguments from the following 3 (combined) sources:- runtime, environment variables and `config.json` file
 
-In summary, the order of parameter precedence is as follows: 
+The order of parameter precedence is as follows:-
 
-1. Runtime parameters 
-2. Environment variables 
-3. Configuration file `config.json` 
+ 1. Runtime parameters 
+ 2. Environment variables 
+ 3. Configuration file `config.json` 
+
+So in summary, runtime parameters have precedence over environment variables, and environment variables have precedence over configuration `JSON` file. 
 
 Note that mandatory parameters need to be provided in any (and not all) of the three configuration methods listed above for ConfigMyApp to be able to start.
 
@@ -107,7 +109,7 @@ The table below describes the supported runtime arguments:
 | Application | `--overwrite-health-rules` | overwrite health rules (true by default) |  <img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20"> |
 | Application | `--bt-only, --no-bt-only` | configure business transactions only  |  <img src="https://github.githubassets.com/images/icons/emoji/unicode/2716.png" width="20" height="20"> |
 
-In addition, note that you can run the script in debug mode by using `--debug` flag, in which case the connection and other parameters used will be printed out in the console. We do not recommend using this flag in production, and it is set to `false` by default.
+You can run the script in debug mode by using `--debug` flag, in which case the connection and other parameters used will be printed out in the console. We do not recommend using this flag in production, and it is set to `false` by default.
 
 ## Environment variables
 
@@ -251,7 +253,7 @@ The table below describes the supported environment variables:
 
 ## Configuration file
 
-ConfigMyApp uses a `config.json` configuration file which can be found in the root of the project. The values in the configuration file are only used  when the runtime parameter is not defined and the environment for the same parameter does not exist. <br>
+ConfigMyApp uses a `config.json` configuration file which can be found in the root of the project. The values in the configuration file are only used when the runtime parameter is not defined and the environment for the same parameter does not exist. <br>
 
 The table below describe the JSON configuration:
 
@@ -335,7 +337,7 @@ This section contains examples of running an instance of ConfigMyApp, it should 
 
 ## Business Transaction Configuration 
 
-Business transaction detection rules can be configured by using the template file in <a href="https://github.com/Appdynamics/ConfigMyApp/tree/master/bt_config"> `bt_config/configBT.json` </a>. The JSON file contains four arrays which represent the four types of business transaction rules that are currently supported by ConfigMyApp. For example, the Java POJO section looks like: 
+Business transaction detection rules can be configured by using the template file in <a href="https://github.com/Appdynamics/ConfigMyApp/tree/master/bt_config"> `bt_config/configBT.json` </a>. The `JSON` file contains four arrays which represent the four types of business transaction rules, which are currently supported by ConfigMyApp. For example, the Java POJO section looks like: 
 
     "java_pojo_rules": [
        {
@@ -349,7 +351,7 @@ Business transaction detection rules can be configured by using the template fil
        }
      ]
      
-and this Java servelet example below shows an example of using REGEX matching condition: 
+and this Java servlet example below shows an example of using REGEX matching condition: 
 
     "java_servlet_rules": [
       {
@@ -368,11 +370,11 @@ The supported match-type ENUMS are:
 
 `MATCHES_REGEX`, `CONTAINS`, `EQUALS`, `STARTS_WITH`, `ENDS_WITH`, `IS_IN_LIST` and `IS_NOT_EMPTY`
      
-The format of the JSON must be maintained at all times, all four sections must be available even if you're not using them, leave it blank if you're not using it. 
+The format of the `JSON` must be maintained at all times, all four sections must be available even if you're not using them, leave it blank if you're not using it. 
 
 ## Branding 
 
-ConfigMyApp uses the `logo.png` and the `background.jpg` file in the `branding` folder by default. We recommend that you replace both files with your company's images. Alternatively, you may toss additional images into the `branding` folder and specify the image names as parameters. See examples below: 
+ConfigMyApp uses the `logo.png` and the `background.jpg` file in the `branding` folder by default. We recommend that you replace both files with your company's images. Alternatively, you may add more images into the `branding` folder and specify the image names as extra parameters. See examples below: 
 
 <b> Run time Paramaters</b>
 
@@ -444,9 +446,9 @@ CMA_USE_ENCODED_CREDENTIALS=true
 
 ## Health Rules 
 
-We have used our experience from working with diverse customers to collate a pre-canned set of best-practice application and server visibility health rules in ConfigMyApp. These health rules are located in the `healthrules` folder.  You may adjust the thresholds of the health rules to match your specific needs. 
+We have used our experience from working with diverse customers to collate a pre-canned set of best-practice 'application' and 'server visibility' health rules in ConfigMyApp. These health rules are located in the `healthrules` folder.  You may adjust the thresholds of the health rules to match your specific needs. 
 
-Furthermore, you can add more health rules should you wish to do so; ConfigMyApp will automatically process all the JSON files that are in the `healthrules\Application` folder and `healthrules\ServerVisibility` folder respectively. To minimize the chances of an error, we recommend that you create the new health rule in the controller first, then export into a JSON file. Once that is done, toss the new JSON file into either the Application or ServerVisbility folder. 
+Furthermore, you can add more health rules should you wish to do so; ConfigMyApp will automatically process all the `JSON` files that are in the `healthrules\Application` folder and `healthrules\ServerVisibility` folder respectively. To minimize the chances of an error, we recommend that you create the new health rule in the controller first, then export into a JSON file. Once that is done, place the new JSON file into either the Application or ServerVisbility folder. 
 
 Please refer to the <a href="https://docs.appdynamics.com/display/PRO45/Health+Rule+API"> Health Rule API</a> documentation for further details. 
 
@@ -515,7 +517,7 @@ CMA_LOGO_NAME=<logo_image_name>.<file-extension>
       --mount type=bind,source=$(pwd)/branding,destination=/opt/configmyapp/branding \
       --env-file docker/env.list  ${image_name}:${version}
  ```
-Note: Do not use qoutes in the environment variable values, and it's best not to use spaces in the file name. 
+Note: Do not use qoutes in the environment variable values, and it's *NOT* best practice to use spaces in the file name. 
 
 #### Mount business transaction volume 
 
@@ -668,11 +670,11 @@ If you installed recommended packages you may already have GitHub plugin, if you
 
 #### Create Jenkins Job
 
-Click "New Item" to create new Jenkins job, and pick a Freestyle project from the list, pick an appropriate name and add and description:
+Click "New Item" to create a new Jenkins job, and pick a "Freestyle" project from the list, and pick an appropriate name and add a description:
 
 ![Jenkins_new_item](https://user-images.githubusercontent.com/23483887/87525582-9ae4fb00-c681-11ea-96e8-946032c70141.png)
 
-In job configuration, check the "This project is parameterized" checkbox in the General section to add environment variables as String variables:
+In job configuration, check the "This project is parameterized" checkbox in the "General" section to add environment variables as String variables:
 
 ![Jenkins_env_vars](https://user-images.githubusercontent.com/23483887/87527981-d1704500-c684-11ea-83b0-d43985793c69.png)
 
@@ -686,7 +688,7 @@ In the build tab, as a build step add "Execute shell" and execute the `start.sh`
 
 ### Run Jenkins Job
 
-In order to change any of the configurations, from the left-side menu inside of a project click "Configure". To run A Jenkins job, pick "Build with Parameters". 
+In order to change any of the configurations, from the left-side menu inside of a project click "Configure". To run a Jenkins job, pick "Build with Parameters". 
 
 ![Jenkins_run_job](https://user-images.githubusercontent.com/23483887/87529787-67a56a80-c687-11ea-9976-65c5d4263a87.png)
 
@@ -696,7 +698,7 @@ You are going to be prompted with environment variables defined that you can upd
 
 ### Job Definitions
 
-An example of Jenkins job definition can also be found in project source code: 
+An example of a Jenkins job definition can also be found in project source code: 
 ```
 integrations/Jenkins/JenkinsJobFile.xml
 ``` 
