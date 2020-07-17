@@ -562,9 +562,19 @@ Creating dashboard in the controller
 [TRUNCATED]
 
 ```
+
+<p><img align="right" width="200" height="60" src="https://user-images.githubusercontent.com/23483887/87779752-39f62800-c825-11ea-9c8c-66be52d131c8.png"></p>
+
 ## Kubernetes  
 
-[TODO]
+## Updating secrets and environment variables
+
+1. Update the password in the `cma-pass-secret.yml` with your controller's user password base64 encoded.
+
+2. Update environment variables defined in a file `cma-configmap.yaml`.
+
+3. In a pod definition, for example `cma-pod-standard.yml`, set the `env:` section to reflect your controller and application settings. 
+
 
 
 <p><img align="right" width="200" height="60" src="https://user-images.githubusercontent.com/23483887/87051577-a9ea2a00-c1f7-11ea-9ab8-4781d043e9bc.png"></p>
