@@ -663,7 +663,7 @@ If you are running Jenkins for the first time, you need to set up a job with the
 
 If you installed recommended packages you may already have GitHub plugin, if you do not then navigate to "Manage Jenkins" and choose "Manage Plugins", search for "git plugin", and click on "Install without restart". You should be seeing GitHub plugin installed:
 
-![Jenkins_github plugin](https://user-images.githubusercontent.com/23483887/87523050-4e4bf080-c67e-11ea-95af-946490110ffd.png)
+<img width="1406" alt="Jenkins_plugin" src="https://user-images.githubusercontent.com/23483887/87814360-7fcde300-c85b-11ea-8875-c38ae77d2b70.png">
 
 #### Create Jenkins Job
 
