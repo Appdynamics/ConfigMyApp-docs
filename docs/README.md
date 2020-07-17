@@ -575,7 +575,7 @@ All files relevant for Kubernetes deployment can be found in `/kubernetes` direc
 
 2. Update environment variables defined in a file `cma-configmap.yaml`.
 
-3. In a pod definition, for example `cma-pod-standard.yml`, set the `env:` section to reflect your application and/or controller settings. 
+3. In a pod definition that you pick, for example, `cma-pod-standard.yml`, set the `env:` section to reflect your application and/or controller settings. 
 
 ## Create a Pod
 
@@ -584,7 +584,7 @@ Example command of how to create the Pod:
 kubectl apply -f <pod-manifest.yaml>
 ```
 
-You can use some of the available Pod specifications, surrently available are:
+You can use some of the available Pod specifications, currently available are:
 - `cma-pod-standard.yml` - standard deployment, without Business Transactions and Branding,
 - `cma-pod-bt-volume.yml` - includes Business Transactions from `bt-config.yml` file,
 - `cma-pod-branding-volume.yml` - mounts a volume for Branding feature.
@@ -599,12 +599,12 @@ kubectl get pod <pod-name>
 
 ## Harness.io
 
-Harness is a Continuous Delivery as a Service enterprise platform for automation of application and micro-service deployments.
+Harness.io is a Continuous Delivery as a Service enterprise platform for automation of application and micro-service deployments.
 
 
 ### Running for the first time - setup
 
-In case that on your account you already have an application and workflow with steps set, proceed to next chapter - Run Harness.io script, otherwise continue in this section.
+In case that on your account you already have an application and workflow with steps set, proceed to the next chapter - Run Harness.io script, otherwise continue in this section.
 
 #### Create an application and workflow
 
@@ -612,25 +612,25 @@ To create an application, if it does not exist, go to Configure and add an appli
 
 ![Harness_new_app](https://user-images.githubusercontent.com/23483887/87537282-48f8a100-c692-11ea-8638-79098fb97fd6.png)
 
-Create new Workflow of a type "Build Workflow":
+Create a new Workflow of a type "Build Workflow":
 
 ![Harness_workflow](https://user-images.githubusercontent.com/23483887/87538269-db4d7480-c693-11ea-98e4-40cb08adbc14.png)
 
 #### Add workflow variables and steps
 
-Add workflow variables, at the minimum GITHUB_USER, GITHUB_PASSWORD and GITHUB_BRANCH:
+Add workflow variables, at the minimum GITHUB_USER, GITHUB_PASSWORD, and GITHUB_BRANCH:
 
 ![Harness_env_vars](https://user-images.githubusercontent.com/23483887/87538628-6af32300-c694-11ea-8695-c85f9e142b88.png)
 
-Add workflow steps for pulling the data from github and executing the `start.sh` script, for example:
+Add workflow steps for pulling the data from GitHub and executing the `start.sh` script, for example:
 
 ![Harness_workflow_steps](https://user-images.githubusercontent.com/23483887/87538756-b0175500-c694-11ea-9753-de250e3fc3a6.png)
 
-Workflow step type should be Shell Script, and in order to pull data from a github repo install the necessary packages and use already defined workflow variables:
+Workflow step type should be Shell Script, and to pull data from a GitHub repo install the necessary packages and use already defined workflow variables:
 
 ![Harness_step_1_github](https://user-images.githubusercontent.com/23483887/87539172-58c5b480-c695-11ea-9099-8cb5318b5262.png)
 
-In next step we are using the downloaded source code to run the `start.sh` script . Note that we are can set environment variables as workflow variables and in start script only overrides runtime parameter default values and/or environment variable values if necessary:
+In next step, we are using the downloaded source code to run the `start.sh` script. Note that we are can set environment variables as workflow variables and in start script only overrides runtime parameter default values and/or environment variable values if necessary:
 
 ![Harness_step_2_start](https://user-images.githubusercontent.com/23483887/87539231-6f6c0b80-c695-11ea-851e-a87cbeeea1f2.png)
 
@@ -641,12 +641,11 @@ integrations/Harnessio/Workflow.yml
 
 ### Run Harness.io script
 
-Navigate to Setup, choose your Application from a list and pick a Workflow that you wish to use. Click Deploy and update environment variables if necessary when prompted, similar to screenshot below:
+Navigate to Setup, choose your Application from a list, and pick a Workflow that you wish to use. Click Deploy and update environment variables if necessary when prompted, similar to the screenshot below:
 
 ![Harness_io_deploy](https://user-images.githubusercontent.com/23483887/87539640-29fc0e00-c696-11ea-9cfd-ce36ac7a9eb9.png)
 
-This will trigger your deployment and you can track progress in console output in the right-side of the Harness.io UI.
-
+This will trigger your deployment and you can track progress in console output on the right side of the Harness.io UI.
 
 
 <p><img align="right" width="200" height="60" src="https://user-images.githubusercontent.com/23483887/87051994-33016100-c1f8-11ea-847f-38da20685581.png"></p>
