@@ -677,17 +677,17 @@ In job configuration, check the "This project is parameterized" checkbox in the 
 
 As a source code specify GitHub project:
 
-<img width="928" alt="Jenkins_source_repo" src="https://user-images.githubusercontent.com/23483887/87810786-6fb30500-c855-11ea-8953-e9e4fec993bb.png">
+<img width="940" alt="Jenkins_source_repo" src="https://user-images.githubusercontent.com/23483887/87811459-a3425f00-c856-11ea-973c-5376d660f439.png">
 
 In the build tab, as a build step add "Execute shell" and execute the `start.sh` script in a similar fashion as you would from the command line. Bear in mind that we defined environment variables in the previous step and you need to specify only additional runtime parameters that you may require:
 
-<img width="928" alt="Jenkins_build_steps" src="https://user-images.githubusercontent.com/23483887/87810878-98d39580-c855-11ea-8886-aa0afcdaab75.png">
+<img width="937" alt="Jenkins_build_steps" src="https://user-images.githubusercontent.com/23483887/87811561-c40ab480-c856-11ea-990a-afa36645b15f.png">
 
 ### Run Jenkins Job
 
 In order to change any of the configurations, from the left-side menu inside of a project click "Configure". To run A Jenkins job, pick "Build with Parameters". 
 
-![Jenkins_run_job](https://user-images.githubusercontent.com/23483887/87529787-67a56a80-c687-11ea-9976-65c5d4263a87.png)
+<img width="972" alt="Jenkins_build_with_params" src="https://user-images.githubusercontent.com/23483887/87811696-fa483400-c856-11ea-999f-0d79062c2832.png">
 
 You are going to be prompted with environment variables defined that you can update prior to running a job. Click on the build, and check the progress in build history and "Console output".
 
