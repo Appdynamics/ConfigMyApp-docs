@@ -673,15 +673,15 @@ Click "New Item" to create new Jenkins job, and pick a Freestyle project from th
 
 In job configuration, check the "This project is parameterized" checkbox in the General section to add environment variables as String variables:
 
-![Jenkins_env_vars](https://user-images.githubusercontent.com/23483887/87527981-d1704500-c684-11ea-83b0-d43985793c69.png)
+<img width="928" alt="jenkins_parameters" src="https://user-images.githubusercontent.com/23483887/87810713-501bdc80-c855-11ea-98f3-cde9406f44f9.png">
 
 As a source code specify GitHub project:
 
-![Jenkins_source](https://user-images.githubusercontent.com/23483887/87527538-2a8ba900-c684-11ea-8ea7-631012d912a4.png)
+<img width="928" alt="Jenkins_source_repo" src="https://user-images.githubusercontent.com/23483887/87810786-6fb30500-c855-11ea-8953-e9e4fec993bb.png">
 
 In the build tab, as a build step add "Execute shell" and execute the `start.sh` script in a similar fashion as you would from the command line. Bear in mind that we defined environment variables in the previous step and you need to specify only additional runtime parameters that you may require:
 
-![Jenkins_build](https://user-images.githubusercontent.com/23483887/87528976-37110100-c686-11ea-8ca4-9e8a299afe12.png)
+<img width="928" alt="Jenkins_build_steps" src="https://user-images.githubusercontent.com/23483887/87810878-98d39580-c855-11ea-8886-aa0afcdaab75.png">
 
 ### Run Jenkins Job
 
@@ -691,7 +691,7 @@ In order to change any of the configurations, from the left-side menu inside of 
 
 You are going to be prompted with environment variables defined that you can update prior to running a job. Click on the build, and check the progress in build history and "Console output".
 
-![Jenkins_console_output](https://user-images.githubusercontent.com/23483887/87530466-45f8b300-c688-11ea-82e0-50b7355b004b.png)
+<img width="1071" alt="Jenkins_console_output" src="https://user-images.githubusercontent.com/23483887/87810537-11862200-c855-11ea-9486-1787c903163d.png">
 
 ### Job Definitions
 
