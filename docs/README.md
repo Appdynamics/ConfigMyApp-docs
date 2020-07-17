@@ -464,7 +464,9 @@ ConfigMyApp will skip a health rule if it exists in the controller. You would ne
 
 ` "overwrite_health_rules": true`
 
-# Integrations 
+# Integrations
+
+This section describes practical examples on how to run ConfigMyApp from  Docker, Kubernetes, Harness and Jenkins. 
 
 ## Docker 
 
@@ -474,7 +476,7 @@ You can run ConfigMyApp by using either the official docker image or you can bui
 
 ConfigMyApp images are available from Docker hub and can be downloaded using `docker pull`. For example: 
 
-`docker pull iogbole/configmyapp:latest`
+`docker pull appdynamicscx/configmyapp:latest`
 
 ### Build a custom docker image
 
@@ -492,7 +494,7 @@ First, you would need to define your environment variables using the `env.list` 
 
 Standard run: 
 
-`docker run --name ConfigMyApp --env-file env.list ${image_name}:${version}` 
+`docker run --name ConfigMyApp --env-file env.list appdynamicscx/configmyapp:latest`
 
 #### Mount branding volume
 
@@ -513,7 +515,7 @@ CMA_LOGO_NAME=<logo_image_name>.<file-extension>
  docker run -d \
       --name ConfigMyApp
       --mount type=bind,source=$(pwd)/branding,destination=/opt/configmyapp/branding \
-      --env-file docker/env.list  ${image_name}:${version}
+      --env-file docker/env.list  appdynamicscx/configmyapp:latest
  ```
 Note: Do not use qoutes in the environment variable values, and it's best not to use spaces in the file name. 
 
@@ -530,7 +532,7 @@ Use the following steps to automate business transaction configuration using the
 docker run -d \
   --name ConfigMyApp
   --mount type=bind,source=$(pwd)/bt_config,destination=/opt/configmyapp/bt_config \
-  ${image_name}:${version}
+    appdynamicscx/configmyapp:latest
 ```
 
 Once your contaienr is up and running, execute `docker ps` to check the container status, then tail the logs: 
@@ -540,7 +542,7 @@ Once your contaienr is up and running, execute `docker ps` to check the containe
 The output should be similar to this: 
 
 ```
-Checking if API_Gateway business application exist in http://controller-2060nosshco-o3wdq4ip.appd-cx.com:8090/controller...
+Checking if API_Gateway business application exist in http://controller.com:8090/controller...
 
 Found API_Gateway business application
 
