@@ -682,7 +682,7 @@ As a source code specify GitHub project:
 
 ![Jenkins_source](https://user-images.githubusercontent.com/23483887/87527538-2a8ba900-c684-11ea-8ea7-631012d912a4.png)
 
-In the build tab, as a build step add "Execute shell" and execute the `start.sh` script in a similar fashion as you would from the command line. Bear in mind that we defined environment variables in the previous step and you need to specify only additional runtime parameters that you may require:
+In the "Build" tab, as a build step add "Execute shell" and execute the `start.sh` script in a similar fashion as you would from the command line. Bear in mind that we defined environment variables in the previous step and you need to specify only additional runtime parameters that you may require:
 
 ![Jenkins_build](https://user-images.githubusercontent.com/23483887/87528976-37110100-c686-11ea-8ca4-9e8a299afe12.png)
 
@@ -692,7 +692,7 @@ In order to change any of the configurations, from the left-side menu inside of 
 
 ![Jenkins_run_job](https://user-images.githubusercontent.com/23483887/87529787-67a56a80-c687-11ea-9976-65c5d4263a87.png)
 
-You are going to be prompted with environment variables defined that you can update prior to running a job. Click on the build, and check the progress in build history and "Console output".
+You are going to be prompted with environment variables defined that you can update prior to running a job. Click on the "Build", and check the progress in build history and "Console output".
 
 ![Jenkins_console_output](https://user-images.githubusercontent.com/23483887/87530466-45f8b300-c688-11ea-82e0-50b7355b004b.png)
 
