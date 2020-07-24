@@ -488,16 +488,18 @@ ConfigMyApp images are available from Docker hub and can be downloaded using `do
 Alternatively, you may build your own ConfigMyApp image using the following steps: 
 
 1. Clone the <a href="https://github.com/Appdynamics/ConfigMyApp" target="_blank">repository</a>
-2. change directory the docker folder
+2. Change to the directory in the docker folder
 3. Run  `./build.sh <tag_name> <image_name>`  
 
 ### Docker run
 
-The `run.sh` script in the docker folder contains 3 examples (standard, BT, and branding) on how to run the configMyApp docker image. 
+The `run.sh` script in the docker folder contains 3 examples; standard, BT, and branding. Below explain on how to run the configMyApp docker image. 
 
 First, you would need to define your environment variables using the `env.list` file in the docker folder as an example. 
 
-Standard run: 
+#### Standard run
+
+Standard run command:
 
 `docker run --name ConfigMyApp --env-file env.list appdynamicscx/configmyapp:latest` 
 
@@ -522,7 +524,7 @@ CMA_LOGO_NAME=<logo_image_name>.<file-extension>
       --mount type=bind,source=$(pwd)/branding,destination=/opt/configmyapp/branding \
       --env-file docker/env.list  appdynamicscx/configmyapp:latest
  ```
-Note: Do not use qoutes in the environment variable values, and it's *NOT* best practice to use spaces in the file name. 
+Note: Do not use quotes in the environment variable values, and it's *NOT* best practice to use spaces in the file name. 
 
 #### Mount business transaction volume 
 
@@ -530,7 +532,7 @@ Use the following steps to automate business transaction configuration using the
 
 1. Create a folder called `bt_config` 
 2. Copy the `configBT.json` file from the project into the `bt_config` folder on your docker host 
-3. Make necessary adjustments to the folder depending on your need. Please refer to the <a href="https://appdynamics.github.io/ConfigMyApp/#business-transaction-configuration"> business transaction configuration</a> section for details
+3. Make necessary adjustments to the folder depending on your need. Please refer to the <a href="https://appdynamics.github.io/ConfigMyApp/#business-transaction-configuration"> business transaction configuration</a> section for more details
 4. Mount the `bt_config` volume in docker run. The docker run command should be executed from the `bt_config` folder on your host. 
 
 ```
@@ -540,7 +542,7 @@ docker run -d \
   appdynamicscx/configmyapp:latest
 ```
 
-Once your contaienr is up and running, execute `docker ps` to check the container status, then tail the logs: 
+Once your container is up and running, execute `docker ps` to check the container status, then tail the logs: 
 
 `docker logs ConfigMyApp -f`
 
@@ -578,7 +580,7 @@ All files relevant for Kubernetes deployment can be found in `/kubernetes` direc
 
 ## Updating secrets and environment variables
 
-1. Update the password in the `cma-pass-secret.yml` with your controller's user password base64 encoded.
+1. Update the password in the `cma-pass-secret.yml` with your controller's user password (that is base64 encoded).
 
 2. Update environment variables defined in a file `cma-configmap.yaml`.
 
@@ -606,26 +608,26 @@ kubectl get pod <pod-name>
 
 ## Harness.io
 
-Harness.io is a Continuous Delivery as a Service enterprise platform for automation of application and micro-service deployments.
+Harness.io is a <b>Continuous-Delivery-as-a-Service (CDaaS)</b> enterprise platform for automation of application and micro-service deployments.
 
 
 ### Running for the first time - setup
 
-In case that on your account you already have an application and workflow with steps set, proceed to the next chapter to <a href="https://appdynamics.github.io/ConfigMyApp/#run-harnessio-script">run the Harness.io deployment</a>, otherwise proceed to the next section.
+If your Harness account already has an application, and in its workflow with steps set, then proceed to the next Section:- <a href="https://appdynamics.github.io/ConfigMyApp/#run-harnessio-script">Run the Harness.io deployment</a>. Otherwise, continue with this section.
 
 #### Create an application and workflow
 
-To create an application, if it does not exist, go to Configure and add an application:
+To create an application, if it does not exist, go to *"Configure"* and add an application:
 
 ![Harness_new_app](https://user-images.githubusercontent.com/23483887/87537282-48f8a100-c692-11ea-8638-79098fb97fd6.png)
 
-Create a new Workflow of a type "Build Workflow":
+Create a new Workflow of a type *"Build Workflow"*:
 
 ![Harness_workflow](https://user-images.githubusercontent.com/23483887/87538269-db4d7480-c693-11ea-98e4-40cb08adbc14.png)
 
 #### Add workflow variables and steps
 
-Add workflow variables, at the minimum GITHUB_USER, GITHUB_PASSWORD, and GITHUB_BRANCH:
+Add workflow variables, with at the minimum GITHUB_USER, GITHUB_PASSWORD, and GITHUB_BRANCH:
 
 ![Harness_env_vars](https://user-images.githubusercontent.com/23483887/87538628-6af32300-c694-11ea-8695-c85f9e142b88.png)
 
@@ -637,11 +639,11 @@ Workflow step type should be Shell Script, and to pull data from a GitHub repo i
 
 ![Harness_step_1_github](https://user-images.githubusercontent.com/23483887/87539172-58c5b480-c695-11ea-9099-8cb5318b5262.png)
 
-In next step, we are using the downloaded source code to run the `start.sh` script. Note that we are can set environment variables as workflow variables and in start script only overrides runtime parameter default values and/or environment variable values if necessary:
+In the next step, we are using the downloaded source code to run the `start.sh` script. <b>Note:</b> We are can set environment variables as workflow variables and in the start script field area only override runtime parameter default values and/or environment variable values if necessary:
 
 ![Harness_step_2_start](https://user-images.githubusercontent.com/23483887/87539231-6f6c0b80-c695-11ea-851e-a87cbeeea1f2.png)
 
-Note: In project source code you can find an example of a workflow, under the `integrations/Harnessio` directory:
+<b>Note:</b> In project source code you can find an example of a *workflow*, under the `integrations/Harnessio` directory:
 ```
 integrations/Harnessio/Workflow.yml
 ```
@@ -652,7 +654,7 @@ Navigate to Setup, choose your Application from a list, and pick a Workflow that
 
 ![Harness_io_deploy](https://user-images.githubusercontent.com/23483887/87539640-29fc0e00-c696-11ea-9cfd-ce36ac7a9eb9.png)
 
-This will trigger your deployment and you can track progress in console output on the right side of the Harness.io UI.
+This will trigger your deployment and you can track progress in the `console` output on the right side of the Harness.io UI.
 
 
 <p><img align="right" width="200" height="60" src="https://user-images.githubusercontent.com/23483887/87051994-33016100-c1f8-11ea-847f-38da20685581.png"></p>
@@ -664,39 +666,39 @@ Jenkins is a free and open-source automation server. It helps automate the parts
 
 ### Running for the first time - setup
 
-If you are running Jenkins for the first time, you need to set up a job with the steps below. If you already specified the job, jump to the next chapter to <a href="https://appdynamics.github.io/ConfigMyApp/#run-jenkins-job">run the Jenkins job</a>, otherwise proceed to the next section.
+If you are running Jenkins for the first time, you need to set up a job using the steps below. If you have already specified the job, jump to the next chapter of:- <a href="https://appdynamics.github.io/ConfigMyApp/#run-jenkins-job">Run the Jenkins job</a>. Otherwise, continue in this section.
 
 #### Plugins
 
-If you installed recommended packages you may already have GitHub plugin, if you do not then navigate to "Manage Jenkins" and choose "Manage Plugins", search for "git plugin", and click on "Install without restart". You should be seeing GitHub plugin installed:
+If you installed the recommended packages you may already have the GitHub plugi. If you do not, then navigate to *"Manage Jenkins"*, choose *"Manage Plugins"*, search for *"git plugin"*, and finally click on *"Install without restart"*. You should be seeing GitHub plugin installed:
 
 <img width="1406" alt="Jenkins_plugin" src="https://user-images.githubusercontent.com/23483887/87814360-7fcde300-c85b-11ea-8875-c38ae77d2b70.png">
 
 #### Create Jenkins Job
 
-Click "New Item" to create a new Jenkins job, and pick a "Freestyle" project from the list, and pick an appropriate name and add a description:
+Click *"New Item"* to create a new Jenkins job, and pick a *"Freestyle"* project from the list, and pick an appropriate name and add a description:
 
 ![Jenkins_new_item](https://user-images.githubusercontent.com/23483887/87525582-9ae4fb00-c681-11ea-96e8-946032c70141.png)
 
-In job configuration, check the "This project is parameterized" checkbox in the "General" section to add environment variables as String variables:
+In job configuration, check the *"This project is parameterized"* checkbox in the *"General"* section to add environment variables as String variables:
 
 <img width="928" alt="jenkins_parameters" src="https://user-images.githubusercontent.com/23483887/87810713-501bdc80-c855-11ea-98f3-cde9406f44f9.png">
 
-Under "Source Code Management" tab specify the GitHub project:
+Under *"Source Code Management"* tab specify the GitHub project:
 
 <img width="940" alt="Jenkins_source_repo" src="https://user-images.githubusercontent.com/23483887/87811459-a3425f00-c856-11ea-973c-5376d660f439.png">
 
-In the "Build" tab, as a build step add "Execute shell" and execute the `start.sh` script in a similar fashion as you would from the command line. Bear in mind that we defined environment variables in the previous step and you need to specify only additional runtime parameters that you may require:
+In the *"Build"* tab, as a build step add "Execute shell" and execute the `start.sh` script in a similar fashion as you would from the command line. Bear in mind that we defined environment variables in the previous step and you need to specify only additional runtime parameters that you may require:
 
 <img width="937" alt="Jenkins_build_steps" src="https://user-images.githubusercontent.com/23483887/87811561-c40ab480-c856-11ea-990a-afa36645b15f.png">
 
 ### Run Jenkins Job
 
-In order to change any of the configurations, from the left-side menu inside of a project click "Configure". To run a Jenkins job, pick "Build with Parameters". 
+In order to change any of the configurations, from the left-side menu inside of a project click *"Configure"*. To run a Jenkins job, pick *"Build with Parameters"*. 
 
 <img width="972" alt="Jenkins_build_with_params" src="https://user-images.githubusercontent.com/23483887/87811696-fa483400-c856-11ea-999f-0d79062c2832.png">
 
-You are going to be prompted with environment variables defined that you can update prior to running a job. Click on the "Build", and check the progress in build history and "Console output".
+You are going to be prompted with environment variables defined that you can update prior to running a job. Click on the *"Build"*, and check the progress in build history and *"Console output"*.
 
 <img width="1071" alt="Jenkins_console_output" src="https://user-images.githubusercontent.com/23483887/87810537-11862200-c855-11ea-9486-1787c903163d.png">
 
