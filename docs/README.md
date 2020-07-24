@@ -351,7 +351,7 @@ Business transaction detection rules can be configured by using the template fil
        }
      ]
      
-and this Java servlet example below shows an example of using REGEX matching condition: 
+and this Java servlet illustration below shows an example of using REGEX matching condition: 
 
     "java_servlet_rules": [
       {
@@ -376,7 +376,7 @@ The format of the `JSON` must be maintained at all times, all four sections must
 
 ConfigMyApp uses the `logo.png` and the `background.jpg` file in the `branding` folder by default. We recommend that you replace both files with your company's images. Alternatively, you may add more images into the `branding` folder and specify the image names as extra parameters. See examples below: 
 
-<b> Run time Paramaters</b>
+<b>Run time Paramaters</b>
 
 `./start.sh -c http://appd-cx.com -a API_Gateway -u appd -p appd --use-branding --logo-name="logo-white.png" --background-name="appd-bg.jpg"`
 
@@ -424,7 +424,7 @@ CMA_PROXY_PORT=4993
     
 ## Encoded Password  
 
-For added security, ConfigMyApp supports base64 password encoding. For example 
+For added security, ConfigMyApp supports base64 password encoding. For example:-
 
 `echo "password" | base64` outputs  `YXBwZAo=` 
 
@@ -613,7 +613,7 @@ Harness.io is a <b>Continuous-Delivery-as-a-Service (CDaaS)</b> enterprise platf
 
 ### Running for the first time - setup
 
-If your Harness account already has an application, and in its workflow with steps set, then proceed to the next Section:- <a href="https://appdynamics.github.io/ConfigMyApp/#run-harnessio-script">Run the Harness.io deployment</a>. Otherwise, continue with this section.
+If your Harness account already has an application, and has a workflow with steps set, then proceed to the next Section:- <a href="https://appdynamics.github.io/ConfigMyApp/#run-harnessio-script">Run the Harness.io deployment</a>. Otherwise, continue with this section.
 
 #### Create an application and workflow
 
