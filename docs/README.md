@@ -698,7 +698,7 @@ In order to change any of the configurations, from the left-side menu inside of 
 
 <img width="972" alt="Jenkins_build_with_params" src="https://user-images.githubusercontent.com/23483887/87811696-fa483400-c856-11ea-999f-0d79062c2832.png">
 
-You are going to be prompted with environment variables defined that you can update prior to running a job. Click on the *"Build"*, and check the progress in build history and *"Console output"*.
+You are going to be prompted with environment variables defined that you can update prior to running a job. Click on the *"Build"*, and check the progress in build history and *"Console Output"*.
 
 <img width="1071" alt="Jenkins_console_output" src="https://user-images.githubusercontent.com/23483887/87810537-11862200-c855-11ea-9486-1787c903163d.png">
 
