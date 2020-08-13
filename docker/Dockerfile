@@ -19,7 +19,4 @@ COPY ./ /opt/configmyapp
 
 WORKDIR /opt/configmyapp
 
-
-    ls -ltr
-
 ENTRYPOINT ["./start.sh"]
