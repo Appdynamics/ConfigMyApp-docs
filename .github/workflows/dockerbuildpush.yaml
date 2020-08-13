@@ -15,5 +15,5 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME_CX }}
           password: ${{ secrets.DOCKER_PASSWORD_CX }}
           repository: iogbole/cma-docs
-          tags: "latest,${{ env.RELEASE_VERSION }}"
+          tags: "latest"
           dockerfile: docker/Dockerfile
